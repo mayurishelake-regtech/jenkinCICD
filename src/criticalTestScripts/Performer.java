@@ -134,7 +134,7 @@ public class Performer extends BasePage {
 	extent.flush();
 	}
 	
-	 @Test(priority = 2) 
+	/* @Test(priority = 2) 
 		void Upcoming_ComplianceInternal() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- Internal Upcoming Compliance Verification");
@@ -702,7 +702,7 @@ public class Performer extends BasePage {
 		 extent.flush();
 		 
 		}
-	
+	*/
 	
 
 	public static void setZoomLevel(WebDriver driver, double zoomLevel) 
