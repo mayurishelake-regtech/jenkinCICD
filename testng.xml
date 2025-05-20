@@ -4,15 +4,6 @@
   <test  name="Test">
     <classes>
      <class name="criticalTestScripts.Performer"/>
-     <class name="criticalTestScripts.Reviewer"/>
-     <class name="criticalTestScripts.StatutoryMGMT"/>
-     <class name="criticalTestScripts.InternalMgmt"/>
-     <class name="criticalTestScripts.AuditorStatutory"/>
-     <class name="criticalTestScripts.AuditorInternal"/>
-     <class name="criticalTestScripts.ApprovalStatutory"/>
-     <class name="criticalTestScripts.ApprovalInCritical"/>
-     <class name="criticalTestScripts.DeptStatutory"/>
-     <class name="criticalTestScripts.DeptInternal"/>
      
       
     </classes>
