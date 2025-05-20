@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [Suite22]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="TestDemo(failed)">
+    <classes>
+      <class name="criticalTestScripts.ApprovalInCritical">
+        <methods>
+          <include name="clickUsersInternal"/>
+          <include name="Overdue_PieChartInternal"/>
+          <include name="clickCategoriesInternal"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="dueToday_PieChartInternal"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="RiskSummaryHighInternal"/>
+          <include name="Rejected_PieChartInternalPeriod"/>
+          <include name="ComplianceDocuments"/>
+          <include name="CompliancesCountMatch"/>
+          <include name="Login"/>
+          <include name="Rejected_PieChartInternal"/>
+          <include name="Entities"/>
+          <include name="Overdue_PieChartInternalPeriod"/>
+          <include name="browserClosing"/>
+          <include name="setBrowser"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="complianceCalendar"/>
+          <include name="NotCompleted_PieChart"/>
+          <include name="SummaryofOverdueCompliances"/>
+          <include name="DepartmentSummaryInternal"/>
+          <include name="RiskSummaryCriticalInternal"/>
+          <include name="ClosedTimely_PieChart"/>
+          <include name="NotApplicable_PieChartInternal"/>
+          <include name="InProgress_PieChartInternalPeriod"/>
+          <include name="ClosedDelayed_PieChart"/>
+          <include name="DetailedReportIn"/>
+          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="PFR_PieChartInternal"/>
+          <include name="Closing"/>
+          <include name="inProgress_PieChartInternal"/>
+          <include name="PFR_PieChartInternalPeriod"/>
+        </methods>
+      </class> <!-- criticalTestScripts.ApprovalInCritical -->
+      <class name="criticalTestScripts.InternalMgmt">
+        <methods>
+          <include name="Login"/>
+          <include name="Entities"/>
+          <include name="setBrowser"/>
+          <include name="browserClosing"/>
+          <include name="Closing"/>
+          <include name="LocationCount"/>
+        </methods>
+      </class> <!-- criticalTestScripts.InternalMgmt -->
+    </classes>
+  </test> <!-- TestDemo(failed) -->
+</suite> <!-- Failed suite [Suite22] -->

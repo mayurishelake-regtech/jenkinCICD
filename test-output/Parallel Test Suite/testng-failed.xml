@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [Parallel Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="methods" name="Parallel Test(failed)">
+    <classes>
+      <class name="criticalTestScripts.StatutoryMGMT">
+        <methods>
+          <include name="dueToday_PieChart"/>
+          <include name="pendingForReview_PieChartPeriod"/>
+          <include name="rejected_PieChart"/>
+          <include name="Overdue_PieChart"/>
+          <include name="DepartmentSummaryHumanResourceStatutory"/>
+          <include name="inProgress_PieChart"/>
+          <include name="pendingForReview_PieChart"/>
+          <include name="Login"/>
+          <include name="inProgress_PieChartPeriod"/>
+          <include name="StandardReportLocationIN"/>
+          <include name="dueToday_PieChartPeriod"/>
+          <include name="UsersCountMatch"/>
+          <include name="StandardReportUser"/>
+          <include name="setBrowser"/>
+          <include name="BargraphIndustrySpeMediumStatutory"/>
+          <include name="SummaryofOverdueCompliances"/>
+          <include name="complianceCalendar"/>
+          <include name="StandardReportDetailedIN"/>
+          <include name="StandardReportCriticalRiskIN"/>
+          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="ClosedDelayed_PieChart"/>
+          <include name="rejected_PieChartPeriod"/>
+          <include name="StandardReportUserIn"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="StandardReportCriticalRisk"/>
+          <include name="Upcoming_PieChartPeriod"/>
+          <include name="StandardReportRiskIN"/>
+          <include name="CompliancesCountMatch"/>
+          <include name="ComplianceDocuments"/>
+          <include name="StandardReportOverallIN"/>
+          <include name="StandardReportLocation"/>
+          <include name="StandardReportDetailed"/>
+          <include name="browserClosing"/>
+          <include name="Overdue_PieChartPeriod"/>
+          <include name="BargraphIndustrySpeLowStatutory"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="StandardReportCategoryIn"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="StandardReportCategory"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
+          <include name="NotApplicable_PieChart"/>
+          <include name="NotCompleted_PieChart"/>
+          <include name="StandardReportRisk"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="StandardReportOverall"/>
+          <include name="BargraphIndustrySpeHighStatutory"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="DetailedReport"/>
+          <include name="AssignmentReport"/>
+          <include name="Closing"/>
+          <include name="ClosedTimely_PieChart"/>
+          <include name="BargraphIndustrySpeCriticalStatutory"/>
+        </methods>
+      </class> <!-- criticalTestScripts.StatutoryMGMT -->
+      <class name="criticalTestScripts.DeptStaExcluding">
+        <methods>
+          <include name="setBrowser"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="NotApplicable_PieChart"/>
+          <include name="NotCompleted_PieChart"/>
+          <include name="SummaryofOverdueCompliances"/>
+          <include name="Inprogress_PieChartPeriod"/>
+          <include name="DetailedReport"/>
+          <include name="browserClosing"/>
+          <include name="DepartmentSummaryFinanceStatutory"/>
+          <include name="complianceCalendar"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="Closing"/>
+          <include name="ClosedTimely_PieChart"/>
+          <include name="ClosedDelayed_PieChart"/>
+          <include name="AssignmentReport"/>
+          <include name="rejected_PieChartPeriod"/>
+          <include name="rejected_PieChart"/>
+          <include name="LocationCount"/>
+          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="CompliancesCountMatch"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="pendingForReview_PieChartPeriod"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="Overdue_PieChart"/>
+          <include name="DepartmentCountMatch"/>
+          <include name="inProgress_PieChart"/>
+          <include name="pendingForReview_PieChart"/>
+          <include name="Overdue_PieChartPeriod"/>
+          <include name="dueToday_PieChartPeriod"/>
+          <include name="Login"/>
+          <include name="Entities"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
+          <include name="UsersCountMatch"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="ComplianceDocuments"/>
+        </methods>
+      </class> <!-- criticalTestScripts.DeptStaExcluding -->
+    </classes>
+  </test> <!-- Parallel Test(failed) -->
+</suite> <!-- Failed suite [Parallel Test Suite] -->

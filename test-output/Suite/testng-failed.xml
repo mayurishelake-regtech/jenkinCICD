@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="criticalTestScripts.AuditorInternal">
+        <methods>
+          <include name="browserClosing"/>
+          <include name="Login"/>
+          <include name="Closing"/>
+          <include name="setBrowser"/>
+          <include name="RiskSummaryLowStatutory"/>
+        </methods>
+      </class> <!-- criticalTestScripts.AuditorInternal -->
+      <class name="criticalTestScripts.ApprovalStatutory">
+        <methods>
+          <include name="rejected_PieChartPeriod"/>
+          <include name="ClosedDelayed_PieChart"/>
+          <include name="ClosedTimely_PieChart"/>
+          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="DepartmentSummaryAccountStatutory"/>
+          <include name="BargraphIndustrySpeCriticalStatutory"/>
+          <include name="Closing"/>
+          <include name="browserClosing"/>
+          <include name="Login"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="BargraphIndustrySpeHighStatutory"/>
+          <include name="BargraphIndustrySpeMediumStatutory"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="setBrowser"/>
+          <include name="NotApplicable_PieChart"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="BargraphIndustrySpeLowStatutory"/>
+          <include name="Overdue_PieChartPeriod"/>
+          <include name="inProgress_PieChartPeriod"/>
+          <include name="pendingForReview_PieChart"/>
+          <include name="inProgress_PieChart"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="rejected_PieChart"/>
+          <include name="Upcoming_PieChartPeriod"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="pendingForReview_PieChartPeriod"/>
+        </methods>
+      </class> <!-- criticalTestScripts.ApprovalStatutory -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Test1(failed)">
+    <classes>
+      <class name="criticalTestScripts.InternalMgmt">
+        <methods>
+          <include name="ComplianceDocumentsIN"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="ClickCompliancesInternal"/>
+          <include name="clickUsersInternal"/>
+          <include name="clickCategoriesInternal"/>
+          <include name="Closing"/>
+          <include name="dueToday_PieChartPeriod"/>
+          <include name="Login"/>
+          <include name="BargraphBSEMediumStatutory"/>
+          <include name="Overdue_PieChartInternalPeriod"/>
+          <include name="Rejected_PieChartInternal"/>
+          <include name="NotApplicable_PieChartIN"/>
+          <include name="Entities"/>
+          <include name="RiskSummaryHighInternal"/>
+          <include name="Overdue_PieChartInternal"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="Rejected_PieChartInternalPeriod"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
+          <include name="SummaryofOverdueCompliances"/>
+          <include name="NotCompleted_PieChart"/>
+          <include name="DepartmentSummaryInternal"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="browserClosing"/>
+          <include name="setBrowser"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="PFR_PieChartInternalPeriod"/>
+          <include name="inProgress_PieChartInternal"/>
+          <include name="BargraphBSEHighStatutory"/>
+          <include name="BargraphBSECriticalStatutory"/>
+          <include name="InProgress_PieChartInternalPeriod"/>
+          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="BargraphBSELowStatutory"/>
+          <include name="DetailedReportIn"/>
+          <include name="LocationCount"/>
+          <include name="AssignmentReport"/>
+          <include name="ClosedDelayed_PieChart"/>
+          <include name="ClosedTimely_PieChart"/>
+          <include name="PFR_PieChartInternal"/>
+          <include name="RiskSummaryCriticalInternal"/>
+        </methods>
+      </class> <!-- criticalTestScripts.InternalMgmt -->
+      <class name="criticalTestScripts.StatutoryMGMT">
+        <methods>
+          <include name="dueToday_PieChart"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="pendingForReview_PieChartPeriod"/>
+          <include name="rejected_PieChart"/>
+          <include name="Overdue_PieChart"/>
+          <include name="CompliancesCountMatch"/>
+          <include name="ComplianceDocuments"/>
+          <include name="inProgress_PieChart"/>
+          <include name="pendingForReview_PieChart"/>
+          <include name="Login"/>
+          <include name="inProgress_PieChartPeriod"/>
+          <include name="browserClosing"/>
+          <include name="Overdue_PieChartPeriod"/>
+          <include name="BargraphIndustrySpeLowStatutory"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="dueToday_PieChartPeriod"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
+          <include name="UsersCountMatch"/>
+          <include name="NotApplicable_PieChart"/>
+          <include name="NotCompleted_PieChart"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="CategoriesCountMatch"/>
+          <include name="setBrowser"/>
+          <include name="BargraphIndustrySpeMediumStatutory"/>
+          <include name="BargraphIndustrySpeHighStatutory"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="SummaryofOverdueCompliances"/>
+          <include name="DetailedReport"/>
+          <include name="complianceCalendar"/>
+          <include name="AssignmentReport"/>
+          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="Closing"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="ClosedTimely_PieChart"/>
+          <include name="BargraphIndustrySpeCriticalStatutory"/>
+          <include name="ClosedDelayed_PieChart"/>
+          <include name="rejected_PieChartPeriod"/>
+        </methods>
+      </class> <!-- criticalTestScripts.StatutoryMGMT -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
