@@ -2135,12 +2135,12 @@ public class ApprovalInCritical extends BasePage {
 			Admin = Admin.replaceAll(" ","");									//Removing all white spaces from string. 
 			int IndustrySpeCritical = Integer.parseInt(Admin);	
 			
-			String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo().getText();			//Reading the Overdue value of Human Resource
+			String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo1().getText();			//Reading the Overdue value of Human Resource
 		//	NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 			int Overdue = Integer.parseInt(NotCompleted);						
 			if(Overdue > 0)
 			{Thread.sleep(2000);
-				CFOcountPOM.clickComplianceIsecOverdueDemo().click();
+				CFOcountPOM.clickComplianceIsecOverdueDemo1().click();
 				ApprovalcountPOM.RiskGraphCountIn1( test, "Overdue", Overdue, "Statutory");
 			}
 			else
@@ -2194,13 +2194,13 @@ public class ApprovalInCritical extends BasePage {
 			
 			Thread.sleep(3000);
 			Thread.sleep(3000);
-			String PendingReview = CFOcountPOM.clickAccountPendingReview().getText();	//Reading the Pending For Review value of Human Resource
+			String PendingReview = CFOcountPOM.clickAccountPendingReview1().getText();	//Reading the Pending For Review value of Human Resource
 			PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 			int Pending_Review = Integer.parseInt(PendingReview);						
 			if(Pending_Review > 0)
 			{
 				Thread.sleep(3000);
-				CFOcountPOM.clickAccountPendingReview().click();
+				CFOcountPOM.clickAccountPendingReview1().click();
 				ApprovalcountPOM.RiskGraphCountIn( test, "Pending For Review", Pending_Review, "Statutory");
 			}
 			else

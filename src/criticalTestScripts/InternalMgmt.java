@@ -2186,12 +2186,12 @@ public class InternalMgmt extends BasePage {
 		  roc1.click();
 		
 		Thread.sleep(1000);
-		String FinaClosedTimely = CFOcountPOM.clickHumanClosedTimelym().getText();		//Reading the Closed Timely value of Human Resource
+		String FinaClosedTimely = CFOcountPOM.clickAccountClosedTimelyA().getText();		//Reading the Closed Timely value of Human Resource
 		FinaClosedTimely = FinaClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Fina_ClosedTimely = Integer.parseInt(FinaClosedTimely);						
 		if(Fina_ClosedTimely > 0)
 		{
-			CFOcountPOM.clickHumanClosedTimelym().click();
+			CFOcountPOM.clickAccountClosedTimelyA().click();
 			CFOcountPOM.RiskGraphCount( test, "Admin -Closed Timely", Fina_ClosedTimely, "Internal");
 		}
 		else
@@ -2203,12 +2203,12 @@ public class InternalMgmt extends BasePage {
 		CT.click();
 		
 		Thread.sleep(3000);
-			String FinaPFReview = CFOcountPOM.clickAccountPendingReview().getText();			//Reading the Overdue value of Human Resource
+			String FinaPFReview = CFOcountPOM.clickAccountPendingReview1().getText();			//Reading the Overdue value of Human Resource
 		FinaPFReview = FinaPFReview.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Fina_PFR = Integer.parseInt(FinaPFReview);						
 		if(Fina_PFR > 0)
 		{
-			CFOcountPOM.clickAccountPendingReview().click();
+			CFOcountPOM.clickAccountPendingReview1().click();
 			CFOcountPOM.RiskGraphCount( test, "Admin -Pending For Review", Fina_PFR, "Internal");
 		}
 		else
@@ -2236,12 +2236,12 @@ public class InternalMgmt extends BasePage {
 		IP.click();
 		
 				Thread.sleep(3000);
-		String FinaRejected = CFOcountPOM.clickFinanceRejectedInternal().getText();			//Reading the Overdue value of Human Resource
+		String FinaRejected = CFOcountPOM.clickFinanceRejectedInternal1().getText();			//Reading the Overdue value of Human Resource
 		FinaRejected = FinaRejected.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Fina_Rejected= Integer.parseInt(FinaRejected);						
 		if(Fina_Rejected > 0)
 		{
-			CFOcountPOM.clickFinanceRejectedInternal().click();
+			CFOcountPOM.clickFinanceRejectedInternal1().click();
 			CFOcountPOM.RiskGraphCount( test, "Admin -Rejected", Fina_Rejected, "Internal");
 		}
 		else

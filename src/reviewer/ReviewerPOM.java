@@ -503,7 +503,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ClickReviewerTaskPFRStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerPendingReviewStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerPendingReviewStatBoth']"));
 		return statutoryAction;
 	}
 	
@@ -533,7 +533,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ReviewerTaskDBNSStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubStatBoth']"));
 		return statutoryAction;
 	}
 	
@@ -545,7 +545,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ReviewerTaskDBNSInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubIntBoth']"));
 		return statutoryAction;
 	}
 	
@@ -617,7 +617,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ClickClosedEventsPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divClosedEventPEOcount']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divClosedEventPREOcount']"));
 		return statutoryAction;
 	}
 	
@@ -739,43 +739,43 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ClickUpcomingInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerUpcomingInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerUpcomingIntBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickOverdueStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerOverdueStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerOverdueStatBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickOverdueInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerOverdueInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerOverdueIntBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickRejectedStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedStatBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickRejectedInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedIntBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickPendingForReviewStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerPendingReviewStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerPendingReviewStatBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickPendingForReviewInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerPendingReviewInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerPendingReviewIntBoth']"));
 		return statutoryAction;
 	}
 	

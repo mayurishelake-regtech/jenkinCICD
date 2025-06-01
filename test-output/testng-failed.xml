@@ -3,57 +3,27 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="criticalTestScripts.ApprovalStatutory">
+      <class name="criticalTestScripts.Reviewer">
         <methods>
-          <include name="rejected_PieChartPeriod"/>
-          <include name="DepartmentSummaryOverdue"/>
-          <include name="NotCompleted_PieChartPeriod"/>
-          <include name="riskSummaryNotApplicable"/>
-          <include name="DepartmentSummaryAccountStatutory"/>
-          <include name="UpcomingPieChartPeriod"/>
-          <include name="complianceCalendar"/>
-          <include name="DetailedreportVsPFRcount"/>
-          <include name="Closing"/>
-          <include name="DetailedreportVsOverduecount"/>
-          <include name="DetailedreportVsRejectedcount"/>
-          <include name="AssignmentReport"/>
-          <include name="DetailedReport"/>
-          <include name="DetailedreportVsCommercialHighcount"/>
-          <include name="browserClosing"/>
-          <include name="ClosedDelayed_PieChartPeriod"/>
-          <include name="Login"/>
-          <include name="BargraphIndustrySpeHighStatutory"/>
-          <include name="DepartmentSummaPR"/>
-          <include name="DepartmentSummaryRejected"/>
-          <include name="DetailedreportVsDueTodaycount"/>
-          <include name="RiskSummaryLowStatutory"/>
+          <include name="DueButNotSubmitted"/>
           <include name="setBrowser"/>
-          <include name="NCcompletionVsNCOverdueP"/>
-          <include name="ComplianceDocuments"/>
-          <include name="ClosedTimely_PieChartPeriod"/>
-          <include name="RiskSummaryMediumStatutory"/>
-          <include name="riskSummaryClosedDelayed"/>
-          <include name="Overdue_PieChartPeriod"/>
-          <include name="DepartmentSummaryClosedDelayed"/>
-          <include name="inProgress_PieChartPeriod"/>
-          <include name="DepartmentSummaryClosedT"/>
-          <include name="NCcompletionVsNCOverdue"/>
-          <include name="DepaINPROGRESSR"/>
-          <include name="DetailedreportVsdashboardNAcount"/>
-          <include name="DetailedreportVsdashboardclosedtimelycount"/>
-          <include name="DepartmentSummaryNotApplicable"/>
-          <include name="DetailedreportVsCommercialCriticalcount"/>
-          <include name="DetailedreportVsdashboardNotCompletedcount"/>
-          <include name="DetailedreportVsCommercialLowcount"/>
-          <include name="DetailedreportVsINprocount"/>
-          <include name="riskSummaryClosedTimely"/>
-          <include name="DetailedreportVsdashboardCloseddealyedcount"/>
-          <include name="riskSummaryCriticalNotCompleted1"/>
-          <include name="DetailedreportVsCommercialMediumcount"/>
-          <include name="NotApplicable_PieChartPeriod"/>
-          <include name="pendingForReview_PieChartPeriod"/>
+          <include name="MyEscalation"/>
+          <include name="browserClosing"/>
+          <include name="PendingForReviewTaskInRejected"/>
+          <include name="ReviewCountStatutoryApprove"/>
+          <include name="PendingForReviewIn"/>
+          <include name="ReviewCountStatutoryReject"/>
+          <include name="DueButNotSubmittedIn"/>
+          <include name="ComplianceDocumentsInter"/>
+          <include name="SMETAReportFilterMgmt"/>
+          <include name="PendingForReview"/>
+          <include name="Login"/>
+          <include name="SMETAReport"/>
+          <include name="ComplianceDocumentsSat"/>
+          <include name="AssignmentReport"/>
+          <include name="PendingForReviewTaskRejected"/>
         </methods>
-      </class> <!-- criticalTestScripts.ApprovalStatutory -->
+      </class> <!-- criticalTestScripts.Reviewer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -393,7 +393,7 @@ public class Login extends BasePage
 			
 		}
 		
-		Thread.sleep(6000);
+	/*	Thread.sleep(6000);
 		try {
 			Thread.sleep(6000);
 			LoginPOM.alrtMsg().click();			//Clicking on Compliance Image.
@@ -403,7 +403,7 @@ public class Login extends BasePage
 		{
 			
 		}
-			
+			*/
 			try
 			{
 			
@@ -420,7 +420,7 @@ public class Login extends BasePage
 			{
 				
 			}
-			Thread.sleep(8000);
+			
 		}
 			//LoginPOM.ClickLitigation(driver).click();
 		

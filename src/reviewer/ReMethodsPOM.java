@@ -3354,7 +3354,7 @@ Thread.sleep(3000);
 		int DasCountCompletedSta = Integer.parseInt(ReviewerPOM.ClickClosedEventsPer().getText());	//Reading old value of Internal Reject
 		
 		ReviewerPOM.ClickClosedEventsPer().click();		//Clicking on Statutory Review value.
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	/*	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table")));
 		elementsList = ReviewerPOM.clickOverViewPerCE();
 		elementsList.get(1).click();

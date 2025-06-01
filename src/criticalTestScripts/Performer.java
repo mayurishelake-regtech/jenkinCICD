@@ -134,7 +134,7 @@ public class Performer extends BasePage {
 	extent.flush();
 	}
 	
-	/* @Test(priority = 2) 
+	 @Test(priority = 2) 
 		void Upcoming_ComplianceInternal() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- Internal Upcoming Compliance Verification");
@@ -146,7 +146,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 	
-	 @Test(priority = 3) 
+	 @Test(priority = 3) //ActionButtons clickStatutoryOverdue
 		void StatutoryOverdueCri() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- Dashboard Statutory Overdue Value Verification");
@@ -158,7 +158,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 	
-	 @Test(priority = 4) 
+	@Test(priority = 4) 
 		void InternalOverdueCri() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- Dashboard Internal Overdue Value Verification");
@@ -182,7 +182,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 6) 
+		@Test(priority = 6) //clickCheckboxesList
 		void StatutoryChecklistBox() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- To Check Perform Multiple statutory Checklist Compliance working or not ");
@@ -218,7 +218,8 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority =9) 
+		@Test(priority =9) //			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("PerformerFrame"));//iPerformerFrame
+
 		void DashboardRejectStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- Statutory Rejected Compliance Count - Dashboard");
@@ -326,7 +327,7 @@ public class Performer extends BasePage {
 		extent.flush();
 	}
 	
-//	 @Test(priority = 18) //pass
+	 @Test(priority = 18) //pass
 	   void PerformerTaskRejected() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Statutory Rejected Count Match");
@@ -338,7 +339,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 19) //pass
+		@Test(priority = 19) //pass
 	   void PerformerTaskRejectedIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Internal Rejected Count Match");
@@ -655,7 +656,7 @@ public class Performer extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 32) 
+//	@Test(priority = 32) 
 	void SMETAReport() throws InterruptedException, IOException
 	{
 		test = extent.startTest("My Reports -  SMETA Report Verification");
@@ -702,7 +703,7 @@ public class Performer extends BasePage {
 		 extent.flush();
 		 
 		}
-	*/
+	
 	
 
 	public static void setZoomLevel(WebDriver driver, double zoomLevel) 

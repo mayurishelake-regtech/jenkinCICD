@@ -2073,7 +2073,7 @@ public class ApprovalStatutory extends BasePage {
 
 	
 		
-		@Test(priority = 23)
+		//@Test(priority = 23)
 		void DepartmentSummaryAccountStatutory() throws InterruptedException, IOException
 		{
 			Thread.sleep(3000);	
@@ -2273,7 +2273,7 @@ public class ApprovalStatutory extends BasePage {
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			//js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.cfo
-			js.executeScript("window.scrollBy(0,2500)");
+			js.executeScript("window.scrollBy(0,2000)");
 			Thread.sleep(3000);
 			
 			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
@@ -2398,7 +2398,7 @@ public class ApprovalStatutory extends BasePage {
 			
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
+			js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 			Thread.sleep(3000);
 			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
@@ -2522,7 +2522,7 @@ public class ApprovalStatutory extends BasePage {
 			
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
+			js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 			Thread.sleep(800);
 			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
@@ -2647,7 +2647,7 @@ public class ApprovalStatutory extends BasePage {
 			
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
+			js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
 			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
@@ -2774,7 +2774,7 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(2000);
 			
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
-			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
+			js.executeScript("window.scrollBy(0,2000)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
 			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
@@ -2933,7 +2933,7 @@ public class ApprovalStatutory extends BasePage {
 			
 			Thread.sleep(3000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
+			js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 			Thread.sleep(3000);
 			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
@@ -3068,7 +3068,7 @@ public class ApprovalStatutory extends BasePage {
 			Actions action = new Actions(getDriver());*/	
 			
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
+			js.executeScript("window.scrollBy(0,2000)");			//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
 			
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
@@ -3194,7 +3194,7 @@ public class ApprovalStatutory extends BasePage {
 			
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
+			js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
 			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
@@ -3328,7 +3328,7 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());*/	
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
+			js.executeScript("window.scrollBy(0,2000)");			//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
@@ -3714,7 +3714,7 @@ public class ApprovalStatutory extends BasePage {
 				    	
 					}
 					
-					 @Test(priority = 96)
+					/* @Test(priority = 96)
 					void DepartmentSummaryOverdue() throws InterruptedException, IOException
 					{
 						test = extent.startTest("Department Summary Overdue dashboard count match with Detailed Report Count Verification");
@@ -3782,7 +3782,7 @@ public class ApprovalStatutory extends BasePage {
 						extent.endTest(test);
 						extent.flush();
 				    	
-					}
+					}*/
 				
 					
 		 

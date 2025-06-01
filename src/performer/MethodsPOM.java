@@ -3820,7 +3820,7 @@ Thread.sleep(4000);
 		int flag = 0;
 		if(Compliance.equalsIgnoreCase("Statutory"))
 		{
-			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("iPerformerFrame"));
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("iPerformerFrame"));//iPerformerFrame
 			try {
 			OverduePOM.selectStatutoryDropdown().click();			//Clicking on statutory Status drop down.
 			Select drp = new Select(OverduePOM.selectStatutoryDropdown());
@@ -4186,7 +4186,7 @@ Thread.sleep(4000);
 	public static void DashboardRejectedCri( ExtentTest test, String Compliance) throws InterruptedException, IOException
 	{
 		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_divPerformerRejectedPEOcount']")));	//Waiting for 'Statutory Reject' value to get visible on Dashboard
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_divPerformerRejectedPEOcount']")));	//Waiting for 'Statutory Reject' value to get visible on Dashboard
 		
 		String string_rejected = null;
 		int rejected = 0;
@@ -5941,7 +5941,7 @@ Thread.sleep(4000);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.remark()));
 			OverduePOM.remark().sendKeys("Automation Remark");	//Sending remark to text area.
 			
-			OverduePOM.clickComplianceSubmit().click();			//Clicking on 'Submit' button.
+			OverduePOM.clickComplianceSubmit().click();			//Clicking on 'Submit' button. C
 			Thread.sleep(5000);
 			try
 			{
@@ -6586,6 +6586,8 @@ Thread.sleep(4000);
 			Thread.sleep(1000);
 			OverduePOM.clickDashboard().click();						//Clicking on Dashboard link.
 			Thread.sleep(3000);
+			js.executeScript("window.scrollBy(0,500)");	
+			Thread.sleep(1000);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickPTUpcomingStatutory()));
 			Thread.sleep(1000);
 			String string_overdueStatutoryNew = OverduePOM.clickPTUpcomingStatutory().getText();		//Storing old value of Statutory overdue.
@@ -10175,7 +10177,9 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 			getDriver().findElement(By.xpath("//*[@id='divShowDialog']/div/div/div[1]/button")).click();
 		Thread.sleep(2000);
 		OverduePOM.clickDashboard().click();
-		
+		Thread.sleep(2000);
+		js.executeScript("window.scrollBy(0,500)");	
+		Thread.sleep(4000);
 		String string_newInternalOverdue = ReviewerPOM.ClickUpcomingInternalPer().getText();		//Storing old value of Statutory overdue.
 		int	newOverdueInternal = Integer.parseInt(string_newInternalOverdue);
 			String string_newInternalReview = ReviewerPOM.ClickPendingForReviewInternalPer().getText();	//Storing old value of Pending Review.
@@ -10247,7 +10251,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		}
 
 		Thread.sleep(3000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_liPerformerReviewer']")));	//Waiting for records table to get visible
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_liPerformerReviewer']")));	//Waiting for records table to get visible
 		Thread.sleep(3000);
 		OverduePOM.ClickPerformReview().click();
 		Thread.sleep(3000);
@@ -10313,6 +10317,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 			Thread.sleep(1000);
 			OverduePOM.clickDashboard().click();						//Clicking on Dashboard link.
 			Thread.sleep(3000);
+			js.executeScript("window.scrollBy(0,500)");	
+			Thread.sleep(1000);
 			wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.ClickOverdueStatutoryPer()));
 		
 			String string_newOverdueStatutory = ReviewerPOM.ClickOverdueStatutoryPer().getText();		//Storing old value of Statutory overdue.
@@ -10442,6 +10448,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 			Thread.sleep(1000);
 			OverduePOM.clickDashboard().click();						//Clicking on Dashboard link.
 			Thread.sleep(3000);
+			js.executeScript("window.scrollBy(0,500)");	
+			Thread.sleep(1000);
 			wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.ClickOverdueStatutoryPer()));
 			Thread.sleep(1000);
 			String string_overdueStatutoryNew = ReviewerPOM.ClickOverdueInternalPer().getText();		//Storing old value of Statutory overdue.
@@ -10482,8 +10490,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedStat']")));	//Waiting for 'Statutory Reject' value to get visible on Dashboard
-		
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedStat']")));	//Waiting for 'Statutory Reject' value to get visible on Dashboard
+		js.executeScript("window.scrollBy(0,500)");
 		String string_rejected = null;
 		int rejected = 0;
 		Thread.sleep(1000);
@@ -10586,6 +10594,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 				OverduePOM.clickDashboard().click();						//Clicking on Dashboard link.
 				
 				Thread.sleep(3000);
+				js.executeScript("window.scrollBy(0,500)");	
+				Thread.sleep(1000);
 				wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.ClickOverdueStatutoryPer()));
 			
 				String string_newOverdueStatutory = ReviewerPOM.ClickRejectedStatutoryPer().getText();		//Storing old value of Statutory overdue.
@@ -10641,7 +10651,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedInt']")));	//Waiting for 'Statutory Reject' value to get visible on Dashboard
+		js.executeScript("window.scrollBy(0,500)");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedIntBoth']")));	//Waiting for 'Statutory Reject' value to get visible on Dashboard
 		
 		String string_rejected = null;
 		int rejected = 0;
@@ -10736,6 +10747,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 				OverduePOM.clickDashboard().click();						//Clicking on Dashboard link.
 				
 				Thread.sleep(3000);
+				js.executeScript("window.scrollBy(0,500)");	
+				Thread.sleep(1000);
 				wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.ClickRejectedInternalPer()));
 			
 				String string_newOverdueStatutory = ReviewerPOM.ClickRejectedInternalPer().getText();		//Storing old value of Statutory overdue.
