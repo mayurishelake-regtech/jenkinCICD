@@ -73,7 +73,7 @@ public class OverdueCount extends BasePage
 	void setBrowser() throws InterruptedException, IOException
 	{
 		
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\PerformerResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\PerformerResults.html",true);
 		test = extent.startTest("Loging In - Performer");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -138,7 +138,7 @@ public class OverdueCount extends BasePage
 	}
 	
 	
-	@Test(priority = 2)//pass     Critical
+	//@Test(priority = 2)//pass     Critical
 	void Upcoming_ComplianceStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Upcoming Compliance Verification");
@@ -150,7 +150,7 @@ public class OverdueCount extends BasePage
 	extent.flush();
 	}
 	
-	@Test(priority = 3)//pass
+	//@Test(priority = 3)//pass
 	void Upcoming_ComplianceStatutoryCkeckView() throws InterruptedException
 	{
 		test = extent.startTest("Statutory Upcoming Compliance Check View Button Verification");
@@ -162,7 +162,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	 @Test(priority = 4) //pass
+	 //@Test(priority = 4) //pass
 	void Upcoming_ComplianceInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Upcoming Compliance Verification");
@@ -174,7 +174,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 		
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	void DashboardStatutoryOverdue() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Dashboard Statutory Overdue Value Verification");
@@ -264,7 +264,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 6)  //pass
+	//@Test(priority = 6)  //pass
 	void DashboardInternalOverdue() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Dashboard Internal Overdue Value Verification");
@@ -290,7 +290,7 @@ public class OverdueCount extends BasePage
 		MethodsPOM.StatutoryOverdueExport(test,workbook);	
 		Thread.sleep(500);
 	//	Thread.sleep(2000);
-	//	MethodsPOM.InternalOverdue();							//Calling InternalOverdue() method.
+		MethodsPOM.InternalOverdue();							//Calling InternalOverdue() method.
 		Thread.sleep(2000);
 	//	MethodsPOM.StatutoryOverdueExport(test,workbook);	
 		Thread.sleep(500);
@@ -357,7 +357,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-  @Test(priority = 7) //pass non -critical
+  //@Test(priority = 7) //pass non -critical
 	void MyWorkComplianceClear() throws InterruptedException, IOException
 	{
 		test = extent.startTest("My Workspace - Compliance - To check Clear button Working or not");
@@ -369,7 +369,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 8) //pass
+	//@Test(priority = 8) //pass
 	void StatutoryOverdueMitigationplan() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Overdue - Mitigation Plan");
@@ -380,7 +380,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-/*	@Test(priority = 9) //pass
+	////@Test(priority = 9) //pass not present
 	void StatutoryOverdueMitigationplanM() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Overdue - Mitigation Plan - To check whether the multiple file can be uploaded or not in the popup of compliance mitigation plan?");
@@ -392,7 +392,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 10) 
+	////@Test(priority = 10) 
 	void StatutoryOverdueMitigationplanDDoc() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Overdue - Mitigation Plan - To check whether the file can be download or not in the popup of compliance mitigation plan?");
@@ -404,7 +404,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 11) 
+	////@Test(priority = 11) 
 	void StatutoryOverdueMitigationplanView() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Overdue - Mitigation Plan - To check whether the file can be view or not in the popup of compliance mitigation plan?");
@@ -416,7 +416,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 
-	@Test(priority = 12) 
+	////@Test(priority = 12) 
 	void StatutoryOverdueMitigationplanDe() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Overdue - Mitigation Plan - To check whether the file can be delete or not in the popup of compliance mitigation plan?");
@@ -428,7 +428,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 13) 
+	////@Test(priority = 13) 
 	void StatutoryOverdueMitigationplanWD() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Overdue - Mitigation Plan -  To check whether the without upload document compliance mitigation plan updated or not?");
@@ -438,9 +438,9 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}*/
+	}
 	
-	/*@Test(priority = 14) //pass
+	////@Test(priority = 14) //pass
 	void StatutoryOverdueMP() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Overdue - Edit - To check whether the overdue compliance complied or not without updated mitigation plan?");
@@ -452,7 +452,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 15) //pass
+	//@Test(priority = 15) //pass
 	void InternalOverdueMitigationplan() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Overdue - Mitigation Plan");
@@ -462,9 +462,9 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}*/
+	}
 	
-/*	@Test(priority = 16) //pass
+	////@Test(priority = 16) //pass
 	void InternalOverdueMitigationplanMul() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Overdue - Mitigation Plan - To check whether the multiple file can be uploaded or not in the popup of compliance mitigation plan?");
@@ -476,7 +476,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 17) //pass
+	////@Test(priority = 17) //pass
 	void InternalOverdueMitigationplanDDoc() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Overdue - Mitigation Plan - To check whether the file can be download or not in the popup of compliance mitigation plan?");
@@ -488,7 +488,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 18) //pass
+	////@Test(priority = 18) //pass
 	void InternalOverdueMitigationplanView() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Overdue - Mitigation Plan - To check whether the file can be view or not in the popup of compliance mitigation plan?");
@@ -500,7 +500,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 
-	@Test(priority = 19) //pass
+	////@Test(priority = 19) //pass
 	void InternalOverdueMitigationplanDe() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Overdue - Mitigation Plan - To check whether the file can be delete or not in the popup of compliance mitigation plan?");
@@ -512,7 +512,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 20) //pass
+	////@Test(priority = 20) //pass
 	void InternalOverdueMitigationplanWD() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Overdue - Mitigation Plan -  To check whether the without upload document compliance mitigation plan updated or not?");
@@ -522,9 +522,9 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}*/
+	}
 	
-/*	@Test(priority = 21) 
+	////@Test(priority = 21) 
 		void InternalOverdueMP() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Internal Overdue - Edit - To check whether the overdue compliance complied or not without updated mitigation plan?");
@@ -548,7 +548,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	//@Test(priority = 26) //pass
+	////@Test(priority = 26) //pass
 	void InternalOverdueMitigationPFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Filter - Internal Overdue - Mitigation Plan - Pending Updation filter working or not");
@@ -572,7 +572,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 		
-	@Test(priority = 28) //pass
+	//@Test(priority = 28) //pass
 	void StatutoryChecklistBox() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Checklist CheckBoxes check ");
@@ -584,7 +584,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	//@Test(priority = 29) //pass
+	////@Test(priority = 29) //pass
 	void StatutoryCheckListCBNotComplied() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Checklist CheckBoxes check  -Not Complied");
@@ -609,7 +609,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 31)  //pass
+	//@Test(priority = 31)  //pass
 	void InternalCheckListCheckBox() throws InterruptedException
 	{
 		test = extent.startTest("Internal Checklist CheckBoxes check");
@@ -621,7 +621,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 		
-	@Test(priority = 32)  //pass non-critical
+	//@Test(priority = 32)  //pass non-critical
 	void StatutoryCheckListMitigationP() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory CheckList - Mitigation Plan");
@@ -631,9 +631,9 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}	*/
+	}	
 	
-/*	@Test(priority = 30)  //pass
+//	//@Test(priority = 30)  //pass
 	void StatutoryCheckListMitigationPMul() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory CheckList - Mitigation Plan - To check whether the multiple file can be uploaded or not in the popup of compliance mitigation plan?");
@@ -645,7 +645,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 31)  //pass
+//	//@Test(priority = 31)  //pass
 	void StatutoryCheckListMitigationPD() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory CheckList - Mitigation Plan - To check whether the file can be download or not in the popup of compliance mitigation plan?");
@@ -657,7 +657,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 32)  //pass
+	////@Test(priority = 32)  //pass
 	void StatutoryCheckListMitigationPView() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory CheckList - Mitigation Plan - To check whether the file can be view or not in the popup of compliance mitigation plan?");
@@ -669,7 +669,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 33)  //pass
+	////@Test(priority = 33)  //pass
 	void StatutoryCheckListMitigationPDe() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory CheckList - Mitigation Plan - To check whether the file can be delete or not in the popup of compliance mitigation plan?");
@@ -681,7 +681,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 
-	@Test(priority = 34)  //pass
+	////@Test(priority = 34)  //pass
 	void StatutoryCheckListMitigationPDeWD() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory CheckList - Mitigation Plan - To check whether the without upload document compliance mitigation plan updated or not?");
@@ -691,9 +691,9 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}*/
+	}
 	
-/*	@Test(priority = 35)  //pass
+	////@Test(priority = 35)  //pass
 	void StatutoryCheckListMP() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory CheckList - Edit - To check whether the overdue compliance complied or not without updated mitigation plan?");
@@ -705,7 +705,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 36)  //pass
+	//@Test(priority = 36)  //pass
 	void InternalCheckListMitigationP() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal CheckList - Mitigation Plan");
@@ -715,9 +715,9 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}*/
+	}
 	
-/*	@Test(priority = 37)  //pass
+//	//@Test(priority = 37)  //pass
 	void InternalCheckListMpMul() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal CheckList - Mitigation Plan - To check whether the multiple file can be uploaded or not in the popup of compliance mitigation plan?");
@@ -729,7 +729,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 38)  //pass
+	////@Test(priority = 38)  //pass
 	void InternalCheckListMitigationPD() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal CheckList - Mitigation Plan - To check whether the file can be download or not in the popup of compliance mitigation plan?");
@@ -741,7 +741,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 39)  //pass
+	////@Test(priority = 39)  //pass
 	void InternalCheckListMitigationPView() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal CheckList - Mitigation Plan - To check whether the file can be view or not in the popup of compliance mitigation plan?");
@@ -753,7 +753,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 40)  //pass
+	////@Test(priority = 40)  //pass
 	void InternalCheckListMitigationPDe() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal CheckList - Mitigation Plan - To check whether the file can be delete or not in the popup of compliance mitigation plan?");
@@ -765,7 +765,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 
-	@Test(priority = 41)  //pass
+	////@Test(priority = 41)  //pass
 	void InternalCheckListMitigationPDeWD() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal CheckList - Mitigation Plan - To check whether the without upload document compliance mitigation plan updated or not?");
@@ -775,9 +775,9 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}*/
+	}
 	
-/*	@Test(priority =42)  //pass
+	////@Test(priority =42)  //pass
 	void InternalCheckListMP() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal CheckList - Edit - To check whether the overdue compliance complied or not without updated mitigation plan?");
@@ -789,7 +789,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-@Test(priority = 43)  //pass
+////@Test(priority = 43)  //pass
 	void StatutoryCheckListMitigationPFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Filter -Statutory CheckList -  Mitigation Plan - Pending Updation filter working or not");
@@ -801,7 +801,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-@Test(priority = 44)  //pass
+////@Test(priority = 44)  //pass
 	void InternalCheckListMitigationPFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Filter -Internal CheckList - Mitigation Plan - Pending Updation filter working or not");
@@ -814,7 +814,7 @@ public class OverdueCount extends BasePage
 	}
 	
 	
-	@Test(priority =45) // pass Critical
+	//@Test(priority =45) // pass Critical
 	void DashboardRejectStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Rejected Compliance Count - Dashboard");
@@ -826,7 +826,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 46)  // pass
+	//@Test(priority = 46)  // pass
 	void DashboardRejectInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Rejected Compliance Count - Dashboard");
@@ -838,7 +838,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority =47) // pass non-critical
+	//@Test(priority =47) // pass non-critical
 	void DashboardPFRStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Pending For Review - Export");
@@ -850,7 +850,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 48)  // pass
+	//@Test(priority = 48)  // pass
 	void DashboardPFRInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Pending For Review - Export");
@@ -860,9 +860,9 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}*/
+	}
 	
-/*	@Test(priority =18) // no present
+//	//@Test(priority =18) // no present
 	void WorkspaceADExportStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" My Workspace - Advanced Search -Statutory -Export");
@@ -874,7 +874,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority =19) // no present
+//	//@Test(priority =19) // no present
 	void WorkspaceADExportInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" My Workspace - Advanced Search -Internal -Export");
@@ -886,7 +886,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 20)  //pass
+//	//@Test(priority = 20)  //pass
 	void AssignedEventsSingle() throws InterruptedException
 	{
 		test = extent.startTest("Activated Events Count using Activate button");
@@ -952,13 +952,13 @@ public class OverdueCount extends BasePage
 		else
 		{
 			test.log(LogStatus.FAIL, "Test Failed.");
-		}
+		}*/
 		OverduePOM.clickDashboard().click();	
 		extent.endTest(test);
 		extent.flush();
 	}
 	
-//	@Test(priority = 21) //Script Issue not Run 
+//	//@Test(priority = 21) //Script Issue not Run 
 	void AssignedEventsMultiple() throws InterruptedException
 	{
 		test = extent.startTest("Activated Events Count using Save button");
@@ -1064,10 +1064,10 @@ public class OverdueCount extends BasePage
 		}
 		extent.endTest(test);
 		extent.flush();
-	}*/
+	}
 	
 	
-/*	@Test(priority = 49) //pass non-critical
+	//@Test(priority = 49) //pass non-critical
 	void WorkspaceOverdueStatutory() throws InterruptedException
 	{
 		test = extent.startTest("My Workspace - Statutory Overdue Value Verification");
@@ -1079,7 +1079,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	@Test(priority = 50)
+	//@Test(priority = 50)
 	void WorkspaceOverdueInternal() throws InterruptedException
 	{
 		test = extent.startTest("My Workspace - Internal Overdue Value Verification");
@@ -1092,7 +1092,7 @@ public class OverdueCount extends BasePage
 	}
 	
 	
-  @Test(priority = 51) //pass
+  //@Test(priority = 51) //pass
 	    void ActivatedEventsPer() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Event Owner Summary - Statutory Activated Events Count Match");
@@ -1104,7 +1104,7 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		}
 	    
-	@Test(priority = 52) //pass 
+	//@Test(priority = 52) //pass 
 	    void ClosedEventsPer() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" Event Owner Summary - Statutory Closed  Events Count Match");
@@ -1116,7 +1116,7 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		}
 	    
-  @Test(priority = 53) //pass 
+  //@Test(priority = 53) //pass 
 	    void AssignedEvents() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Event Owner Summary - Statutory Assigned  Event Count Match");
@@ -1125,21 +1125,21 @@ public class OverdueCount extends BasePage
 			
 			extent.endTest(test);
 			extent.flush();
-		}*/
+		}
 	
-   @Test(priority = 54) //pass
+   //@Test(priority = 54) //pass
   void PerformerTaskUpcoming() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Performer Task Summary - Statutory Upcoming Count Match");
 		
 		
-		MethodsPOM.PerformerTaskUpcoming(test,"Statutory");
+		MethodsPOM.PerformUpcomingStatutory(test);
 		
 		extent.endTest(test);
 		extent.flush();
 	}
 	
-	@Test(priority = 55) //pass
+	//@Test(priority = 55) //pass
   void PerformerTaskUpcomingIn() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Performer Task Summary - Internal Upcoming Count Match");
@@ -1152,7 +1152,7 @@ public class OverdueCount extends BasePage
 	}
 	
 
- @Test(priority = 56) //pass
+ //@Test(priority = 56) //pass
  void PerformerTaskOverdue() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Performer Task Summary - Statutory Overdue Count Match");
@@ -1164,19 +1164,19 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-@Test(priority = 57) //pass
+//@Test(priority = 57) //pass
  void PerformerTaskOverdueIn() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Performer Task Summary - Internal Overdue Count Match");
 		
 		
-		MethodsPOM.PerformerTaskOverdue(test,"Internal");
+		MethodsPOM.PerformerTaskOverdueInternal(test,"Internal");
 		
 		extent.endTest(test);
 		extent.flush();
 	}
 	
- @Test(priority = 58) //pass
+ //@Test(priority = 58) //pass
 	   void PerformerTaskRejected() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Statutory Rejected Count Match");
@@ -1188,19 +1188,19 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		}
 		
-	@Test(priority = 59) //pass
+	//@Test(priority = 59) //pass
 	   void PerformerTaskRejectedIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Internal Rejected Count Match");
 			
 			
-			MethodsPOM.PerformerTaskRejected(test,"Internal");
+			MethodsPOM.PerformerTaskRejectedInternal(test,"Internal");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 	
- @Test(priority = 60) 
+ //@Test(priority = 60) 
 	   void PerformerTaskPFR() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Statutory Pending For Review Count Match");
@@ -1211,7 +1211,7 @@ public class OverdueCount extends BasePage
 			extent.endTest(test);
 			extent.flush();
 		}
-		@Test(priority = 61) //pass
+		//@Test(priority = 61) //pass
 	   void PerformerTaskPFRIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Internal Pending For Review Count Match");
@@ -1227,7 +1227,7 @@ public class OverdueCount extends BasePage
 	 
 	
 			
-	@Test(priority = 62) 
+	//@Test(priority = 62) 
 		void DetailedReport1() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report -Statutory Count Verification");
@@ -1239,7 +1239,7 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		}
 		
-	@Test(priority = 63) 
+	//@Test(priority = 63) 
 		void DetailedReportIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report -Internal Count Verification");
@@ -1251,7 +1251,7 @@ public class OverdueCount extends BasePage
 		}
 
 	
-	@Test(priority = 64) 
+	//@Test(priority = 64) 
 	void DetailedReportFilterper() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To check  Detailed report filters working or not Verification");
@@ -1264,7 +1264,7 @@ public class OverdueCount extends BasePage
 	}
 	
 
-@Test(priority = 65)  
+//@Test(priority = 65)  
 	void DetailedReportStautau() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Detailed Report -Statutory -Status -Closed Timely display Verification");
@@ -1276,7 +1276,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-@Test(priority = 65)
+//@Test(priority = 65)
 void PerformReviewEmailCol() throws InterruptedException, IOException
 {
 	test = extent.startTest("Detailed Report - Performer Email column and Reviewer Email column Visible on grid Verification. ");
@@ -1288,7 +1288,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 }
 
 	
-	@Test(priority = 66) //pass
+	//@Test(priority = 66) //pass
 	void AssignmentReport() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Assignment Report count verification");
@@ -1301,7 +1301,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 	}
 	
 	
-	@Test(priority = 67)// non-critical
+	//@Test(priority = 67)// non-critical
 	void AssignmentReportFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("'Assignment Report' :- Statutory & Statutory CheckList = Compliance ID Filter Working Or not");
@@ -1312,7 +1312,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}	
 	
-//	@Test(priority = 68)
+	//@Test(priority = 68)
 	void ComplianceIDFilterEBDe() throws InterruptedException, IOException
 	{
 		test = extent.startTest("'Assignment Report' :- EventBased Checklist & EventBased = Compliance ID Filter Working Or not");
@@ -1323,7 +1323,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}	
 	
-//	@Test(priority = 69)
+	//@Test(priority = 69)
 	void ComplianceIDFilterINDe() throws InterruptedException, IOException
 	{
 		test = extent.startTest("'Assignment Report' :- Internal & Internal CheckList = Compliance ID Filter Working Or not");
@@ -1334,7 +1334,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}	
 	
-	@Test(priority = 70)
+	//@Test(priority = 70)
 	void ComplianceIDFilter1Invalid() throws InterruptedException, IOException
 	{
 		test = extent.startTest("'Assignment Report' :- Statutory & Statutory CheckList = To check whether the data is seen on the grid after entering invalid data in compliance ID search box Filter.");
@@ -1345,7 +1345,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}	
 	
-//	@Test(priority = 71)
+	//@Test(priority = 71)
 	void ComplianceIDFilterEBInvalid() throws InterruptedException, IOException
 	{
 		test = extent.startTest("'Assignment Report' :- EventBased Checklist & EventBased = To check whether the data is seen on the grid after entering invalid data in compliance ID search box Filter.");
@@ -1356,7 +1356,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}	
 	
-	@Test(priority = 72)
+	//@Test(priority = 72)
 	void ComplianceIDFilterINInvalid() throws InterruptedException, IOException
 	{
 		test = extent.startTest("'Assignment Report' :- Internal & Internal CheckList = To check whether the data is seen on the grid after entering invalid data in compliance ID search box Filter.");
@@ -1367,7 +1367,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}	
 	
-	 @Test(priority = 73) //pass 
+	 //@Test(priority = 73) //pass 
      void TaskReport() throws InterruptedException
 			{
 				test = extent.startTest("Task Report Verification");
@@ -1379,7 +1379,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
      
-	@Test(priority = 73)
+	//@Test(priority = 73)
  	void ComplianceRepository() throws InterruptedException, IOException
  	{
  		test = extent.startTest("Compliance Repository/Act Repository  verification");
@@ -1391,7 +1391,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
  		extent.flush();
  	}
  	
-	@Test(priority = 66) //critical
+	//@Test(priority = 66) //critical
 	void ComplianceDocumentsSat() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Compliance Documents Statutory verification");
@@ -1403,7 +1403,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 	}
 	
-	@Test(priority = 67) 
+	//@Test(priority = 67) 
 		void ComplianceDocumentsInter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Compliance Documents Internal verification");
@@ -1416,7 +1416,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		}
 	
 	
-	@Test(priority = 68) //	pass	
+	//@Test(priority = 68) //	pass	
 	void CriticalDocuments() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Critical Document Verification");
@@ -1427,7 +1427,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}
 	
-	//@Test(priority = 69) // pass
+/*	////@Test(priority = 69) // pass
 	void MyReminderStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("My Reminder - Statutory Count Verification");
@@ -1438,7 +1438,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}
 	
-	//@Test(priority = 70) //pass
+	////@Test(priority = 70) //pass
 	void MyReminderInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("My Reminder - Internal Count Verification");
@@ -1449,7 +1449,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}
 	
-	@Test(priority = 74) //pass non-critical
+	//@Test(priority = 74) //pass non-critical
 	void ReviseCompliance() throws InterruptedException
 	{
 		test = extent.startTest("Revise Compliance and Update Penalty  Count Verification");
@@ -1464,7 +1464,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}
 	
-/*	@Test(priority = 72)		
+	//@Test(priority = 72)		
 	void ComplianceUpdateTask() throws InterruptedException, EncryptedDocumentException, IOException
 	{
 		test = extent.startTest("My Workspace - 'Update Tasks' - Statutory  Verification");
@@ -1479,7 +1479,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}
 	
-	@Test(priority = 73)		
+	//@Test(priority = 73)		
 	void ComplianceUpdateTaskIn() throws InterruptedException, EncryptedDocumentException, IOException
 	{
 		test = extent.startTest("My Workspace - 'Update Tasks' - Internal  Verification");
@@ -1491,7 +1491,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}
 	
-	@Test(priority = 74)		
+	//@Test(priority = 74)		
 	void ComplianceEditSatTask() throws InterruptedException
 	{
 		test = extent.startTest("My Workspace - 'Update Tasks' -Statutory - Edit  Verification");
@@ -1506,7 +1506,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}
 	
-	@Test(priority = 75)		
+	//@Test(priority = 75)		
 	void ComplianceEditINTask() throws InterruptedException
 	{
 		test = extent.startTest("My Workspace - 'Update Tasks' - 'Edit ' - Internal Verification");
@@ -1521,7 +1521,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}*/
 	
-	  @Test(priority = 74) 
+	  //@Test(priority = 74) 
 		            void PenaltyUpdation() throws InterruptedException
 		      			{
 		          	  test = extent.startTest("My Workspace - Penalty Updation");
@@ -1534,7 +1534,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		      			}
 	
 
- @Test(priority = 0)
+// //@Test(priority = 0)
 	void PerformerTaskAddUpcomingStatutory() throws InterruptedException, EncryptedDocumentException, IOException
   {
 		test = extent.startTest("Dashboard Statutory Upcoming Performer Task Verification");
@@ -1750,7 +1750,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		extent.flush();
 	}
 	
-	//@Test(priority = 21)
+	////@Test(priority = 21)
 		void PerformerTaskUpcomingInternal() throws InterruptedException{
 		 test = extent.startTest("Dashboard Internal Upcoming Performer Task Verification");
 			test.log(LogStatus.INFO, "Test Initiated");
@@ -1953,7 +1953,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 			extent.flush();
 	 }
 	 
-//	 @Test(priority = 22)
+//	 //@Test(priority = 22)
 		void PerformerTaskOverdueStatutory() throws InterruptedException{
 		 
 		 test = extent.startTest("Dashboard Statutory Overdue Performer Task Verification");
@@ -2146,7 +2146,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.endTest(test);
 				extent.flush();
 	 }
-//@Test(priority = 23)
+////@Test(priority = 23)
 		void PerformerTaskOverdueInternal() throws InterruptedException{
 		 
 		 test = extent.startTest("Dashboard Internal Overdue Performer Task Verification");
@@ -2341,7 +2341,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 					extent.flush();
 		}
 		
-// @Test(priority = 24)
+// //@Test(priority = 24)
 			void PerformerTaskRejectedStatutory() throws InterruptedException{
 			 
 			 test = extent.startTest("Dashboard Statutory Overdue Performer Task Verification");
@@ -2533,7 +2533,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 			extent.flush();
 		 }
 			
-	//	@Test(priority = 25)
+	//	//@Test(priority = 25)
 			void PerformerTaskRejectedInternal() throws InterruptedException{
 			 
 			 test = extent.startTest("Dashboard Internal Rejected Performer Task Verification");
@@ -2728,7 +2728,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 						extent.flush();
 			}
 			
-	        /*    @Test(priority = 40)
+	        /*    //@Test(priority = 75)
 				void PerformerTaskPerformUpcomingStatutory() throws InterruptedException{
 					test = extent.startTest("Dashboard Statutory Upcoming Performer Task Count Verification");
 					
@@ -2740,7 +2740,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 			
 			 }
 				
-	             @Test(priority = 41)
+	             //@Test(priority = 76)
 					void PerformerTaskPerformUpcomingInternal() throws InterruptedException{
 						test = extent.startTest("Dashboard Internal Upcoming Performer Task Count Verification");
 						
@@ -2752,7 +2752,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				
 				 }
 					
-	    	@Test(priority = 42)
+	    	//@Test(priority = 77)
 		   void PerformerTaskPerformOverdueStatutory() throws InterruptedException{
 						test = extent.startTest("Dashboard Statutory Overdue Performer Task Count Verification");
 						
@@ -2764,7 +2764,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				
 				 }	
 		
-		 @Test(priority = 43)
+		 //@Test(priority = 78)
 			void PerformerTaskPerformOverdueInternal() throws InterruptedException{
 				test = extent.startTest("Dashboard Internal Overdue Performer Task Count Verification");
 				
@@ -2776,7 +2776,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		
 		 }
 			
-		@Test(priority = 44)
+		//@Test(priority = 79)
 			void PerformerTaskPerformRejectedStatutory() throws InterruptedException{
 							test = extent.startTest("Dashboard Statutory Rejected Performer Task Count Verification");
 							
@@ -2788,7 +2788,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 					  		
 					 }	
 			
-    	@Test(priority = 45)
+    	//@Test(priority = 80)
 				void PerformerTaskPerformRejectedInternal() throws InterruptedException{
 					test = extent.startTest("Dashboard Internal Rejected Performer Task Count Verification");
 					
@@ -2800,7 +2800,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 			
 			 }
 						
-	//	@Test(priority = 46) //pass fri not run
+	//	//@Test(priority = 46) //pass fri not run
 	       void ComplianceSatCalender() throws InterruptedException
 				{
 					test = extent.startTest("My Compliance Calender Statutory perform Verification");
@@ -2856,7 +2856,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 					
 				}
 			
-	   //   @Test(priority = 47) //pass fri not run
+	   //   //@Test(priority = 47) //pass fri not run
 	       void ComplianceInternalCalender() throws InterruptedException
 				{
 					test = extent.startTest("My Compliance Calender Internal perform Verification");
@@ -2920,7 +2920,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				}*/
 	  
 		
-		@Test(priority = 77)// non-critical
+		//@Test(priority = 81)// non-critical
 		void DailyUpdates() throws InterruptedException, IOException
 		{
 			Thread.sleep(500);		
@@ -2954,7 +2954,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 			extent.flush();
 		}
 		
-     	@Test(priority = 78)
+     	//@Test(priority = 82)
 		void NewsLetter() throws InterruptedException, IOException
 		{
 			Thread.sleep(500);		
@@ -2981,7 +2981,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 			extent.flush();
 		}	
 	       
-	       @Test(priority = 79)
+	       //@Test(priority = 83)
 			void InternalMsg() throws InterruptedException, IOException
 			{
 				Thread.sleep(500);		
@@ -2998,7 +2998,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				Thread.sleep(1000);
 				OverduePOM.TypeMsg().sendKeys("Automation testing");
 				Thread.sleep(1000);
-				OverduePOM.choosefile().sendKeys("E:\\Test Cases\\Approver Test Case.xlsx");
+				OverduePOM.choosefile().sendKeys("D:\\Regtrack-Project\\TestData\\Contract.xlsx");
 				Thread.sleep(1000);
 				//OverduePOM.send().click();
 				By locator = By.xpath("//*[@id='btnsendmailNew']");
@@ -3017,7 +3017,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-			 @Test(priority = 80)
+			 //@Test(priority = 84)
 				void SupportTicket() throws InterruptedException, IOException
 				{
 					Thread.sleep(1000);		
@@ -3029,10 +3029,9 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 					extent.endTest(test);
 					extent.flush();
 				}
-				
 			
 		            
-		      //    @Test(priority = 81) //pass
+		      //    //@Test(priority = 81) //pass
 		            void MyEscalation() throws InterruptedException
 		      			{
 		      				test = extent.startTest("My Escalation Verification");
@@ -3066,7 +3065,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		      				
 		      			}
 		            
-		            @Test(priority = 82)
+		            //@Test(priority = 85)
 		        	void ActDocuments() throws InterruptedException, IOException
 		        	{
 		        		test = extent.startTest("Act Documents  verification");
@@ -3078,7 +3077,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		        		extent.flush();
 		        	}
 				
-		        //    @Test(priority = 83) //pass 
+		        //    //@Test(priority = 83) //pass 
 			       void EventReport() throws InterruptedException
 						{
 							test = extent.startTest("Event Report Verification");
@@ -3092,7 +3091,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		      		       
 			      
 			
-			 @Test(priority = 84) //pass 
+			 //@Test(priority = 86) //pass 
 		       void WhatsNew() throws InterruptedException, IOException
 					{
 						test = extent.startTest("' what's New ' Verification");
@@ -3104,7 +3103,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 						extent.flush();
 					}
 		      
-		  //    @Test(priority = 85) //pass 
+		  //    //@Test(priority = 85) //pass 
 		       void MyLeave() throws InterruptedException, IOException
 					{
 						test = extent.startTest(" My Leave  - temporary assignment -  add new - To check whether the compliance can be reassign to new users or not?");
@@ -3116,7 +3115,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 						extent.flush();
 					}
 		       
-		 //      @Test(priority = 86) //pass 
+		 //      //@Test(priority = 86) //pass 
 		       void MyLeaveIn() throws InterruptedException, IOException
 					{
 						test = extent.startTest(" My Leave  - temporary assignment -  add new - Internal -  To check whether the compliance can be reassign to new users or not?");
@@ -3128,7 +3127,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 						extent.flush();
 					}
 		       
-		 //  	@Test(priority = 87)
+		   	//@Test(priority = 87)
 			void DetailedReportAPer() throws InterruptedException, IOException
 			{
 				test = extent.startTest("To check whether the \"actionable procedure\" can be seen or not in details tab on the view icon of Detailed report?");
@@ -3140,7 +3139,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 		   	
-		  //@Test(priority = 28)
+		/*  //@Test(priority = 88)
 			void Reopening() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Reopening - To check whether the new tab named \"My Reopening\" is seperately reflects or not on the dashboard in the main menu while the tab will be visible only for who have made the configuration.");
@@ -3151,7 +3150,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		/*	@Test(priority = 29)
+			//@Test(priority = 29)
 			void ReopeningRe() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Reopening - To check whether the compliances can be updated or not while clicking on the edit icon from action column. - Re-open");
@@ -3162,7 +3161,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-			@Test(priority = 30)
+			//@Test(priority = 30)
 			void Reopeningapprove() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Reopening - To check whether the compliances can be updated or not while clicking on the edit icon from action column. - Approve");
@@ -3173,7 +3172,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-			@Test(priority = 31)
+			//@Test(priority = 31)
 			void ReopeningExport() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Reopening - To Check Whether Export button of working or not?");
@@ -3184,7 +3183,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}*/
 			
-		//	@Test(priority = 31)
+		//	//@Test(priority = 89)
 			void DeviationApplied() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Calendar - To check that, after selection of \"Deviation Applied\" status in the status dropdown, the three new fields (Reason for Overdue / Delay Compliance, Deviation Closure Date, Upload Supporting Document) are visible or not in the update compliance status?");
@@ -3195,7 +3194,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//	@Test(priority = 32)
+		//	//@Test(priority = 90)
 			void DeviationAppliedW() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Workspace - compliance - To check that, after selection of \"Deviation Applied\" status in the status dropdown, the three new fields (Reason for Overdue / Delay Compliance, Deviation Closure Date, Upload Supporting Document) are visible or not in the update compliance status?");
@@ -3206,7 +3205,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//	@Test(priority = 32)
+		//	//@Test(priority = 91)
 			void DeviationAppliedWS() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Workspace - compliance - To check whether records are submitted after entering the data in \"reason for delay/overdue compliance\" and \"Deviation closer date\"?");
@@ -3217,7 +3216,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//	@Test(priority = 32)
+		//	//@Test(priority = 92)
 			void DeviationAppliedWD() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Workspace - compliance - To check that the \"Upload Supporting Document\" field is non mandatory.");
@@ -3228,7 +3227,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//	@Test(priority = 32)
+		//	//@Test(priority = 93)
 			void DeviationAppliedWR() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Workspace - compliance - To check that the \"Reason for Overdue / Delay Compliance and Deviation Closure Date\" fileds are mandatory or not?");
@@ -3239,7 +3238,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//	@Test(priority = 32)
+		//	//@Test(priority = 94)
 			void DeviationAppliedWCD() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Performer Summary - Checklist - To check while performing an checklist compliance  Deviation Approval button or not");
@@ -3250,7 +3249,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//	@Test(priority = 33)
+		//	//@Test(priority = 95)
 			void DeviationAppliedWC() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Performer Summary - Checklist - To check while Enter the mandatory details  without entering the mandatoy fields (Reason for Overdue / Delay Compliance, Deviation Closure Date, Upload Supporting Document) do not enter date in these fields and clicked on Closed Timely,Closed Dealyed or Not Applicable button.");
@@ -3261,7 +3260,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-			@Test(priority = 33)
+		//	//@Test(priority = 96)
 			void OverdueDA() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Performer Summary - Overdue - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown on the grid of my workspace page?");
@@ -3272,7 +3271,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//	@Test(priority = 33)
+		//	//@Test(priority = 97)
 			void DeviationApproverCol() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Workspace - compliance - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\"in grid and downloaded export report of My workspace ");
@@ -3283,7 +3282,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//	@Test(priority = 34)
+		//	//@Test(priority = 98)
 			void DeviationClosureStatuscol() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Workspace - compliance - To check whether the name of additional column \"deviation closure status\" appears or not in grid");
@@ -3294,7 +3293,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//@Test(priority = 35)
+		////@Test(priority = 99)
 			void ComplianceDocumentsDA() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Documents - Compliance Documents - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown on the grid of my document page?");
@@ -3305,7 +3304,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//	@Test(priority = 36)
+		//	//@Test(priority = 100)
 			void DeviationApproverColCD() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Documents - Compliance Documents - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\"in grid  of My document page?");
@@ -3316,7 +3315,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		//	@Test(priority = 37)
+		//	//@Test(priority = 101)
 			void DeviationClosureStatuscolCD() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Documents - Compliance Documents - To check whether the name of additional column \"deviation closure status\" appears or not in grid");
@@ -3327,7 +3326,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 			
-		@Test(priority = 37)
+		////@Test(priority = 102)
 			void DetailedReportDA() throws InterruptedException, IOException
 			{
 				test = extent.startTest("my Report - Detailed  report - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown on the grid of my report page?");
@@ -3336,6 +3335,18 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				
 				extent.endTest(test);
 				extent.flush();
+			}
+			
+			@Test(priority = 103)//pass     Critical
+			void UpcomingFilterSta() throws InterruptedException, IOException
+			{
+				test = extent.startTest("Statutory Upcoming Compliance fliters Verification");
+				
+				Thread.sleep(3000);
+				
+				DeptCountPOM.UpcomingFilterSta( test);
+				extent.endTest(test);
+			extent.flush();
 			}
 			
 			
@@ -3383,7 +3394,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		            
 				
 		 
-	   //    @Test(priority = 39)
+	   //    //@Test(priority = 39)
 			void LiveChat() throws InterruptedException, IOException
 			{
 				Thread.sleep(500);		
@@ -3417,7 +3428,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}          
 	       
-	//	@Test(priority = 24) //pass
+	//	//@Test(priority = 24) //pass
 		       void ComplianceCalender() throws InterruptedException
 			{
 				test = extent.startTest("My Compliance Calender Count Verification");
@@ -3480,7 +3491,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				extent.flush();
 			}
 		       
-		       @Test(priority = 25)
+		   //    //@Test(priority = 25)
 				void DetailedReportSF() throws InterruptedException, IOException
 				{
 					test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Deatiled Report?");
@@ -3490,7 +3501,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 					extent.endTest(test);
 					extent.flush();
 				}
-				@Test(priority = 26)
+			//	//@Test(priority = 26)
 				void ComplianceDocumentsSF() throws InterruptedException, IOException
 				{
 					test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Compliance Document?");

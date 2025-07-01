@@ -86,6 +86,30 @@ public class DeptCountPOM extends BasePage {
 		return categories;
 	}
 	
+	public static WebElement EntityLocationPer()		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.xpath("//*[@id='example']/div[1]/div[1]/div/span[1]"));
+		return categories;
+	}
+	
+	public static WebElement Expand()		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.cssSelector("div[class='k-top k-bot'] span[class='k-icon k-i-expand']"));
+		return categories;
+	}
+	
+	public static WebElement RiskP()		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.xpath("//*[@id='example']/div[1]/div[3]/div"));
+		return categories;
+	}
+
+	public static WebElement MitigationPlan()		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.xpath("//*[@id='example']/div[2]/span[5]/span/span[1]"));
+		return categories;
+	}
+	
 	public static WebElement EntityLocationDe()		//Method for closing Message Popup
 	{
 		categories = getDriver().findElement(By.xpath("//*[@id='grid']/div[1]/div[1]/div/div[1]/div/span[1]"));
@@ -193,7 +217,7 @@ public class DeptCountPOM extends BasePage {
 	
 	public static WebElement Status1RE()		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])[18]"));
+		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])[26]"));
 		return categories;
 	}
 	
@@ -347,7 +371,7 @@ public class DeptCountPOM extends BasePage {
 	
 	public static WebElement ActMgmt()		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[6]"));
+		categories = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[65]"));
 		return categories;
 	}
 	
@@ -395,7 +419,7 @@ public class DeptCountPOM extends BasePage {
 	
 	public static WebElement StatusM1()		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])[30]"));
+		categories = getDriver().findElement(By.xpath("//span[normalize-space()='Pending For Review']"));
 		return categories;
 	}
 	
@@ -456,6 +480,12 @@ public class DeptCountPOM extends BasePage {
 	public static WebElement apply()		//Method for closing Message Popup
 	{
 		categories = getDriver().findElement(By.xpath("//*[@id='Applybtn1']"));
+		return categories;
+	}
+	
+	public static WebElement apply1()		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.xpath("//*[@id='Applybtn']"));
 		return categories;
 	}
 	
@@ -3551,17 +3581,19 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
        Thread.sleep(500);
        Status().click();
        Thread.sleep(500);
-        List<String> li=new ArrayList<String>();
+       apply1().click();
+       Thread.sleep(8000);
+       List<String> li=new ArrayList<String>();
         
         //li.add(locationtext);
-        li.add(Statustext);
+        li.add("ClosedDelayed");
         Thread.sleep(3000);
         
 		List<String> filter=new ArrayList<String>();	
 		//filter.add("Location");
 		filter.add("Status");	
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		js.executeScript("window.scrollBy(0,150)");	
+		js.executeScript("window.scrollBy(0,500)");	
 		Thread.sleep(3000);
 		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
 		String s = CFOcountPOM.readTotalItemsD().getText();
@@ -3571,7 +3603,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 	
 		//List<WebElement> entitycol=getDriver().findElements(By.xpath("//*[@id='grid']/div[4]/table/tbody/tr/td[4]"));
 		//entitycol.get(0).click();
-		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[4]/table/tbody/tr/td[13]"));
+		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr/td[15]"));
 		
 		Thread.sleep(2000);
 
@@ -4141,8 +4173,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		Thread.sleep(3000);
 		
 		
-		ComplianceIDFilter(test,"Statutory",57377);
-		ComplianceIDFilter(test,"Statutory CheckList",53980);
+		ComplianceIDFilter(test,"Statutory",178079);
+		ComplianceIDFilter(test,"Statutory CheckList",145108);
 		
 		OverduePOM.clickDashboard().click();
 	}
@@ -4159,8 +4191,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		CFOcountPOM.clickAssignmentReport().click();			//Clicking on 'Assignment Report'
 		Thread.sleep(3000);
 		
-		ComplianceIDFilter(test,"EventBased Checklist",130794);
-		ComplianceIDFilter(test,"EventBased",66976);
+		ComplianceIDFilter(test,"EventBased Checklist",122090);
+		ComplianceIDFilter(test,"EventBased",122090);
 	
 		OverduePOM.clickDashboard().click();
 	}
@@ -4177,8 +4209,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		CFOcountPOM.clickAssignmentReport().click();			//Clicking on 'Assignment Report'
 		Thread.sleep(3000);
 		
-		ComplianceIDFilter(test,"EventBased Checklist",58445);
-		ComplianceIDFilter(test,"EventBased",9123);
+		ComplianceIDFilter(test,"EventBased Checklist",66978);
+		ComplianceIDFilter(test,"EventBased",66978);
 	
 		OverduePOM.clickDashboard().click();
 	}
@@ -4214,8 +4246,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		CFOcountPOM.clickAssignmentReport().click();			//Clicking on 'Assignment Report'
 		Thread.sleep(3000);
 		
-		ComplianceIDFilter(test,"EventBased Checklist",70184);
-		ComplianceIDFilter(test,"EventBased",9090);
+		ComplianceIDFilter(test,"EventBased Checklist",28954);
+		ComplianceIDFilter(test,"EventBased",28954);
 	
 		OverduePOM.clickDashboard().click();
 	}
@@ -4234,7 +4266,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		Thread.sleep(3000);
 		
 		
-		ComplianceIDFilter(test,"Internal",55722);
+		ComplianceIDFilter(test,"Internal",56635);
 		ComplianceIDFilter(test,"Internal CheckList",55038);
 		OverduePOM.clickDashboard().click();
 	}
@@ -4252,8 +4284,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		Thread.sleep(3000);
 		
 		
-		ComplianceIDFilter(test,"Internal",27472);
-		ComplianceIDFilter(test,"Internal CheckList",27474);
+		ComplianceIDFilter(test,"Internal",66978);
+		ComplianceIDFilter(test,"Internal CheckList",56638);
 		OverduePOM.clickDashboard().click();
 	}
 	
@@ -4288,8 +4320,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		Thread.sleep(3000);
 		
 		
-		ComplianceIDFilter(test,"Internal",55038);
-		ComplianceIDFilter(test,"Internal CheckList",15945);
+		ComplianceIDFilter(test,"Internal",62939);
+		ComplianceIDFilter(test,"Internal CheckList",56638);
 		OverduePOM.clickDashboard().click();
 	}
 
@@ -11154,6 +11186,178 @@ getDriver().switchTo().parentFrame();
 		    }
 
 
+		}
+		
+		
+		
+		
+		
+		public static void UpcomingFilterSta(ExtentTest test ) throws InterruptedException, IOException
+		{	
+			
+	       WebDriverWait wait = new WebDriverWait(getDriver(), 140);
+		    
+	       Thread.sleep(500);
+			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickUpcomingStatutory()));	//Waiting for 'Upcoming Statutory' count to be clickable.
+			
+			OverduePOM.clickUpcomingStatutory().click();
+			Thread.sleep(2000);
+			
+
+			Thread.sleep(1000);
+			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.checkTable()));	//Waiting for records table to get displayed.
+			
+			
+			//EntityLocationPer().click();
+			Thread.sleep(2000);
+			
+		//	Expand().click();
+			
+		//	List<WebElement>roc3 = getDriver().findElements(By.xpath("//*[@class='k-in']"));
+		//	ApprovalcountPOM.selectOptionFromDropDown_bs(roc3, "A Pvt Ltd");
+	      
+	       Thread.sleep(3000);
+	       
+	       RiskP().click();
+			Thread.sleep(2000);
+			
+			List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='k-in'])"));
+			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "High");
+			RiskP().click();
+			Thread.sleep(2000);
+			
+			
+			MitigationPlan().click();
+			List<WebElement>roc2 = getDriver().findElements(By.xpath("//*[@id='dropdownlistMplan_listbox']/li"));
+			ApprovalcountPOM.selectOptionFromDropDown_bs(roc2, "Pending Updation");
+	       Thread.sleep(3000);
+	      
+	       
+	       CFOcountPOM.Apply().click();
+			Thread.sleep(2000);
+	       Thread.sleep(3000);
+	        List<String> li=new ArrayList<String>();
+	        
+	     //   li.add("A Pvt Ltd");
+	        li.add("High");
+	        li.add("1");
+	        Thread.sleep(3000);
+	        
+			List<String> filter=new ArrayList<String>();	
+		//	filter.add("Entity/Sub-Entity/Location");
+			filter.add("Risk");	
+			filter.add("Mitigation Plan");	
+			MgmtSonyMethod.ClickTri().click();
+		       Thread.sleep(1000);
+		       MgmtSonyMethod.Columns().click();
+		       Thread.sleep(500);
+		       MgmtSonyMethod.RiskCheck().click();
+		       Thread.sleep(1000);
+		       MgmtSonyMethod.MitigationPlanA().click();
+		       Thread.sleep(2000);
+		       MgmtSonyMethod.ClickTri().click();
+		       Thread.sleep(3000);
+			      
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+			js.executeScript("window.scrollBy(0,500)");	
+			Thread.sleep(4000);
+			
+			
+			Thread.sleep(8000);
+			CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+			String s = CFOcountPOM.readTotalItemsD().getText();
+			Thread.sleep(3000);
+			if(!s.equalsIgnoreCase("No items to display")) {
+			Thread.sleep(5000);
+		
+		//	List<WebElement> Actcol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[1]"));
+		
+			List<WebElement> catcol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[17]"));
+			List<WebElement> Statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[15]"));
+			Thread.sleep(2000);
+
+			for(int i=0; i<li.size(); i++){
+				
+				List<String> text= new ArrayList<String>();
+				HashSet<String> pass=new LinkedHashSet<>();
+				HashSet<String> fail=new LinkedHashSet<>();
+				List<WebElement> raw=new ArrayList<WebElement>();
+
+				
+				 if(i==0)
+					{
+						raw.addAll(catcol);
+					}
+				else if(i==1)
+				{
+					raw.addAll(Statuscol);
+				}
+
+					
+					
+				for(int k=0;k<raw.size();k++)
+					{
+						text.add(raw.get(k).getText());
+					}
+
+					for(int l=0;l<text.size();l++)
+						{
+					if(text.get(l).equals(li.get(i)))
+						{
+							pass.add(text.get(l));	
+							System.out.println("pass : "+text.get(l)+" : "+li.get(i));
+
+						}
+					else
+					{
+						fail.add(text.get(l));		
+						System.out.println("fail : "+text.get(l)+" : "+li.get(i));
+						System.out.println(i);
+
+					}
+					 }
+			 
+		for(String Fal : fail)
+			 {
+					test.log(LogStatus.FAIL, filter.get(i)+" column shows incorrect value : "+Fal);
+			 }	
+			 for(String Pas : pass)
+			 {
+				 test.log(LogStatus.PASS,  filter.get(i)+" dropdown working properly.");
+					test.log(LogStatus.PASS, filter.get(i)+" displayed : "+Pas);	
+					System.out.println(filter.get(i)+" : "+Pas);
+		 }
+			 text.clear();
+			pass.clear();
+			fail.clear();
+			raw.clear();
+			
+			
+			}
+			}else {
+				test.log(LogStatus.PASS,"No records found");	
+			}
+			Thread.sleep(8000);
+			
+			Actions a = new Actions(getDriver());
+			
+			a.sendKeys(Keys.PAGE_UP).build().perform();
+			Thread.sleep(8000);
+			if(Clear().isEnabled())
+			{
+				test.log(LogStatus.PASS, "while click on Clear Button selected data should be cleared");
+			
+			Clear().click();
+			}
+		
+		else
+		{
+			test.log(LogStatus.FAIL, "while click on Clear Button selected data not cleared");
+			
+		}
+		
+					OverduePOM.clickDashboard().click();
+			
 		}
 
 

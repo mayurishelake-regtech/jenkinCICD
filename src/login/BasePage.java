@@ -31,7 +31,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.relevantcodes.extentreports.ExtentReports;
 	import com.relevantcodes.extentreports.ExtentTest;
 
@@ -57,7 +56,7 @@ import performer.OverduePOM;
 	    protected String uname;
 	    protected   String password;
 	    protected String url;
-	    
+	   // static SelfHealingDriver 	healingDriver;
 	    String filePath ="D:\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
 	    
 		public static WebDriver getDriver() {
@@ -163,23 +162,40 @@ import performer.OverduePOM;
 	  }
 	}
 	
-	private void openBrower(int no) throws IOException {
+	/*public class DriverManager {
+	    private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+  
+	}
+	
+	public static void setDriver(WebDriver driverInstance) {
+        driver.set(driverInstance);
+    }*/
+	
+	private void openBrower(int no) throws IOException, InterruptedException {
 
 		if (browser.contains("chrome")) {
 					System.setProperty("webdriver.chrome.driver", "D:\\Regtrack-Project\\Driver\\chromedriver.exe");
 					//WebDriverManager.chromedriver().setup();
 					ChromeOptions options = new ChromeOptions();
 					options.addArguments("--remote-allow-origins=*");
-					driver.set(new ChromeDriver(options));		
+					driver.set(new ChromeDriver(options));
+					//ChromeDriver originalDriver = new ChromeDriver(options);
+				//	Thread.sleep(3000);
+					// 	healingDriver = SelfHealingDriver.create(originalDriver);
+					// 	Thread.sleep(3000);
+			        // Set the driver to your driver manager (you should have setDriver() method)
+			     //   setDriver(healingDriver);
+					
 	}
 				
 				else {
 					System.out.println("please select valid browser");
 				}
 		
-			getDriver().manage().window().maximize();
-			getDriver().manage().deleteAllCookies();
-			getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		getDriver().manage().window().maximize();
+		getDriver().manage().deleteAllCookies();
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			//getDriver().get(url);
 			read_Login_url(no);
 			getDriver().get(url);
@@ -263,6 +279,21 @@ import performer.OverduePOM;
 		{
 			
 		}
+		Thread.sleep(8000);
+		try {
+			Thread.sleep(8000);
+			Thread.sleep(8000);
+			Thread.sleep(8000);
+	    	WebDriverWait wait = new WebDriverWait(getDriver() ,(50));
+	        WebElement popup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='tawk-chat-message-container']/span/div/div/div/div/p/div/span"))); // Replace with actual selector
+	        WebElement closeBtn = popup.findElement(By.xpath("//*[@id='tawk-chat-message-container']/span/div/div/div/div/p/div/span")); // Adjust as needed
+	     //   closeBtn.click();
+	}catch(Exception e) {
+	    	
+	    }
+		
+		CFOcountPOM.RefreshNow().click();
+		Thread.sleep(8000);
 		
 	}
 	
@@ -349,12 +380,27 @@ By locator = By.xpath("//*[@id='ContentPlaceHolder1_LinkButton3']");
         	
             System.out.println("Element not found");
         }
+        
+        
+        try {
+			Thread.sleep(8000);
+			Thread.sleep(8000);
+			Thread.sleep(8000);
+	    	//WebDriverWait wait = new WebDriverWait(getDriver() ,(50));
+	        WebElement popup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='tawk-chat-message-container']/span/div/div/div/div/p/div/span"))); // Replace with actual selector
+	        WebElement closeBtn = popup.findElement(By.xpath("//*[@id='tawk-chat-message-container']/span/div/div/div/div/p/div/span")); // Adjust as needed
+	     //   closeBtn.click();
+	}catch(Exception e) {
+	    	
+	    }
+		
+		CFOcountPOM.RefreshNow().click();
+		Thread.sleep(8000);
 		
 	}
-/*	1) RND ci/cd pipeline for Jenkins Pipeline
-	2)Modify the script of secretarial product on Dot Net live Testing Link.
-3)Modify the scripts of compliance product
-*/	
+	
+	
+	
 	
 
 	public void closeBrowser() {

@@ -78,6 +78,12 @@ public class CFOcountPOM extends BasePage
 		return categories;
 	}
 	
+	public static WebElement clickCategories1( )		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.xpath("//*[@id='example']/div[1]/div[2]/div/span[1]"));
+		return categories;
+	}
+	
 	public static WebElement readCompliances( )		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divCompliancesCount']"));
@@ -566,6 +572,12 @@ public class CFOcountPOM extends BasePage
 		return compliances;
 	} 
 	
+	public static WebElement clickClear1( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//*[@id='ClearfilterMain'])[2]"));
+		return compliances;
+	} 
+	
 	
 	
 	public static List<WebElement> readCompliancesList( )	//Method for reading list of compliances after clicking Categories. 
@@ -730,7 +742,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement ActDD( )				//Method to read and click on Penalty.
 	{
-		penalty = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[14]"));
+		penalty = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[66]"));
 		return penalty;
 	}
 
@@ -1125,7 +1137,7 @@ public class CFOcountPOM extends BasePage
 	{
 	
 		piechart=getDriver().findElement(By.xpath("//*[@id='grid']/div[3]/span[2]"));
-		return piechart;
+		return piechart;//*[@id="grid"]/div[3]/span[2]
 	}
 	
 	public static WebElement readTotalItems4( )				//Method to read total no of items.
@@ -1231,7 +1243,7 @@ public class CFOcountPOM extends BasePage
 	}
 	public static WebElement clickIndustrySpeHigh( )				//"Statutory" Method to search Labour compliance High risk value.
 	{
-		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[14]"));
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[10]"));
 		return bargraph;
 	}
 	
@@ -1293,7 +1305,7 @@ public class CFOcountPOM extends BasePage
 	}
 	public static WebElement clickIndustrySpeMedium( )			//"Statutory" Method to search Labour compliance Medium risk value.
 	{
-		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[22]"));
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[18]"));
 		return bargraph;
 	}
 	
@@ -1316,7 +1328,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement  clickIndustrySpeLow( )				//"Statutory" Method to search Labour compliance low risk value.
 	{
-		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[30]"));
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[26]"));
 		return bargraph;
 	}
 	
@@ -1394,6 +1406,13 @@ public class CFOcountPOM extends BasePage
 		bargraph = getDriver().findElement(By.xpath("//*[@id='divApiOverView']/div/div/div[1]/button"));
 		return bargraph;                         //*[@id="divreports"]/div/div/div[1]/button                
 	}  
+	
+	public static WebElement closeDocuments1( )				//Method to search cross of document to close it.
+	{
+		bargraph = getDriver().findElement(By.xpath("//*[@id='divreportsNewGraph']/div/div/div[1]/button"));
+		return bargraph;                         //*[@id="divreports"]/div/div/div[1]/button                
+	}  
+	
 	
 	public static WebElement closeDocumentA( )				//Method to search cross of document to close it.
 	{
@@ -2754,6 +2773,7 @@ public class CFOcountPOM extends BasePage
 		return grading;
 	}
 	
+	
 	public static WebElement clickDropdown( )				//Searching dropdown in Grading Report
 	{
 		grading = getDriver().findElement(By.xpath("//select[@name='ddlPageSize']"));
@@ -2859,92 +2879,92 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement closeExport( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("(//*[@class='k-button k-bare k-button-icon k-window-action'])[3]"));
+		reports = getDriver().findElement(By.xpath("(//*[@class='k-icon k-svg-icon k-svg-i-x k-button-icon'])[2]"));
 		return reports;
 	}
 	
 	public static WebElement ClickDownload( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='grid12']/div[2]/table/tbody/tr[1]/td[4]/a[1]"));
+		reports = getDriver().findElement(By.xpath("(//*[@class='k-icon k-svg-icon k-svg-i-download k-button-icon'])[1]"));
 		return reports;
 	}
 	
 	public static WebElement ClickDownloadLocation( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridLocation']/div[2]/table/tbody/tr[1]/td[4]/a[1]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(1) > span:nth-child(1) > svg:nth-child(1)"));
 		return reports;
 	}
 	
 	public static WebElement ClickDownloadUser( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridUser']/div[2]/table/tbody/tr[1]/td[4]/a[1]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(1) > span:nth-child(1) > svg:nth-child(1) > path:nth-child(1)"));
 		return reports;
 	}
 	
 	public static WebElement ClickDownloadCategory( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridCategory']/div[2]/table/tbody/tr[1]/td[4]/a[1]"));
+		reports = getDriver().findElement(By.cssSelector("button[aria-describedby='gridCategory_tb_active'] span[class='k-icon k-svg-icon k-svg-i-download k-button-icon'] svg"));
 		return reports;
 	}
 	
 	public static WebElement ClickDownloadRisk( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridRisk']/div[2]/table/tbody/tr[1]/td[4]/a[1]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(1) > span:nth-child(1) > svg:nth-child(1) > path:nth-child(1)"));
 		return reports;
 	}
 	
 	public static WebElement ClickDownloadDetaild( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridDetaild']/div[2]/table/tbody/tr[1]/td[4]/a[1]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(1) > span:nth-child(1) > svg:nth-child(1)"));
 		return reports;
 	}
 	
 	public static WebElement ClickDownloadCriticalRisk( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridCriticalRisk']/div[2]/table/tbody/tr[1]/td[4]/a[1]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(1) > span:nth-child(1) > svg:nth-child(1) > path:nth-child(1)"));
 		return reports;
 	}
 	
 	
 	public static WebElement ClickPreview( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='grid12']/div[2]/table/tbody/tr[1]/td[4]/a[2]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(2)"));
 		return reports;
 	}
 	
 	public static WebElement ClickPreviewLocation( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridLocation']/div[2]/table/tbody/tr[1]/td[4]/a[2]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(2) > span:nth-child(1) > svg:nth-child(1)"));
 		return reports;
 	}
 	
 	public static WebElement ClickPreviewUser( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridUser']/div[2]/table/tbody/tr[1]/td[4]/a[2]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(2) > span:nth-child(1) > svg:nth-child(1)"));
 		return reports;
 	}
 	
 	public static WebElement ClickPreviewCategory( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridCategory']/div[2]/table/tbody/tr[1]/td[4]/a[2]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(2) > span:nth-child(1) > svg:nth-child(1) > path:nth-child(1)"));
 		return reports;
 	}
 	
 	public static WebElement ClickPreviewRisk( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridRisk']/div[2]/table/tbody/tr[1]/td[4]/a[2]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(2)"));
 		return reports;
 	}
 	
 	public static WebElement ClickPreviewDetailed( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridDetaild']/div[2]/table/tbody/tr[1]/td[4]/a[2]"));
+		reports = getDriver().findElement(By.cssSelector("body > form:nth-child(1) > div:nth-child(8) > section:nth-child(2) > section:nth-child(2) > section:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > button:nth-child(2) > span:nth-child(1) > svg:nth-child(1)"));
 		return reports;
 	}
 	
 	public static WebElement ClickPreviewCriticalR( )					//Searching 'My Reports' element
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='gridCriticalRisk']/div[2]/table/tbody/tr[1]/td[4]/a[2]"));
+		reports = getDriver().findElement(By.cssSelector("button[aria-describedby='gridCriticalRisk_tb_active'] span[class='k-icon k-svg-icon k-svg-i-eye k-button-icon'] svg"));
 		return reports;
 	}
 	
@@ -5295,7 +5315,7 @@ public class CFOcountPOM extends BasePage
 			Thread.sleep(3000);
 			
   By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
-
+ 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
 			// retrieving "foo-button" HTML element
@@ -8192,7 +8212,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
+			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -8327,6 +8347,9 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 		Thread.sleep(3000);
 		clickStandardReport().click();
 		Thread.sleep(7000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,200)");					//Scrolling down window by 2600 px.
+		Thread.sleep(1000);
 	//	clickOverallImg().click();
 		By locator = By.xpath("//*[@id='ContentPlaceHolder1_header1']");
 		
@@ -8342,7 +8365,9 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowSummarypopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
 
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowSummarypopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
+		Thread.sleep(8000);
+		Thread.sleep(8000);
 		if(ViewTextIOR().isDisplayed())							//If not items found
 		{
 			test.log(LogStatus.PASS, " Overall - View");
@@ -8393,6 +8418,9 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 		Thread.sleep(3000);
 		clickStandardReport().click();
 		Thread.sleep(7000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,200)");					//Scrolling down window by 2600 px.
+		Thread.sleep(1000);
 	//	clickOverallImg().click();
 		By locator = By.xpath("//*[@id='ContentPlaceHolder1_ImageButton1']");
 		
@@ -8408,7 +8436,9 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowlocationpopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
 
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowlocationpopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
+		Thread.sleep(8000);
+		Thread.sleep(8000);
 		if(ViewText().isDisplayed())							//If not items found
 		{
 			test.log(LogStatus.PASS, " Location - View");
@@ -8460,7 +8490,9 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 		clickReports().click();					//Clicking on 'My Reports'
 		Thread.sleep(3000);
 		clickStandardReport().click();
-		Thread.sleep(7000);
+		Thread.sleep(7000);JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,200)");					//Scrolling down window by 2600 px.
+		Thread.sleep(1000);
 	//	clickOverallImg().click();
 		By locator = By.xpath("//*[@id='ContentPlaceHolder1_ImageButton2']");
 		
@@ -8475,8 +8507,9 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowuserpopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowuserpopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
-
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowuserpopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
+		Thread.sleep(8000);
+		Thread.sleep(8000);
 		if(ViewTextUser().isDisplayed())							//If not items found
 		{
 			test.log(LogStatus.PASS, " Location - View");
@@ -8814,8 +8847,9 @@ By locator1 = By.cssSelector("#ContentPlaceHolder1_myFunctionShowInternal");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowInternalSummarypopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowInternalSummarypopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
-
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowInternalSummarypopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
+		Thread.sleep(8000);
+		Thread.sleep(8000);
 		if(ViewTextIORIn().isDisplayed())							//If not items found
 		{
 			test.log(LogStatus.PASS, " Overall - View");
@@ -8891,8 +8925,10 @@ By locator1 = By.cssSelector("#ContentPlaceHolder1_myFunctionShowInternal");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/*[@id='windowInternallocationpopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[62]/div")));	//Wait until records table get visible.
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/*[@id='windowInternallocationpopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[62]/div")));	//Wait until records table get visible.
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/*[@id='windowInternallocationpopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[62]/div")));	//Wait until records table get visible.
 
-		
+		Thread.sleep(8000);
+		Thread.sleep(8000);
 		if(ViewTextLoIn().isDisplayed())							//If not items found
 		{
 			test.log(LogStatus.PASS, " Location - View");
@@ -8968,8 +9004,9 @@ By locator1 = By.cssSelector("#ContentPlaceHolder1_myFunctionShowInternal");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ViewTextUserIn']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ViewTextUserIn']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
-
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ViewTextUserIn']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]")));	//Wait until records table get visible.
+		Thread.sleep(8000);
+		Thread.sleep(8000);
 		if(ViewTextUserIn().isDisplayed())							//If not items found
 		{
 			test.log(LogStatus.PASS, " User - View");
@@ -9049,8 +9086,10 @@ By locator1 = By.cssSelector("#ContentPlaceHolder1_myFunctionShowInternal");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowInternalCategorypopup']/div/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div")));	//Wait until records table get visible.
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowInternalCategorypopup']/div/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div")));	//Wait until records table get visible.
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowInternalCategorypopup']/div/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div")));	//Wait until records table get visible.
 
-		
+		Thread.sleep(8000);
+		Thread.sleep(8000);
 		if(ViewTextCategoryIn().isDisplayed())							//If not items found
 		{
 			test.log(LogStatus.PASS, " Category - View");
@@ -9130,7 +9169,10 @@ By locator1 = By.cssSelector("#ContentPlaceHolder1_myFunctionShowInternal");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowInternalriskpopup']/div/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div")));	//Wait until records table get visible.
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowInternalriskpopup']/div/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div")));	//Wait until records table get visible.
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='windowInternalriskpopup']/div/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div")));	//Wait until records table get visible.
 
+		Thread.sleep(8000);
+		Thread.sleep(8000);
 		
 		if(ViewTextRiskIn().isDisplayed())							//If not items found
 		{
@@ -10053,6 +10095,11 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 	    
 		Thread.sleep(1000);
+		Thread.sleep(8000);
+		
+		
+		
+		Thread.sleep(4000);
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
 		CFOcountPOM.clickComplianceDocuments().click();			//Clicking on 'Compliance Documents ' 
@@ -10066,7 +10113,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 		Thread.sleep(8000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
 		Thread.sleep(2000);
-		 By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[24]/a");
+		 By locator = By.xpath("//*[@id='grid1']/div[2]/table/tbody/tr[1]/td[21]/a");
 		
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -10674,7 +10721,7 @@ else
 		Thread.sleep(8000);
 	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[22]/a")));	//Wait till records table gets visible
 		Thread.sleep(8000);
-		 By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[24]/a");
+		 By locator = By.xpath("//*[@id='grid1']/div[2]/table/tbody/tr[1]/td[21]/a");
 			Thread.sleep(8000);
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(8000);
@@ -11023,9 +11070,9 @@ public static void FilterWiseCompliancesCountMatch(  ExtentTest test)throws Inte
 	
 //	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[4]/a")));
 	Thread.sleep(3000);
-	ClickAct().click();
+	clickCategories1().click();
 	Thread.sleep(1000);
-	 WebElement TextCat=getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[6]")); 
+	 WebElement TextCat=getDriver().findElement(By.xpath("(//span[normalize-space()='Internal Audit'])[1]")); 
 	 String cattext =TextCat.getText();
 	 Thread.sleep(1000);
 	 TextCat.click();
@@ -11038,7 +11085,7 @@ public static void FilterWiseCompliancesCountMatch(  ExtentTest test)throws Inte
 	if(!s.equalsIgnoreCase("No items to display")) {
 	
 		Thread.sleep(1000);
-	 List<WebElement> Risks=getDriver().findElements(By.xpath("//*[@id='grid']/div[2]/table/tbody/tr[1]/td[2]")); //column list
+	 List<WebElement> Risks=getDriver().findElements(By.xpath("//*[@id='grid']/div[2]/table/tbody/tr/td[5]")); //column list
 	 
 	 List<String> text=new ArrayList<String>();
 	 
@@ -12741,14 +12788,20 @@ public static void DeviationApproverColPSAu(ExtentTest test)throws InterruptedEx
 		Thread.sleep(3000);
 	
 	
-	
-     MgmtSonyMethod.ClickTri().click();
+By locator = By.xpath("(//*[@class='k-icon k-i-more-vertical'])[14]");
+		
+		WebElement ViewButton =getDriver() .findElement(locator);	
+		Thread.sleep(3000);
+		JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
+    // MgmtSonyMethod.ClickTri().click();
      Thread.sleep(1000);
      MgmtSonyMethod.Columns().click();
      Thread.sleep(500);
 	OverduePOM.DeviationAppliedCol().click();
 	Thread.sleep(2000);
-	 MgmtSonyMethod.ClickTri().click();
+	// MgmtSonyMethod.ClickTri().click();
      Thread.sleep(1000);
 	
 
@@ -13842,7 +13895,7 @@ public static void DeviationApproverColDSAu(ExtentTest test)throws InterruptedEx
 	
 	js.executeScript("window.scrollBy(0,1700)");	
 	Thread.sleep(3000);
-	CFOcountPOM.clickAdminOverdueM().click();
+	CFOcountPOM.clickComplianceIsecOverdueDemo().click();
 	
 	wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 	Thread.sleep(8000);
@@ -15933,7 +15986,7 @@ public static void DetailedreportVsdashboardclosedtimelycount(ExtentTest test)th
   	Thread.sleep(2000);
      	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
   	Thread.sleep(2000);
-  	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+  	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
   	Thread.sleep(2000);
   	CFOcountPOM.Apply().click();
   	Thread.sleep(8000);
@@ -16195,7 +16248,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -16351,6 +16404,12 @@ NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spa
 int NotCompletedIn = Integer.parseInt(NotCompleted);
 
 	Thread.sleep(500);
+	
+	Thread.sleep(8000);
+	
+	
+	
+	Thread.sleep(5000);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
 	clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
@@ -16393,7 +16452,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -16488,7 +16547,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -16568,7 +16627,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -16709,7 +16768,11 @@ Thread.sleep(3000);
 String NotCompleted = CFOcountPOM.clickClosedTimely().getText();		//Reading the Closed Timely value of Human Resource
 NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 int NotCompletedIn = Integer.parseInt(NotCompleted);
+Thread.sleep(8000);
 
+
+
+Thread.sleep(5000);
 	Thread.sleep(500);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
@@ -16741,7 +16804,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -16826,7 +16889,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -16908,7 +16971,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -17050,6 +17113,11 @@ NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spa
 int NotCompletedIn = Integer.parseInt(NotCompleted);
 
 	Thread.sleep(500);
+Thread.sleep(8000);
+	
+	
+	
+	Thread.sleep(5000);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
 	clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
@@ -17080,7 +17148,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -17163,7 +17231,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -17244,7 +17312,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -17385,7 +17453,11 @@ Thread.sleep(5000);
 String NotCompleted = CFOcountPOM.clickNotApplicable().getText();		//Reading the Closed Timely value of Human Resource
 NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 int NotCompletedIn = Integer.parseInt(NotCompleted);
+Thread.sleep(8000);
 
+
+
+Thread.sleep(5000);
 	Thread.sleep(500);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
@@ -17417,7 +17489,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -17500,7 +17572,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -17580,7 +17652,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -17721,7 +17793,11 @@ Thread.sleep(5000);
 String NotCompleted = CFOcountPOM.clickOverdue().getText();		//Reading the Closed Timely value of Human Resource
 NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 int NotCompletedIn = Integer.parseInt(NotCompleted);
+Thread.sleep(8000);
 
+
+
+Thread.sleep(5000);
 	Thread.sleep(500);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
@@ -17754,7 +17830,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -17838,7 +17914,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -17918,7 +17994,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -18059,7 +18135,11 @@ Thread.sleep(5000);
 String NotCompleted = CFOcountPOM.clickdueToday().getText();		//Reading the Closed Timely value of Human Resource
 NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 int NotCompletedIn = Integer.parseInt(NotCompleted);
+Thread.sleep(8000);
 
+
+
+Thread.sleep(5000);
 	Thread.sleep(500);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
@@ -18092,7 +18172,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -18177,7 +18257,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -18258,7 +18338,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -18399,7 +18479,11 @@ Thread.sleep(5000);
 String NotCompleted = CFOcountPOM.clickpendingForReviewIN().getText();		//Reading the Closed Timely value of Human Resource
 NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 int NotCompletedIn = Integer.parseInt(NotCompleted);
+Thread.sleep(8000);
 
+
+
+Thread.sleep(5000);
 	Thread.sleep(500);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
@@ -18432,7 +18516,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -18517,7 +18601,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -18598,7 +18682,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -18738,7 +18822,11 @@ Thread.sleep(5000);
 String NotCompleted = CFOcountPOM.clickInProgressDept().getText();		//Reading the Closed Timely value of Human Resource
 NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 int NotCompletedIn = Integer.parseInt(NotCompleted);
+Thread.sleep(8000);
 
+
+
+Thread.sleep(5000);
 	Thread.sleep(500);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
@@ -18855,7 +18943,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -18936,7 +19024,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -19077,7 +19165,11 @@ Thread.sleep(5000);
 String NotCompleted = CFOcountPOM.clickRejected().getText();		//Reading the Closed Timely value of Human Resource
 NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 int NotCompletedIn = Integer.parseInt(NotCompleted);
+Thread.sleep(8000);
 
+
+
+Thread.sleep(5000);
 	Thread.sleep(500);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
@@ -19110,7 +19202,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -19194,7 +19286,7 @@ int NotCompletedIn = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -19712,6 +19804,11 @@ public static void DetailedreportVsCommercialCriticalcount(ExtentTest test)throw
 	IndustrySpeCritical = IndustrySpeCritical.replaceAll(" ","");									//Removing all white spaces from string. 
 	int NotCompletedIn = Integer.parseInt(IndustrySpeCritical);
 	Thread.sleep(500);
+Thread.sleep(8000);
+	
+	
+	
+	Thread.sleep(5000);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
 	clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
@@ -19736,7 +19833,7 @@ public static void DetailedreportVsCommercialCriticalcount(ExtentTest test)throw
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	
     CFOcountPOM.Risk().click();
@@ -19851,7 +19948,7 @@ public static void DetailedreportVsCommercialCriticalcountEx(ExtentTest test)thr
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	
     CFOcountPOM.Risk().click();
@@ -19963,7 +20060,7 @@ public static void DetailedreportVsCommercialCriticalcountIn(ExtentTest test)thr
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	
     CFOcountPOM.Risk().click();
@@ -20184,7 +20281,7 @@ public static void DetailedreportVsCommercialHighcountIn(ExtentTest test)throws 
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	
     CFOcountPOM.Risk().click();
@@ -20403,7 +20500,7 @@ public static void DetailedreportVsCommercialMediumcountIn(ExtentTest test)throw
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	
     CFOcountPOM.Risk().click();
@@ -20622,7 +20719,7 @@ public static void DetailedreportVsCommercialLowcountIn(ExtentTest test)throws I
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	
     CFOcountPOM.Risk().click();
@@ -20824,6 +20921,11 @@ public static void DetailedreportVsCommercialHighcount(ExtentTest test)throws In
 	IndustrySpeCritical = IndustrySpeCritical.replaceAll(" ","");									//Removing all white spaces from string. 
 	int NotCompletedIn = Integer.parseInt(IndustrySpeCritical);
 	Thread.sleep(500);
+Thread.sleep(8000);
+	
+	
+	
+	Thread.sleep(5000);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
 	clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
@@ -21060,6 +21162,11 @@ public static void DetailedreportVsCommercialMediumcount(ExtentTest test)throws 
 	IndustrySpeCritical = IndustrySpeCritical.replaceAll(" ","");									//Removing all white spaces from string. 
 	int NotCompletedIn = Integer.parseInt(IndustrySpeCritical);
 	Thread.sleep(500);
+Thread.sleep(8000);
+	
+	
+	
+	Thread.sleep(5000);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
 	clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
@@ -21084,7 +21191,7 @@ public static void DetailedreportVsCommercialMediumcount(ExtentTest test)throws 
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	
     CFOcountPOM.Risk().click();
@@ -21199,7 +21306,7 @@ public static void DetailedreportVsCommercialMediumcountEx(ExtentTest test)throw
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	
     CFOcountPOM.Risk().click();
@@ -21294,6 +21401,11 @@ public static void DetailedreportVsCommercialLowcount(ExtentTest test)throws Int
 	IndustrySpeCritical = IndustrySpeCritical.replaceAll(" ","");									//Removing all white spaces from string. 
 	int NotCompletedIn = Integer.parseInt(IndustrySpeCritical);
 	Thread.sleep(500);
+Thread.sleep(8000);
+	
+	
+	
+	Thread.sleep(5000);
 	clickReports().click();					//Clicking on 'My Reports'
 	Thread.sleep(3000);
 	clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
@@ -21318,7 +21430,7 @@ public static void DetailedreportVsCommercialLowcount(ExtentTest test)throws Int
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	
     CFOcountPOM.Risk().click();
@@ -21433,7 +21545,7 @@ public static void DetailedreportVsCommercialLowcountEx(ExtentTest test)throws I
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	
     CFOcountPOM.Risk().click();
@@ -21678,7 +21790,6 @@ if(NotCompletedValue==overduetotal)
 
 
 }
-
 
 
 

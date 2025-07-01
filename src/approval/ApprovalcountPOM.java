@@ -130,7 +130,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement Status()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("//*[@id='example']/div[2]/div[3]/div/span[1]"));
+		compliances = getDriver().findElement(By.xpath("//*[@id='example']/div[2]/div[2]/div/span[1]"));
 		return compliances;
 	}
 	
@@ -306,7 +306,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement Act2()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[6]"));
+		compliances = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[3]"));
 		return compliances;
 	}
 	
@@ -318,7 +318,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement ActP()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[3]"));
+		compliances = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[9]"));
 		return compliances;
 	}
 	
@@ -455,11 +455,23 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement StatusF ()		//Method for reading Compliances value on Dashboard
 	{
+		compliances = getDriver().findElement(By.xpath("//*[@id='example']/div[2]/div[2]/div/span[1]"));
+		return compliances;
+	}
+	
+	public static WebElement StatusFP ()		//Method for reading Compliances value on Dashboard
+	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='example']/div[2]/div[3]/div/span[1]"));
 		return compliances;
 	}
 	
 	public static WebElement StatusAll ()		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-checkbox-label'])[5]"));
+		return compliances;
+	}
+	
+	public static WebElement StatusAll1 ()		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("(//*[@class='k-checkbox-label'])[3]"));
 		return compliances;
@@ -905,7 +917,7 @@ getDriver() .switchTo().frame(farme);
 	 
 	 ApprovalcountPOM.Status().click();
 		Thread.sleep(1000);
-		 WebElement TextCat=getDriver().findElement(By.xpath("(//*[@class='k-in'])[20]")); 
+		 WebElement TextCat=getDriver().findElement(By.xpath("(//*[@class='k-in'])[31]")); 
 		 String cattext =TextCat.getText();
 		 Thread.sleep(1000);
 		TextCat.click();
@@ -917,7 +929,7 @@ getDriver() .switchTo().frame(farme);
 		Thread.sleep(6000);
 	
 		Thread.sleep(1000);
-		 List<WebElement> Risks=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[10]")); //column list
+		 List<WebElement> Risks=getDriver().findElements(By.xpath("//*[@id='grid']/div[2]/table/tbody/tr/td[10]")); //column list
 		 
 		 List<String> text=new ArrayList<String>();
 		 
@@ -3157,15 +3169,24 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 		filter.add("Status");	
 		filter.add("Risk");
 		filter.add("Act");
-		
-		MgmtSonyMethod.ClickTri().click();
+		 By locator = By.xpath("(//*[@class='k-icon k-i-more-vertical'])[2]");
+
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+			Thread.sleep(4000);
+			
+			WebElement ViewButton = getDriver().findElement(locator);	
+			Thread.sleep(3000);
+		JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+		//MgmtSonyMethod.ClickTri().click();
 	       Thread.sleep(1000);
 	       MgmtSonyMethod .Columns().click();
 	       Thread.sleep(1000);
 	       MgmtSonyMethod.RiskCheck().click();
 	       Thread.sleep(1000);
 	      
-	       MgmtSonyMethod.ClickTri().click();
+	      // MgmtSonyMethod.ClickTri().click();
 	       Thread.sleep(1000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,300)");	
@@ -3543,17 +3564,20 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 
 				}
 				 }
+				
+				for(String Pas : pass)
+				 {
+					 test.log(LogStatus.PASS,  filter.get(i)+" dropdown working properly.");
+						test.log(LogStatus.PASS, filter.get(i)+" displayed : "+Pas);	
+						System.out.println(filter.get(i)+" : "+Pas);
+			 }
 		 
 	for(String Fal : fail)
 		 {
 				test.log(LogStatus.FAIL, filter.get(i)+" column shows incorrect value : "+Fal);
+				test.log(LogStatus.PASS, filter.get(i)+" displayed : "+Fal);
 		 }	
-		 for(String Pas : pass)
-		 {
-			 test.log(LogStatus.PASS,  filter.get(i)+" dropdown working properly.");
-				test.log(LogStatus.PASS, filter.get(i)+" displayed : "+Pas);	
-				System.out.println(filter.get(i)+" : "+Pas);
-	 }
+		 
 		 text.clear();
 		pass.clear();
 		fail.clear();
@@ -6246,20 +6270,20 @@ else {
 		Thread.sleep(8000);
 	
 	
-		RiskF().click();
+	//	RiskF().click();
 		Thread.sleep(500);
 	
-		String Risktext =RiskHighM().getText();
+	//	String Risktext =RiskHighM().getText();
 	    
 		Thread.sleep(3000);
-       	SelectActF().click();
+     /*  	SelectActF().click();
        	Thread.sleep(4000);
    		List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='k-in'])"));
    		ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Demo Act");
 		
    		SelectActF().click();
    		Thread.sleep(4000);
-    
+    */
        Thread.sleep(4000);
        
        MitigationPlan().click();
@@ -6284,19 +6308,29 @@ else {
        
         List<String> li=new ArrayList<String>();
         
-        li.add(Risktext);
-        li.add("Demo Act");
+        li.add("High");
+       // li.add("Demo Act");
         li.add("1");
         Thread.sleep(3000);
         li.add("Overdue");
         
 		List<String> filter=new ArrayList<String>();	
 		filter.add("Risk");
-		filter.add("Act");
+		//filter.add("Act");
 		filter.add("Mitigation Plan");	
-		filter.add("Status");	
-		
-		MgmtSonyMethod.ClickTriA().click();
+		filter.add("Status");
+		 Thread.sleep(5000);
+	By	locator = By.xpath("(//*[@class='k-icon k-i-more-vertical'])[14]");
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		WebElement ViewButton = getDriver().findElement(locator);	
+		Thread.sleep(3000);
+	
+	JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+	jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
+		//MgmtSonyMethod.ClickTriStatus().click();
 	       Thread.sleep(1000);
 	       MgmtSonyMethod.Columns().click();
 	       Thread.sleep(500);
@@ -6315,11 +6349,11 @@ else {
 		if(!s.equalsIgnoreCase("No items to display")) {
 		Thread.sleep(5000);
 	
-		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[14]"));
-		List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
-		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[18]"));
+		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[10]"));
+		//List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
+		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[17]"));
 		
-		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[6]"));
+		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[5]"));
 		
 		Thread.sleep(2000);
 
@@ -6334,15 +6368,12 @@ else {
 				{
 					raw.addAll(Risk);
 				}
+			
 			else if(i==1)
-				{
-					raw.addAll(Act);
-				}
-			else if(i==2)
 			{
 				raw.addAll(MitigationPlan);
 			}
-			else if(i==3)
+			else if(i==2)
 			{
 				raw.addAll(statuscol);
 			}
@@ -6621,20 +6652,20 @@ else {
 		Thread.sleep(8000);
 	
 	
-		RiskF().click();
+	//	RiskF().click();
 		Thread.sleep(500);
 	
-		String Risktext =RiskHighM().getText();
+	//	String Risktext =RiskHighM().getText();
     
        Thread.sleep(3000);
-       SelectActF().click();
+    /*   SelectActF().click();
        Thread.sleep(500);
        List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='k-in'])"));
        ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Demo Act");
    	
 		SelectActF().click();
        Thread.sleep(3000);
-       
+       */
        MitigationPlan().click();
        Thread.sleep(500);
      
@@ -6652,24 +6683,36 @@ else {
        List<WebElement>roc1 = getDriver().findElements(By.xpath("(//*[@class='k-in'])"));
       	ApprovalcountPOM.selectOptionFromDropDown_bs(roc1, "Overdue");
        Thread.sleep(3000);
+      
+     	ApprovalcountPOM.selectOptionFromDropDown_bs(roc1, "Overdue");
+     	 Thread.sleep(3000);
        StatusF().click();
        Thread.sleep(2000);
        
         List<String> li=new ArrayList<String>();
         
-        li.add(Risktext);
-        li.add("Demo Act");
+        li.add("High");
+     //   li.add("Demo Act");
         li.add("1");
         Thread.sleep(3000);
         li.add("Overdue");
         
 		List<String> filter=new ArrayList<String>();	
 		filter.add("Risk");
-		filter.add("Act");
+	//	filter.add("Act");
 		filter.add("Mitigation Plan");	
 		filter.add("Status");	
-		
-		MgmtSonyMethod.ClickTriA().click();
+		By	locator = By.xpath("(//*[@class='k-icon k-i-more-vertical'])[14]");
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		WebElement ViewButton = getDriver().findElement(locator);	
+		Thread.sleep(3000);
+	
+	JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+	jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
+		//MgmtSonyMethod.ClickTriA().click();
 	       Thread.sleep(1000);
 	       MgmtSonyMethod.Columns().click();
 	       Thread.sleep(500);
@@ -6688,11 +6731,11 @@ else {
 		if(!s.equalsIgnoreCase("No items to display")) {
 		Thread.sleep(5000);
 	
-		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[14]"));
-		List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
-		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[18]"));
+		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[10]"));
+	//	List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
+		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[17]"));
 		
-		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[6]"));
+		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[5]"));
 		
 		Thread.sleep(2000);
 
@@ -6707,15 +6750,12 @@ else {
 				{
 					raw.addAll(Risk);
 				}
+			
 			else if(i==1)
-				{
-					raw.addAll(Act);
-				}
-			else if(i==2)
 			{
 				raw.addAll(MitigationPlan);
 			}
-			else if(i==3)
+			else if(i==2)
 			{
 				raw.addAll(statuscol);
 			}
@@ -7004,7 +7044,7 @@ else {
 
 		}
 	
-		RiskF().click();
+	/*	RiskF().click();
 		Thread.sleep(500);
 	
       String Risktext =RiskHighM().getText();
@@ -7017,7 +7057,7 @@ else {
        SelectActNA().click();
        Thread.sleep(3000);
        SelectActF().click();
-       Thread.sleep(500);
+       Thread.sleep(500);*/
        
        MitigationPlan().click();
        Thread.sleep(500);
@@ -7042,25 +7082,43 @@ else {
        
         List<String> li=new ArrayList<String>();
         
-        li.add(Risktext);
-        li.add(Acttext);
+        li.add("High");
+      //  li.add(Acttext);
         li.add("1");
         Thread.sleep(3000);
         li.add(Statustext);
         
 		List<String> filter=new ArrayList<String>();	
 		filter.add("Risk");
-		filter.add("Act");
+		//filter.add("Act");
 		filter.add("Mitigation Plan");	
 		filter.add("Status");	
 		
-		MgmtSonyMethod.ClickTriA().click();
-	       Thread.sleep(1000);
+		By	locator = By.xpath("(//*[@class='k-icon k-i-more-vertical'])[14]");
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		WebElement ViewButton = getDriver().findElement(locator);	
+		Thread.sleep(3000);
+	
+	JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+	jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
 	       MgmtSonyMethod.Columns().click();
 	       Thread.sleep(500);
 	       MgmtSonyMethod.RiskCheck().click();
-	       Thread.sleep(1000);
-	       MgmtSonyMethod.MitigationPlanA().click();
+	       Thread.sleep(2000);
+	      	locator = By.xpath("(//*[@data-field='MitigationPlan'])[2]");
+
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+			Thread.sleep(4000);
+			 ViewButton = getDriver().findElement(locator);	
+			Thread.sleep(3000);
+		
+		//JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+	    //   MgmtSonyMethod.MitigationPlanA().click();
 	       Thread.sleep(2000);
 	      // MgmtSonyMethod.ClickTriA().click();
 	       Thread.sleep(3000);
@@ -7074,7 +7132,7 @@ else {
 		Thread.sleep(5000);
 	
 		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[14]"));
-		List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
+	//	List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
 		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[18]"));
 		
 		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[6]"));
@@ -7092,15 +7150,12 @@ else {
 				{
 					raw.addAll(Risk);
 				}
+			
 			else if(i==1)
-				{
-					raw.addAll(Act);
-				}
-			else if(i==2)
 			{
 				raw.addAll(MitigationPlan);
 			}
-			else if(i==3)
+			else if(i==2)
 			{
 				raw.addAll(statuscol);
 			}
@@ -7388,19 +7443,19 @@ else {
 		Thread.sleep(8000);
 	
 	
-		RiskF().click();
+	//	RiskF().click();
 		Thread.sleep(500);
 	
-      String Risktext =RiskHighM().getText();
+   //   String Risktext =RiskHighM().getText();
     
        Thread.sleep(3000);
-       SelectActF().click();
+     /*  SelectActF().click();
        Thread.sleep(500);
        List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='k-in'])"));
        ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Demo Act");
        Thread.sleep(3000);
        SelectActF().click();
-       Thread.sleep(500);
+       Thread.sleep(500);*/
        MitigationPlan().click();
        Thread.sleep(500);
      
@@ -7418,25 +7473,35 @@ else {
        List<WebElement>roc1 = getDriver().findElements(By.xpath("(//*[@class='k-in'])"));
      	ApprovalcountPOM.selectOptionFromDropDown_bs(roc1, "Overdue");
        Thread.sleep(3000);
+       ApprovalcountPOM.selectOptionFromDropDown_bs(roc1, "Overdue");
+       Thread.sleep(3000);
        StatusF().click();
        Thread.sleep(2000);
        
         List<String> li=new ArrayList<String>();
         
-        li.add(Risktext);
-        li.add("Demo Act");
+        li.add("High");
+      //  li.add("Demo Act");
         li.add("1");
         Thread.sleep(3000);
         li.add("Overdue");
         
 		List<String> filter=new ArrayList<String>();	
 		filter.add("Risk");
-		filter.add("Act");
+	//	filter.add("Act");
 		filter.add("Mitigation Plan");	
 		filter.add("Status");	
 		
-		MgmtSonyMethod.ClickTriA().click();
-	       Thread.sleep(1000);
+		By	locator = By.xpath("(//*[@class='k-icon k-i-more-vertical'])[14]");
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		WebElement ViewButton = getDriver().findElement(locator);	
+		Thread.sleep(3000);
+	
+	JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+	jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
 	       MgmtSonyMethod.Columns().click();
 	       Thread.sleep(500);
 	       MgmtSonyMethod.RiskCheck().click();
@@ -7454,11 +7519,11 @@ else {
 		if(!s.equalsIgnoreCase("No items to display")) {
 		Thread.sleep(5000);
 	
-		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[14]"));
-		List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
-		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[18]"));
+		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[10]"));
+	//	List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
+		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[17]"));
 		
-		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[6]"));
+		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[5]"));
 		
 		Thread.sleep(2000);
 
@@ -7473,15 +7538,12 @@ else {
 				{
 					raw.addAll(Risk);
 				}
+			
 			else if(i==1)
-				{
-					raw.addAll(Act);
-				}
-			else if(i==2)
 			{
 				raw.addAll(MitigationPlan);
 			}
-			else if(i==3)
+			else if(i==2)
 			{
 				raw.addAll(statuscol);
 			}
@@ -7924,15 +7986,15 @@ else {
 		js.executeScript("window.scrollBy(0,2000)");			
 	
 		Thread.sleep(3000);
-		String NotCompleted = CFOcountPOM.clickHROverdueM().getText();	
+		String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo1().getText();	
 		
-		CFOcountPOM.clickHROverdueM().click();			
+		CFOcountPOM.clickComplianceIsecOverdueDemo1().click();			
 		Thread.sleep(5000);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 	
 	
-		RiskF().click();
+	/*	RiskF().click();
 		Thread.sleep(500);
 		
 		Thread.sleep(500);
@@ -7949,7 +8011,7 @@ else {
    	ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Demo Act");
        Thread.sleep(3000);
        SelectActF().click();
-       Thread.sleep(5000);
+       Thread.sleep(5000);*/
        MitigationPlan().click();
        Thread.sleep(500);
      
@@ -7966,6 +8028,7 @@ else {
        Thread.sleep(3000);
        List<WebElement>roc1 = getDriver().findElements(By.xpath("(//*[@class='k-in'])"));
     	ApprovalcountPOM.selectOptionFromDropDown_bs(roc1, "Overdue");
+    	//ApprovalcountPOM.selectOptionFromDropDown_bs(roc1, "Overdue");
       Thread.sleep(3000);
        Thread.sleep(3000);
        StatusF().click();
@@ -7973,20 +8036,28 @@ else {
        
         List<String> li=new ArrayList<String>();
         
-        li.add(Risktext);
-        li.add("Demo Act");
+        li.add("High");
+      //  li.add("Demo Act");
         li.add("1");
         Thread.sleep(3000);
         li.add("Overdue");
         
 		List<String> filter=new ArrayList<String>();	
 		filter.add("Risk");
-		filter.add("Act");
+		//filter.add("Act");
 		filter.add("Mitigation Plan");	
 		filter.add("Status");	
 		
-		MgmtSonyMethod.ClickTriA().click();
-	       Thread.sleep(1000);
+		By	locator = By.xpath("(//*[@class='k-icon k-i-more-vertical'])[14]");
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		WebElement ViewButton = getDriver().findElement(locator);	
+		Thread.sleep(3000);
+	
+	JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+	jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
 	       MgmtSonyMethod.Columns().click();
 	       Thread.sleep(500);
 	       MgmtSonyMethod.RiskCheck().click();
@@ -8004,11 +8075,11 @@ else {
 		if(!s.equalsIgnoreCase("No items to display")) {
 		Thread.sleep(5000);
 	
-		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[14]"));
-		List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
-		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[18]"));
+		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[10]"));
+		//List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
+		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[17]"));
 		
-		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[6]"));
+		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[5]"));
 		
 		Thread.sleep(2000);
 
@@ -8023,15 +8094,12 @@ else {
 				{
 					raw.addAll(Risk);
 				}
+			
 			else if(i==1)
-				{
-					raw.addAll(Act);
-				}
-			else if(i==2)
 			{
 				raw.addAll(MitigationPlan);
 			}
-			else if(i==3)
+			else if(i==2)
 			{
 				raw.addAll(statuscol);
 			}
@@ -8320,7 +8388,7 @@ else {
 		Thread.sleep(8000);
 	
 	
-		RiskF().click();
+		/*RiskF().click();
 		Thread.sleep(500);
 	
 		String Risktext =RiskHighM().getText();
@@ -8332,7 +8400,7 @@ else {
        ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Demo Act");
        Thread.sleep(3000);
        SelectActF().click();
-       Thread.sleep(500);
+       Thread.sleep(500);*/
        Thread.sleep(3000);
        
        MitigationPlan().click();
@@ -8357,19 +8425,28 @@ else {
        
         List<String> li=new ArrayList<String>();
         
-        li.add(Risktext);
-        li.add("Demo Act");
+        li.add("High");
+     //   li.add("Demo Act");
         li.add("1");
         Thread.sleep(3000);
         li.add("Overdue");
         
 		List<String> filter=new ArrayList<String>();	
 		filter.add("Risk");
-		filter.add("Act");
+	//	filter.add("Act");
 		filter.add("Mitigation Plan");	
 		filter.add("Status");	
 		
-			MgmtSonyMethod.ClickTriA().click();
+		By	locator = By.xpath("(//*[@class='k-icon k-i-more-vertical'])[14]");
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		WebElement ViewButton = getDriver().findElement(locator);	
+		Thread.sleep(3000);
+	
+	JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+	jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
 	       Thread.sleep(1000);
 	       MgmtSonyMethod.Columns().click();
 	       Thread.sleep(500);
@@ -8388,11 +8465,11 @@ else {
 		if(!s.equalsIgnoreCase("No items to display")) {
 		Thread.sleep(5000);
 	
-		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[16]"));
-		List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
-		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[19]"));
+		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[10]"));
+	//	List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
+		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[18]"));
 		
-		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[6]"));
+		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[5]"));
 		
 		Thread.sleep(2000);
 
@@ -8407,15 +8484,12 @@ else {
 				{
 					raw.addAll(Risk);
 				}
+			
 			else if(i==1)
-				{
-					raw.addAll(Act);
-				}
-			else if(i==2)
 			{
 				raw.addAll(MitigationPlan);
 			}
-			else if(i==3)
+			else if(i==2)
 			{
 				raw.addAll(statuscol);
 			}
@@ -8519,7 +8593,7 @@ else {
 		Thread.sleep(8000);
 	
 	
-		RiskF().click();
+		/*RiskF().click();
 		Thread.sleep(500);
 	
       String Risktext =RiskHighM().getText();
@@ -8531,7 +8605,7 @@ else {
       	ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Demo Act");
        Thread.sleep(3000);
        SelectActF().click();
-       Thread.sleep(4000);
+       Thread.sleep(4000);*/
        MitigationPlan().click();
        Thread.sleep(500);
      
@@ -8554,20 +8628,28 @@ else {
        
         List<String> li=new ArrayList<String>();
         
-        li.add(Risktext);
-        li.add("Demo Act");
+        li.add("High");
+      //  li.add("Demo Act");
         li.add("1");
         Thread.sleep(3000);
         li.add("Overdue");
         
 		List<String> filter=new ArrayList<String>();	
 		filter.add("Risk");
-		filter.add("Act");
+	//	filter.add("Act");
 		filter.add("Mitigation Plan");	
 		filter.add("Status");	
 		
-		MgmtSonyMethod.ClickTriA().click();
-	       Thread.sleep(1000);
+		By	locator = By.xpath("(//*[@class='k-icon k-i-more-vertical'])[14]");
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		WebElement ViewButton = getDriver().findElement(locator);	
+		Thread.sleep(3000);
+	
+	JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+	jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
 	       MgmtSonyMethod.Columns().click();
 	       Thread.sleep(500);
 	       MgmtSonyMethod.RiskCheck().click();
@@ -8585,11 +8667,11 @@ else {
 		if(!s.equalsIgnoreCase("No items to display")) {
 		Thread.sleep(5000);
 	
-		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[16]"));
-		List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
-		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[19]"));
+		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[10]"));
+	//	List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[2]"));
+		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[18]"));
 		
-		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[6]"));
+		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[5]"));
 		
 		Thread.sleep(2000);
 
@@ -8604,15 +8686,12 @@ else {
 				{
 					raw.addAll(Risk);
 				}
+			
 			else if(i==1)
-				{
-					raw.addAll(Act);
-				}
-			else if(i==2)
 			{
 				raw.addAll(MitigationPlan);
 			}
-			else if(i==3)
+			else if(i==2)
 			{
 				raw.addAll(statuscol);
 			}
@@ -10413,7 +10492,7 @@ else {
 		Thread.sleep(8000);
 		
 	
-		RiskF().click();
+		/*RiskF().click();
 		Thread.sleep(500);
 	
       String Risktext =RiskHighM().getText();
@@ -10427,7 +10506,7 @@ else {
        SelectActF1().click();
        Thread.sleep(3000);
        SelectActF().click();
-       
+       */
        Thread.sleep(500);
        
        
@@ -10438,41 +10517,53 @@ else {
        Thread.sleep(2000);
       
        Thread.sleep(3000);
-       StatusF().click();
-       Thread.sleep(500);
+       StatusFP().click();
+       Thread.sleep(5000);
        
-       StatusAll().click();
+       StatusAll1().click();
        Thread.sleep(3000);
-       StatusAll().click();
+       StatusAll1().click();
        Thread.sleep(3000);
        String Statustext =StatusUpcoming().getText();
        Thread.sleep(500);
        StatusUpcoming().click();
        Thread.sleep(3000);
-       StatusF().click();
+       StatusFP().click();
        Thread.sleep(2000);
        
         List<String> li=new ArrayList<String>();
         
-        li.add(Risktext);
-        li.add(Acttext);
+        li.add("High");
+       // li.add(Acttext);
         li.add("1");
         Thread.sleep(3000);
         li.add(Statustext);
         
 		List<String> filter=new ArrayList<String>();	
 		filter.add("Risk");
-		filter.add("Act");
+		//filter.add("Act");
 		filter.add("Mitigation Plan");	
 		filter.add("Status");	
 		
-		MgmtSonyMethod.ClickTriA().click();
-	       Thread.sleep(1000);
+		By locator = By.xpath("(//*[@class='k-icon k-i-more-vertical'])[14]");
+		
+		WebElement ViewButton =getDriver() .findElement(locator);	
+		Thread.sleep(3000);
+		JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
 	       MgmtSonyMethod.Columns().click();
-	       Thread.sleep(500);
+	       Thread.sleep(5000);
 	       MgmtSonyMethod.RiskCheck().click();
-	       Thread.sleep(1000);
-	       MgmtSonyMethod.MitigationPlanA().click();
+	       Thread.sleep(2000);
+	        locator = By.xpath("(//*[@data-field='MitigationPlan'])[2]");
+			
+			 ViewButton =getDriver() .findElement(locator);	
+			Thread.sleep(3000);
+			//JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+			jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+	     //  MgmtSonyMethod.MitigationPlanA().click();
 	       Thread.sleep(2000);
 	      // MgmtSonyMethod.ClickTriA().click();
 	       Thread.sleep(3000);
@@ -10486,7 +10577,7 @@ else {
 		Thread.sleep(5000);
 	
 		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[16]"));
-		List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[2]"));
+	//	List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[2]"));
 		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]"));
 		
 		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[6]"));
@@ -10504,15 +10595,12 @@ else {
 				{
 					raw.addAll(Risk);
 				}
+			
 			else if(i==1)
-				{
-					raw.addAll(Act);
-				}
-			else if(i==2)
 			{
 				raw.addAll(MitigationPlan);
 			}
-			else if(i==3)
+			else if(i==2)
 			{
 				raw.addAll(statuscol);
 			}
@@ -10580,7 +10668,7 @@ else {
        } catch (InterruptedException e) {
            e.printStackTrace();
        }
-		CFOcountPOM.closeDocuments().click();					//Closing the High Risk Window.
+		CFOcountPOM.closeDocuments1().click();					//Closing the High Risk Window.
 		Thread.sleep(1000);
 		OverduePOM.clickDashboard().click();
 		

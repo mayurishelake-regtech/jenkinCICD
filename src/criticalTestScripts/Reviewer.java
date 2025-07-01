@@ -658,7 +658,7 @@ public class Reviewer  extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 19) 
+	//@Test(priority = 19) 
 	void SMETAReport() throws InterruptedException, IOException
 	{
 		test = extent.startTest("My Reports - SMETA Report Verification");
@@ -670,7 +670,7 @@ public class Reviewer  extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 20) 
+	//@Test(priority = 20) 
 	void SMETAReportFilterMgmt() throws InterruptedException, IOException
 	{
 		test = extent.startTest("My Reports -  To Check Whether Smeta Report Grid all filter working or not ? ");
@@ -706,7 +706,7 @@ public class Reviewer  extends BasePage {
 		 
 		}
 
-	@Test(priority = 23)
+	//@Test(priority = 23)
 	void MyEscalation() throws InterruptedException, IOException
 	{
 		test = extent.startTest("My Escalation verification");

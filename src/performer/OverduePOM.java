@@ -339,6 +339,12 @@ public class OverduePOM extends BasePage
 		return dropdown;
 	}
 	
+	public static WebElement framname( )		//Method to search dropdown box
+	{
+		dropdown = getDriver().findElement(By.xpath("//*[@id='iPerformerFrame']"));
+		return dropdown;
+	}
+	
 	public static WebElement selectStatutoryDropdown1( )		//Method to search dropdown box
 	{
 		dropdown = getDriver().findElement(By.xpath("//*[@id='ddlStatus2']"));
@@ -429,7 +435,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement remark( )						//Method created to search text area 
 	{
-		value = getDriver().findElement(By.xpath("//textarea[@id='tbxRemarks']"));
+		value = getDriver().findElement(By.id("tbxRemarks"));
 		return value;//*[@id="tbxRemarks"]//*[@id="tbxRemarks"]
 	}
 	
@@ -468,7 +474,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickComplianceSubmitAS( )		//Method for searching button for Submit Form
 	{
-		submit = getDriver().findElement(By.xpath("//*[@id='btnSaveDOCNotCompulsory']"));
+		submit = getDriver().findElement(By.id("btnSaveDOCNotCompulsory"));
 		return submit;
 	}
 	
@@ -554,7 +560,7 @@ public class OverduePOM extends BasePage
 	{
 		//elementsList = getDriver().findElements(By.xpath("//*[@role='button'][@class='k-button k-button-icontext ob-overview k-grid-edit2']"));
 	//	elementsList = getDriver().findElements(By.xpath("//*[@id='grid']/div[4]/table/tbody/tr/td[24]/a[1]"));
-		elementsList = getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[26]/a"));
+		elementsList = getDriver().findElements(By.xpath("//*[@id='grid']/div[2]/table/tbody/tr/td[26]/a"));
 		
 		return elementsList;
 	}
@@ -2945,19 +2951,19 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement Column( )					//
 	{
-		performer = getDriver().findElement(By.xpath("//*[@class='k-icon k-i-arrow-60-right k-menu-expand-arrow']"));
+		performer = getDriver().findElement(By.xpath("//*[@class='k-icon k-i-arrow-60-right k-menu--arrow']"));
 		return performer;
 	}
 	
 	public static WebElement MitigationPlanCheck( )					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-link k-menu-link'])[10]/input"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-link k-menu-link'])[11]/input"));
 		return performer;
 	}
 	
 	public static WebElement MitigationPlanCheck1( )					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-link k-menu-link'])[14]/input"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-link k-menu-link'])[15]/input"));
 		return performer;
 	}
 	
@@ -3162,19 +3168,19 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement Clickcolumns()					//
 	{
-		performer = getDriver().findElement(By.xpath("//*[@class='k-icon k-i-arrow-60-right k-menu-expand-arrow']"));
+		performer = getDriver().findElement(By.xpath("//*[@class='k-icon k-i-arrow-60-right k-menu--arrow']"));
 		return performer;
 	}
 	
 	public static WebElement Clickcolumns1()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-icon k-i-arrow-60-right k-menu-expand-arrow'])[3]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-icon k-i-arrow-60-right k-menu--arrow'])[3]"));
 		return performer;
 	}
 	
 	public static WebElement ClickcolumnsCD()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-icon k-i-arrow-60-right k-menu-expand-arrow'])[35]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-icon k-i-arrow-60-right k-menu--arrow'])[35]"));
 		return performer;
 	}
 	
@@ -3270,7 +3276,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement ClickFilter()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-icon k-i-arrow-60-right k-menu-expand-arrow'])[4]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-icon k-i-arrow-60-right k-menu--arrow'])[4]"));
 		return performer;
 	}
 	

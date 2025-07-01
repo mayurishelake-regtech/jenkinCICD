@@ -1111,7 +1111,7 @@ public class ReMethodsPOM extends BasePage
 
 		Thread.sleep(2500);
 		
-		getDriver().navigate().refresh();
+		//getDriver().navigate().refresh();
 		
 		wait.until(ExpectedConditions.visibilityOf(performer.OverduePOM.clickDashboard()));
 		performer.OverduePOM.clickDashboard().click();
@@ -2090,13 +2090,23 @@ public class ReMethodsPOM extends BasePage
 		ReviewerPOM.ClickEvents().click();		//Clicking on Statutory Review value.
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table")));
+		
+		
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,300)");	
+		Thread.sleep(5000);
+		ReviewerPOM.ReadCountEvent().click();					//Clicking on Text of total items just to scroll down.
+		String s = ReviewerPOM.ReadCountEvent().getText();	
+		if(!s.equalsIgnoreCase("No items to display")) {
+		Thread.sleep(5000);
+		
 		elementsList = ReviewerPOM.clickOverViewE();
 		elementsList.get(1).click();
 		Thread.sleep(3000);
 		ReviewerPOM.CloseOverview1().click();
 		Thread.sleep(3000);
 		test.log(LogStatus.PASS,"Overview Successfully");
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		//JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
 		ReviewerPOM.ReadCountEvent().click();					//Clicking on Text of total items just to scroll down.
@@ -2125,15 +2135,31 @@ public class ReMethodsPOM extends BasePage
 		
 		if(count == DasCountCompletedSta)
 		{
-			test.log(LogStatus.PASS, "Number of Overdue Internal grid matches to Dashboard Overdue Internal Count.");
-		//	test.log(LogStatus.INFO, "No of Overdue Internal in the grid = "+count+" | Dashboard Overdue Internal Count = "+DasCountCompletedSta);
+			test.log(LogStatus.PASS, "Number of Event grid matches to Dashboard Event Count.");
+			test.log(LogStatus.INFO, "No of Event in the grid = "+count+" | Dashboard Event Count = "+DasCountCompletedSta);
 		}
 		else
 		{
-			test.log(LogStatus.FAIL, "Number of Overdue Internal does not matches to Dashboard Overdue Internal Count.");
-		//	test.log(LogStatus.INFO, "No of Overdue Internal in the grid = "+count+" | Dashboard Overdue Internal Count = "+DasCountCompletedSta);
+			test.log(LogStatus.FAIL, "Number of Overdue Internal does not matches to Dashboard Event Count.");
+			test.log(LogStatus.INFO, "No of Event in the grid = "+count+" | Dashboard Event Count = "+DasCountCompletedSta);
 		}
 		Thread.sleep(2000);
+		}else {
+			
+			if(DasCountCompletedSta == 0)
+			{
+				test.log(LogStatus.PASS, "Number of Event grid matches to Dashboard Event Count.");
+				test.log(LogStatus.PASS, "No of Event in the grid = "+0+" | Dashboard Event Count = "+DasCountCompletedSta);
+			}
+			else
+			{
+				test.log(LogStatus.FAIL, "Number of Overdue Internal does not matches to Dashboard Event Count.");
+				test.log(LogStatus.INFO, "No of Event in the grid = "+0+" | Dashboard Event Count = "+DasCountCompletedSta);
+			}
+			
+		}
+		
+		
 		OverduePOM.clickDashboard().click();
 		
 	}
@@ -2277,13 +2303,22 @@ Thread.sleep(3000);
 		ReviewerPOM.ClickActivatedEvents().click();		//Clicking on Statutory Review value.
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table")));
+		
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,300)");	
+		Thread.sleep(5000);
+		ReviewerPOM.ReadCountEvent().click();					//Clicking on Text of total items just to scroll down.
+		String s = ReviewerPOM.ReadCountEvent().getText();	
+		if(!s.equalsIgnoreCase("No items to display")) {
+		Thread.sleep(5000);
+		
 		elementsList = ReviewerPOM.clickOverViewAE();
 		elementsList.get(1).click();
 		Thread.sleep(3000);
 		ReviewerPOM.CloseOverview1().click();
 		Thread.sleep(3000);
 		test.log(LogStatus.PASS,"Overview Successfully");
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+	//	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
 		ReviewerPOM.ReadCountEvent().click();					//Clicking on Text of total items just to scroll down.
@@ -2320,6 +2355,20 @@ Thread.sleep(3000);
 			test.log(LogStatus.FAIL, "Number of Activated Events  does not matches to Dashboard Activated Events  Count.");
 		//	test.log(LogStatus.INFO, "No of Activated Events in the grid = "+count+" | Dashboard Activated Events Count = "+DasCountCompletedSta);
 		}
+		
+}else {
+			
+			if(DasCountCompletedSta == 0)
+			{
+				test.log(LogStatus.PASS, "Number of  Activated Event grid matches to Dashboard Event Count.");
+				test.log(LogStatus.PASS, "No of Activated Event in the grid = "+0+" | Dashboard Activated Event Count = "+DasCountCompletedSta);
+			}
+			else
+			{
+				test.log(LogStatus.FAIL, "Number of Activated Event does not matches to Dashboard Activated Event Count.");
+				test.log(LogStatus.INFO, "No of Activated Event in the grid = "+0+" | Dashboard Activated Event Count = "+DasCountCompletedSta);
+			}
+}
 		Thread.sleep(2000);
 		OverduePOM.clickDashboard().click();
 		
@@ -2337,13 +2386,21 @@ Thread.sleep(3000);
 		ReviewerPOM.ClickClosedEvents().click();		//Clicking on Statutory Review value.
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table")));
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,300)");	
+		Thread.sleep(5000);
+		ReviewerPOM.ReadCountEvent().click();					//Clicking on Text of total items just to scroll down.
+		String s = ReviewerPOM.ReadCountEvent().getText();	
+		if(!s.equalsIgnoreCase("No items to display")) {
+		Thread.sleep(5000);
+		
 		elementsList = ReviewerPOM.clickOverViewCE();
 		elementsList.get(1).click();
 		Thread.sleep(3000);
 		ReviewerPOM.CloseOverview1().click();
 		Thread.sleep(3000);
 		test.log(LogStatus.PASS,"Overview Successfully");
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+	//	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
 		ReviewerPOM.ReadCountEvent().click();					//Clicking on Text of total items just to scroll down.
@@ -2381,6 +2438,20 @@ Thread.sleep(3000);
 			//test.log(LogStatus.INFO, "No of Closed Events in the grid = "+count+" | Dashboard Closed Events Count = "+DasCountCompletedSta);
 		}
 		Thread.sleep(2000);
+		
+}else {
+			
+			if(DasCountCompletedSta == 0)
+			{
+				test.log(LogStatus.PASS, "Number of  Closed Event grid matches to Dashboard Closed Event Count.");
+				test.log(LogStatus.PASS, "No of Closed Event in the grid = "+0+" | Dashboard Closed Event Count = "+DasCountCompletedSta);
+			}
+			else
+			{
+				test.log(LogStatus.FAIL, "Number of Closed Event does not matches to Dashboard Closed Event Count.");
+				test.log(LogStatus.INFO, "No of Closed Event in the grid = "+0+" | Dashboard Closed Event Count = "+DasCountCompletedSta);
+			}
+}
 		OverduePOM.clickDashboard().click();
 		
 	}
@@ -2936,7 +3007,7 @@ jse.executeScript("arguments[0].click();", ClickSta);
 			Thread.sleep(1000);
 		}
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[4]/table")));
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[4]/table")));
 		
 	
 		ReviewerPOM.MitigationPlan().click();		//Clicking on Statutory Review value.
@@ -3289,6 +3360,8 @@ Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
 		
 		Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,500)");		
 		wait.until(ExpectedConditions.visibilityOf(OverduePOM.readActivatedEvents()));	//Wait until Internal Pending For Review count gets visible.
 		
 		int DasCountCompletedSta = Integer.parseInt(OverduePOM.readActivatedEvents().getText());	//Reading old value of Internal Reject
@@ -3302,7 +3375,7 @@ Thread.sleep(3000);
 //		ReviewerPOM.CloseOverview1().click();
 //		Thread.sleep(3000);
 //		test.log(LogStatus.PASS,"Overview Successfully");
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		//JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
 		ReviewerPOM.ReadCountEvent().click();					//Clicking on Text of total items just to scroll down.
@@ -3349,6 +3422,8 @@ Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
 		
 		Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,500)");		
 		wait.until(ExpectedConditions.visibilityOf(ReviewerPOM.ClickClosedEventsPer()));	//Wait until Internal Pending For Review count gets visible.
 		
 		int DasCountCompletedSta = Integer.parseInt(ReviewerPOM.ClickClosedEventsPer().getText());	//Reading old value of Internal Reject
@@ -3362,7 +3437,7 @@ Thread.sleep(3000);
 		ReviewerPOM.CloseOverview1().click();
 		Thread.sleep(3000);
 		test.log(LogStatus.PASS,"Overview Successfully");*/
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+	//	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
 		ReviewerPOM.ReadCountEvent().click();					//Clicking on Text of total items just to scroll down.
@@ -3409,6 +3484,8 @@ Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
 		
 		Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,500)");		
 		wait.until(ExpectedConditions.visibilityOf(OverduePOM.clickAssignedEvents()));	//Wait until Internal Pending For Review count gets visible.
 		
 		int DasCountCompletedSta = Integer.parseInt(OverduePOM.clickAssignedEvents().getText());	//Reading old value of Internal Reject
@@ -3422,7 +3499,7 @@ Thread.sleep(3000);
 		ReviewerPOM.CloseOverview1().click();
 		Thread.sleep(3000);
 		test.log(LogStatus.PASS,"Overview Successfully");
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+	//	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
 		ReviewerPOM.ReadCountEvent().click();					//Clicking on Text of total items just to scroll down.
@@ -3505,7 +3582,7 @@ Thread.sleep(3000);
 		
 		//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));
 		Thread.sleep(8000);
-		CFOcountPOM.ComplianceID().sendKeys("6696");
+		CFOcountPOM.ComplianceID().sendKeys("27522");
 		Thread.sleep(8000);
 		ReviewerPOM.Apply().click();
 		

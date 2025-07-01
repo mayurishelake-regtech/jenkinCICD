@@ -888,7 +888,7 @@ Thread.sleep(4000);
 		
 		OverduePOM.MitigationPFilter().click();
 			Thread.sleep(1000);
-			 WebElement TextCat=getDriver().findElement(By.xpath("(//*[@id='example']/div[2]/span[5]/span/span[1])")); 
+			 WebElement TextCat=getDriver().findElement(By.xpath("//*[@id='dropdownlistMplan_listbox']/li[2]")); 
 			 String cattext =TextCat.getText();
 			 Thread.sleep(1000);
 			TextCat.click();
@@ -904,12 +904,12 @@ Thread.sleep(4000);
 			OverduePOM.MitigationPlanCheck().click();
 			Thread.sleep(1000);
 			OverduePOM.Clicktri().click();
-			Thread.sleep(3000);
+			Thread.sleep(8000);
 			Thread.sleep(1000);
 			 List<WebElement> Risks=getDriver().findElements(By.xpath("//*[@id='grid']/div[4]/table/tbody/tr/td[12]")); //column list
-			 
+			 Thread.sleep(8000);
 			 List<String> text=new ArrayList<String>();
-			 Thread.sleep(3000);
+			 Thread.sleep(8000);
 			 for(int i=0;i<Risks.size();i++) {
 				 text.add(Risks.get(i).getText());
 			 }
@@ -944,7 +944,7 @@ Thread.sleep(4000);
 			 for(String Pas : pass)
 			 {
 				 test.log(LogStatus.PASS, "Selection Pending Updation  filter working Properly   Value Match with : "+Pas);
-				// System.out.println("Pass : "+Pas);
+				System.out.println("Pass : "+Pas);
 			 }
 			 }
 			 for(String Fal : fail)
@@ -953,7 +953,7 @@ Thread.sleep(4000);
 					 test.log(LogStatus.FAIL, "Status column have Empty value");
 					 }else {
 				 test.log(LogStatus.FAIL, "Selection Pending Updation  filter not working Properly : "+Fal);
-				
+				 System.out.println("FAIL : "+Fal);
 					 }
 			 }
 
@@ -1131,10 +1131,13 @@ Thread.sleep(4000);
 				if(text.get(i).equals("1"))
 				{
 					pass.add(text.get(i));		//	the specified element at the end of a list.
+					System.out.println(text.get(i));
+					
 				}
 				else
 				{
 					fail.add(text.get(i));
+					System.out.println(text.get(i));
 						
 				}
 				
@@ -1702,7 +1705,7 @@ Thread.sleep(4000);
 		elementsList.get(2).click();							//Clicking on Third Action button.
 		
 		Thread.sleep(1000);
-		getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
+		getDriver().switchTo().frame(OverduePOM.framname());						//Switching 1st iFrame.
 		
 		Thread.sleep(500);
 		js.executeScript("window.scrollBy(0,2000)"," ");				//Scrolling down window by 2000 px.
@@ -2432,7 +2435,7 @@ Thread.sleep(4000);
 						Thread.sleep(3000);
 					}
 				
-				
+				Thread.sleep(5000);
 				getDriver().switchTo().alert().accept();						//Accepting msg of Successful Submission.
 				getDriver().switchTo().parentFrame();						//Switching back to parent frame from iFrame
 			//	break;
@@ -2528,7 +2531,7 @@ Thread.sleep(4000);
 		 Actions at = new Actions(getDriver());
 		 at.sendKeys(Keys.PAGE_UP).build().perform();
 		Thread.sleep(5000);
-		elementsList = OverduePOM.clickActionButtonList();		//Getting all action buttons on the page.
+		elementsList = OverduePOM.ActionButtons();		//Getting all action buttons on the page.
 		elementsList.get(0).click();	
 		Thread.sleep(2000);
 	//	wait.until(ExpectedConditions.elementToBeClickable)
@@ -2660,7 +2663,7 @@ Thread.sleep(4000);
 	{
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
 		//div[@class = 'k-multiselect-wrap k-floatwrap']
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		Thread.sleep(3000);
@@ -2708,7 +2711,7 @@ Thread.sleep(4000);
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
 		Thread.sleep(3000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		Thread.sleep(5000);
@@ -2760,6 +2763,7 @@ Thread.sleep(4000);
 					Thread.sleep(1000);
 				}
 			//getDriver().switchTo().alert().accept();
+			Thread.sleep(6000);
 			try
 			{
 				Thread.sleep(1000);
@@ -2778,7 +2782,7 @@ Thread.sleep(4000);
 			Thread.sleep(2000);
 			OverduePOM.clickActionNotApplicable().click();		//Clicking on 'Not Applicable' button.
 			
-			Thread.sleep(500);
+			Thread.sleep(5000);
 			getDriver().switchTo().alert().dismiss();				//Clicking on OK of alert.
 			getDriver().switchTo().parentFrame();						//Switching back to parent frame.
 		}
@@ -2857,7 +2861,7 @@ Thread.sleep(4000);
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
 		Thread.sleep(3000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		Thread.sleep(5000);
@@ -3413,7 +3417,7 @@ Thread.sleep(4000);
 		Thread.sleep(500);
 		//OverduePOM.clickComplianceSubmit().click();				//Clicking on 'Submit' button.	
 		getDriver().findElement(By.xpath("//*[@id='btnSave2']")).click();
-		Thread.sleep(1000);
+		Thread.sleep(6000);
 		getDriver().switchTo().alert().accept();								//Clicking on alert to accept the message.
 		getDriver().switchTo().parentFrame();								//Switching back to parent frame.
 		/*Thread.sleep(2000);
@@ -3555,7 +3559,7 @@ Thread.sleep(4000);
 				Thread.sleep(500);
 				//OverduePOM.clickComplianceSubmit().click();				//Clicking on 'Submit' button.	
 				getDriver().findElement(By.xpath("//*[@id='btnClosedDelayed']")).click();
-				Thread.sleep(1000);
+				Thread.sleep(6000);
 				try {
 				getDriver().switchTo().alert().accept();								//Clicking on alert to accept the message.
 				}catch(Exception e) {
@@ -3652,7 +3656,7 @@ Thread.sleep(4000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		Thread.sleep(1000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
 		
 		Thread.sleep(3000);
 		
@@ -5362,12 +5366,12 @@ Thread.sleep(4000);
 		{
 			if(upcomingStatutory == count)
 			{
-			//	test.log(LogStatus.PASS, "Before Perform :- Upcoming Statutory count matches to total number of compliances displayed.");
+				test.log(LogStatus.PASS, "Before Perform :- Upcoming Statutory count matches to total number of compliances displayed.");
 				test.log(LogStatus.PASS, "Total Compliance Count in the Grid = "+count+" | Dashboard Compliance Count = "+upcomingStatutory);
 			}
 			else
 			{
-				//test.log(LogStatus.FAIL, "Before Perform :- Upcoming Statutory count does not matches to total number of compliances displayed.");
+				test.log(LogStatus.FAIL, "Before Perform :- Upcoming Statutory count does not matches to total number of compliances displayed.");
 				test.log(LogStatus.FAIL, "Total Compliance Count in the Grid = "+count+" | Dashboard Compliance Count = "+upcomingStatutory);
 			}
 		}
@@ -5375,12 +5379,12 @@ Thread.sleep(4000);
 		{
 			if(upcomingInternal == count)
 			{
-			//	test.log(LogStatus.PASS, "Before Perform :- Upcoming Internal count matches to total number of compliances displayed.");
+				test.log(LogStatus.PASS, "Before Perform :- Upcoming Internal count matches to total number of compliances displayed.");
 				test.log(LogStatus.PASS, "Total Compliance Count in the Grid = "+count+" | Dashboard Compliance Count = "+upcomingInternal);
 			}
 			else
 			{
-				//test.log(LogStatus.FAIL, "Before Perform :- Upcoming Internal count does not matches to total number of compliances displayed.");
+				test.log(LogStatus.FAIL, "Before Perform :- Upcoming Internal count does not matches to total number of compliances displayed.");
 				test.log(LogStatus.FAIL, "Total Compliance Count in the Grid = "+count+" | Dashboard Compliance Count = "+upcomingInternal);
 			}
 		}
@@ -5505,7 +5509,7 @@ Thread.sleep(4000);
 			Thread.sleep(3000);
 			OverduePOM.clickComplianceSubmit2().click();
 		}
-		Thread.sleep(1000);
+		Thread.sleep(6000);
 		try
 		{
 			getDriver().switchTo().alert().accept();
@@ -5723,23 +5727,23 @@ Thread.sleep(4000);
 			if(upcomingStatutory > upcomingStatutoryNew)
 			{
 				test.log(LogStatus.PASS, "After Perform :- 'Upcoming' Statutory count decreased.");
-			//	test.log(LogStatus.PASS, "Old Compliance Count = "+upcomingStatutory+" | New Compliance Count = "+upcomingStatutoryNew);
+				test.log(LogStatus.PASS, "Old Compliance Count = "+upcomingStatutory+" | New Compliance Count = "+upcomingStatutoryNew);
 			}
 			else
 			{
 				test.log(LogStatus.FAIL, "After Perform :- 'Upcoming' Statutory count doesn't decreased.");
-				//test.log(LogStatus.FAIL, "Old Compliance Count = "+upcomingStatutory+" | New Compliance Count = "+upcomingStatutoryNew);
+				test.log(LogStatus.FAIL, "Old Compliance Count = "+upcomingStatutory+" | New Compliance Count = "+upcomingStatutoryNew);
 			}
 			
 			if(pendingcount1 > pendingCount)
 			{
 				test.log(LogStatus.PASS, "After Perform :- 'Pending for Review' Statutory count increased.");
-			//	test.log(LogStatus.PASS, "Old Compliance Count = "+pendingCount+" | New Compliance Count = "+pendingcount1);
+				test.log(LogStatus.PASS, "Old Compliance Count = "+pendingCount+" | New Compliance Count = "+pendingcount1);
 			}
 			else
 			{
 				test.log(LogStatus.FAIL, "After Perform :- 'Pending for Review' Statutory count doesn't increased.");
-				//test.log(LogStatus.FAIL, "Old Compliance Count = "+pendingCount+" | New Compliance Count = "+pendingcount1);
+				test.log(LogStatus.FAIL, "Old Compliance Count = "+pendingCount+" | New Compliance Count = "+pendingcount1);
 			}
 		}
 		else
@@ -5750,23 +5754,23 @@ Thread.sleep(4000);
 			if(upcomingInternal > upcomingInternalNew)
 			{
 				test.log(LogStatus.PASS, "After Perform :- 'Upcoming' Internal count decreased.");
-			//	test.log(LogStatus.PASS, "Old Compliance Count = "+upcomingInternal+" | New Compliance Count = "+upcomingInternalNew);
+				test.log(LogStatus.PASS, "Old Compliance Count = "+upcomingInternal+" | New Compliance Count = "+upcomingInternalNew);
 			}
 			else
 			{
 				test.log(LogStatus.FAIL, "After Perform :- 'Upcoming' Internal count doesn't decreased.");
-			//	test.log(LogStatus.FAIL, "Old Compliance Count = "+upcomingInternal+" | New Compliance Count = "+upcomingInternalNew);
+				test.log(LogStatus.FAIL, "Old Compliance Count = "+upcomingInternal+" | New Compliance Count = "+upcomingInternalNew);
 			}
 			
 			if(pendingcount1 > pendingCountInternal)
 			{
 				test.log(LogStatus.PASS, "After Perform :- 'Pending for Review' Internal count increased.");
-			//	test.log(LogStatus.PASS, "Old Compliance Count = "+pendingCountInternal+" | New Compliance Count = "+pendingcount1);
+				test.log(LogStatus.PASS, "Old Compliance Count = "+pendingCountInternal+" | New Compliance Count = "+pendingcount1);
 			}
 			else
 			{
 				test.log(LogStatus.FAIL, "After Perform :- 'Pending for Review' Internal count doesn't increased.");
-			//	test.log(LogStatus.FAIL, "Old Compliance Count = "+pendingCountInternal+" | New Compliance Count = "+pendingcount1);
+				test.log(LogStatus.FAIL, "Old Compliance Count = "+pendingCountInternal+" | New Compliance Count = "+pendingcount1);
 			}
 		}
 		//OverduePOM.clickDashboard().click();	
@@ -5883,7 +5887,7 @@ Thread.sleep(4000);
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("iPerformerFrame"));
 				Thread.sleep(500);
 				js.executeScript("window.scrollBy(0,550)");	
-				//test.log(LogStatus.PASS, "Compliance related task is not yet completed.");
+				//test.log(LogStatus.PASS, "");
 			}}catch(Exception e) {
 				
 			}
@@ -6536,7 +6540,7 @@ Thread.sleep(4000);
 		getDriver().switchTo().frame("showdetails");						//Switching 1st iFrame.
 	
 		Select status = new Select(OverduePOM.selectStatutoryDropdown());	//Selecting dropdown box
-		status.selectByIndex(1);											//Selecting 2nd value from dropdown.
+		status.selectByIndex(2);											//Selecting 2nd value from dropdown.
 		
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
@@ -6649,7 +6653,7 @@ Thread.sleep(4000);
 		getDriver().switchTo().frame("showdetails");	
 		Thread.sleep(500);
 		Select status1 = new Select(OverduePOM.selectStatutoryDropdown());	//Selecting dropdown box.
-		status1.selectByIndex(1);								//Selecting 2nd value from dropdown.
+		status1.selectByIndex(2);								//Selecting 2nd value from dropdown.
 		
 	//	js.executeScript("window.scrollBy(0,2000)"," ");		//Scrolling down window by 2000 px.
 		
@@ -7243,19 +7247,19 @@ Thread.sleep(4000);
 		Thread.sleep(500);
 		OverduePOM.clickApply().click();
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
 		Thread.sleep(4000);
-		OverduePOM.ComplianceType().click();
+		CFOcountPOM.ComplianceType().click();
+		Thread.sleep(2000);
+		CFOcountPOM.StatutoryM().click();
+		Thread.sleep(4000);
 		Thread.sleep(500);
-		OverduePOM.Statutory().click();
+		CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
 		Thread.sleep(1000);
+		CFOcountPOM.Status1().click();
 		Thread.sleep(500);
-		OverduePOM.StatutoryCheckList().click();
-		Thread.sleep(1000);
-		OverduePOM.Status().click();
-		Thread.sleep(500);
-		OverduePOM.ClosedTimely().click();
-		Thread.sleep(1000);
+		CFOcountPOM.StatusClosedTimely().click();
+		Thread.sleep(4000);
 		OverduePOM.clickApply().click();
 		Thread.sleep(8000);	
 	
@@ -7952,7 +7956,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		Thread.sleep(5000);
 		test.log(LogStatus.PASS, "While Click on 'view ' Button . Release Document should be Viewed.");
 			
-		File dir = new File("C:\\Users\\shitalb\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		Thread.sleep(3000);
 		Thread.sleep(500);
@@ -7962,7 +7966,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 		if (dirContents.length < allFilesNew.length) {
 			test.log(LogStatus.PASS,  "  File downloaded successfully.");
 		} else {
@@ -7994,7 +7998,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		OverduePOM.Apply().click();			//Clicking on 'Compliance Documents ' 
 		Thread.sleep(8000);
 		
-		 By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[24]/a");
+		 By locator = By.xpath("//*[@id='grid1']/div[2]/table/tbody/tr[1]/td[21]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -8065,9 +8069,9 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		OverduePOM.Apply().click();			//Clicking on 'Compliance Documents ' 
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr/td[24]/a")));	//Wait till records table gets visible
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid1']/div[2]/table/tbody/tr/td[21]/a")));	//Wait till records table gets visible
 		Thread.sleep(8000);
-		 By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr/td[24]/a");
+		 By locator = By.xpath("//*[@id='grid1']/div[2]/table/tbody/tr/td[21]/a");
 			Thread.sleep(8000);
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(8000);
@@ -9972,9 +9976,9 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 					Thread.sleep(500);
 					getDriver().switchTo().parentFrame();
 					getDriver().findElement(By.xpath("//*[@id='divShowDialog']/div/div/div[1]/button")).click();
-					Thread.sleep(2000);
+					Thread.sleep(5000);
 					OverduePOM.clickDashboard().click();
-		
+					Thread.sleep(8000);
 		String string_newInternalOverdue = ReviewerPOM.ClickReviewerTaskPFRInternalPer().getText();		//Storing old value of Statutory overdue.
 		int	newOverdueInternal = Integer.parseInt(string_newInternalOverdue);
 			
@@ -10076,7 +10080,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");	
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		int DasCountCompletedSta = 0 ;
 		
 		int reviewStatutory = 0 ;
@@ -10138,7 +10142,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		getDriver().switchTo().frame("showdetails");						//Switching 1st iFrame.
 	
 		Select status = new Select(OverduePOM.selectStatutoryDropdown());	//Selecting dropdown box
-		status.selectByIndex(1);											//Selecting 2nd value from dropdown.
+		status.selectByIndex(2);											//Selecting 2nd value from dropdown.
 		
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
@@ -10177,7 +10181,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 			getDriver().findElement(By.xpath("//*[@id='divShowDialog']/div/div/div[1]/button")).click();
 		Thread.sleep(2000);
 		OverduePOM.clickDashboard().click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		js.executeScript("window.scrollBy(0,500)");	
 		Thread.sleep(4000);
 		String string_newInternalOverdue = ReviewerPOM.ClickUpcomingInternalPer().getText();		//Storing old value of Statutory overdue.
@@ -10276,7 +10280,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		getDriver().switchTo().frame("showdetails");						//Switching 1st iFrame.
 	
 		Select status = new Select(OverduePOM.selectStatutoryDropdown());	//Selecting dropdown box
-		status.selectByIndex(1);											//Selecting 2nd value from dropdown.
+		status.selectByIndex(2);											//Selecting 2nd value from dropdown.
 		
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
@@ -10316,9 +10320,9 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 			
 			Thread.sleep(1000);
 			OverduePOM.clickDashboard().click();						//Clicking on Dashboard link.
-			Thread.sleep(3000);
+			Thread.sleep(4000);
 			js.executeScript("window.scrollBy(0,500)");	
-			Thread.sleep(1000);
+			Thread.sleep(5000);
 			wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.ClickOverdueStatutoryPer()));
 		
 			String string_newOverdueStatutory = ReviewerPOM.ClickOverdueStatutoryPer().getText();		//Storing old value of Statutory overdue.
@@ -10406,7 +10410,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		getDriver().switchTo().frame("showdetails");						//Switching 1st iFrame.
 	
 		Select status = new Select(OverduePOM.selectStatutoryDropdown());	//Selecting dropdown box
-		status.selectByIndex(1);											//Selecting 2nd value from dropdown.
+		status.selectByIndex(2);											//Selecting 2nd value from dropdown.
 		
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
@@ -10551,7 +10555,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 			getDriver().switchTo().frame("showdetails");						//Switching 1st iFrame.
 		
 			Select status = new Select(OverduePOM.selectStatutoryDropdown());	//Selecting dropdown box
-			status.selectByIndex(1);											//Selecting 2nd value from dropdown.
+			status.selectByIndex(2);											//Selecting 2nd value from dropdown.
 			
 			Thread.sleep(500);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
@@ -10595,7 +10599,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 				
 				Thread.sleep(3000);
 				js.executeScript("window.scrollBy(0,500)");	
-				Thread.sleep(1000);
+				Thread.sleep(5000);
 				wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.ClickOverdueStatutoryPer()));
 			
 				String string_newOverdueStatutory = ReviewerPOM.ClickRejectedStatutoryPer().getText();		//Storing old value of Statutory overdue.
@@ -10704,7 +10708,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 			getDriver().switchTo().frame("showdetails");						//Switching 1st iFrame.
 		
 			Select status = new Select(OverduePOM.selectStatutoryDropdown());	//Selecting dropdown box
-			status.selectByIndex(1);											//Selecting 2nd value from dropdown.
+			status.selectByIndex(2);											//Selecting 2nd value from dropdown.
 			
 			Thread.sleep(500);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
@@ -10824,7 +10828,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		try {
 		int gridCountCompletedSta = Integer.parseInt(ReviewerPOM.GridCount().getText());	
-					
+		Thread.sleep(8000);
 		
 		if(gridCountCompletedSta == DasCountCompletedSta)
 		{
@@ -11681,7 +11685,7 @@ String textDA=	OverduePOM.DeviationClosureStatus().getText();
 	 
 		      
 		
-		js.executeScript("window.scrollBy(0,150)");	
+		js.executeScript("window.scrollBy(0,500)");	
 		Thread.sleep(3000);
 		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
 		String s = CFOcountPOM.readTotalItemsD().getText();
@@ -12349,7 +12353,7 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
 		
 		
-		CFOcountPOM.ComplianceID().sendKeys("6696");
+		CFOcountPOM.ComplianceID().sendKeys("69");
 		Thread.sleep(4000);
 		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td/a");
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -12418,12 +12422,12 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 			Thread.sleep(3000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
 			Thread.sleep(3000);
-			CFOcountPOM.ComplianceID1().sendKeys("6696");
+			CFOcountPOM.ComplianceID1().sendKeys("62624");
 			
 			Thread.sleep(2000);
 			CFOcountPOM.Apply().click();
 			Thread.sleep(2000);
-			By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[22]/a[3]");
+			By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[24]/a[3]");
 			
 			WebElement ViewButton =getDriver() .findElement(locator);	
 			Thread.sleep(3000);
@@ -13136,7 +13140,7 @@ Thread.sleep(5000);
 		if(Status.equalsIgnoreCase("Overdue"))
 		{		
 			Thread.sleep(5000);
-			CFOcountPOM.clickHROverduem().click();
+			CFOcountPOM.clickComplianceIsecOverdueDemo().click();
 			Thread.sleep(2000);			  
 			}
 		else if(Status.equalsIgnoreCase("Closed Delayed"))
@@ -13149,35 +13153,35 @@ Thread.sleep(5000);
 		else if(Status.equalsIgnoreCase("Closed Timely"))
 		{
 			
-			CFOcountPOM.clickHumanClosedTimely().click();
+			CFOcountPOM.clickHumanClosedTimelym().click();
 			Thread.sleep(2000);
 			
 					}
 		else if(Status.equalsIgnoreCase("Pending For Review"))
 		{
 			
-			CFOcountPOM.clickHRPendingReviewm1().click();
+			CFOcountPOM.clickAccountPendingReview().click();
 			Thread.sleep(2000);
 			
 					}
 		else if(Status.equalsIgnoreCase("In Progress"))
 		{
 			
-			CFOcountPOM.clickAdminInprogress().click();
+			CFOcountPOM.clickFinanceInProgressInternal().click();
 			Thread.sleep(2000);
 			
 					}
 		else if(Status.equalsIgnoreCase("Rejected"))
 		{
 			
-			CFOcountPOM.clickAdminInRejected().click();
+			CFOcountPOM.clickFinanceRejectedInternal().click();
 			Thread.sleep(2000);
 			
 					}
 		else if(Status.equalsIgnoreCase("Not Applicable"))
 		{
 			
-			CFOcountPOM.clickAdminNotApplicable().click();
+			CFOcountPOM.clickComplianceIsecNotApplicableDemo().click();
 			Thread.sleep(2000);
 			
 					}
@@ -14520,7 +14524,7 @@ Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,925)");			//Scrolling down window by 1000 px.cfo
 	//	js.executeScript("window.scrollBy(0,800)");
 		Thread.sleep(3000);
-		CFOcountPOM.clickIndustrySpeCriticalM().click();
+		CFOcountPOM.clickIndustrySpeCritical().click();
 		Thread.sleep(3000);
 		int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
 		int ClosedDelayed = Integer.parseInt(CFOcountPOM.clickBarClosedDelayed().getText());	//reading Closed Delayed count.
@@ -14601,7 +14605,7 @@ Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,800)");			//Scrolling down window by 1000 px.cfo
 	//	js.executeScript("window.scrollBy(0,800)");
 		Thread.sleep(3000);
-		CFOcountPOM.clickIndustrySpeCriticalM().click();
+		CFOcountPOM.clickIndustrySpeCritical().click();
 		Thread.sleep(3000);
 		int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
 		int ClosedDelayed = Integer.parseInt(CFOcountPOM.clickBarClosedDelayed().getText());	//reading Closed Delayed count.
@@ -14718,9 +14722,9 @@ Thread.sleep(2000);
 		NotApplicable = NotApplicable.replaceAll(" ","");									//Removing all white spaces from string. 
 		int RiskCritical_NotApplicable = Integer.parseInt(NotApplicable);
 		
-		String DueToday = CFOcountPOM.clickRiskHighDuetoday().getText();		//Reading the Closed Timely value of Human Resource
-		DueToday = DueToday.replaceAll(" ","");									//Removing all white spaces from string. 
-		int RiskCritical_DueToday = Integer.parseInt(DueToday);
+	//	String DueToday = CFOcountPOM.clickRiskHighDuetoday().getText();		//Reading the Closed Timely value of Human Resource
+	//	DueToday = DueToday.replaceAll(" ","");									//Removing all white spaces from string. 
+	//	int RiskCritical_DueToday = Integer.parseInt(DueToday);
 		
 		Thread.sleep(2000);
 	//	int total = RiskHigh_NotCompleted + RiskCritical_ClosedDelayed + RiskCritical_ClosedTimely + RiskCritical_NotApplicable;	
@@ -14755,7 +14759,7 @@ Thread.sleep(2000);
 				
 			}
 			
-			if(RiskCritical_DueToday > 0)
+		/*	if(RiskCritical_DueToday > 0)
 			{
 				MethodsPOM.IsSmetaColumnRisksummary(test, "DueToday");
 				Thread.sleep(500);
@@ -14766,7 +14770,7 @@ Thread.sleep(2000);
 				test.log(LogStatus.PASS, "'DueToday' Status Compliance Count = "+RiskCritical_DueToday);
 				Thread.sleep(500);
 				
-			}	
+			}	*/
 			
 			if(RiskCritical_NotApplicable > 0)
 			{
@@ -14927,7 +14931,7 @@ Thread.sleep(2000);
 	//	js.executeScript("window.scrollBy(0,800)");
 		Thread.sleep(3000);
 		
-		String NotCompleted = CFOcountPOM.clickHROverduem().getText();			//Reading the Overdue value of Human Resource
+		String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo().getText();			//Reading the Overdue value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Overdue = Integer.parseInt(NotCompleted);	
 		
@@ -14970,7 +14974,7 @@ Thread.sleep(2000);
 		}
 		
 		Thread.sleep(3000);
-		String ClosedTimely = CFOcountPOM.clickHumanClosedTimely().getText();		//Reading the Closed Timely value of Human Resource
+		String ClosedTimely = CFOcountPOM.clickHumanClosedTimelym().getText();		//Reading the Closed Timely value of Human Resource
 		ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Closed_Timely = Integer.parseInt(ClosedTimely);	
 		Thread.sleep(500);
@@ -14987,7 +14991,7 @@ Thread.sleep(2000);
 			
 		}
 		Thread.sleep(500);
-		String PendingReview = CFOcountPOM.clickHRPendingReviewm1().getText();	//Reading the Pending For Review value of Human Resource
+		String PendingReview = CFOcountPOM.clickAccountPendingReview().getText();	//Reading the Pending For Review value of Human Resource
 		PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 		int Pending_Review = Integer.parseInt(PendingReview);
 		
@@ -15007,7 +15011,7 @@ Thread.sleep(2000);
 		WebElement roc1 = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));	
 		roc1.click();
 		
-		String InProgress = CFOcountPOM.clickAdminInprogress().getText();	//Reading the Pending For Review value of Human Resource
+		String InProgress = CFOcountPOM.clickFinanceInProgressInternal().getText();	//Reading the Pending For Review value of Human Resource
 		InProgress = InProgress.replaceAll(" ","");								//Removing all white spaces from string. 
 		int In_Progress = Integer.parseInt(InProgress);	
 
@@ -15026,7 +15030,7 @@ Thread.sleep(2000);
 		}	
 		  
 		
-		String Rejected = CFOcountPOM.clickAdminInRejected().getText();	//Reading the Pending For Review value of Human Resource
+		String Rejected = CFOcountPOM.clickFinanceRejectedInternal().getText();	//Reading the Pending For Review value of Human Resource
 		Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
 		int R_ejected = Integer.parseInt(Rejected);
 		Thread.sleep(500);
@@ -15045,7 +15049,7 @@ Thread.sleep(2000);
 	}	
 
 		
-		String NotApplicable = CFOcountPOM.clickAdminNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
+		String NotApplicable = CFOcountPOM.clickComplianceIsecNotApplicableDemo().getText();	//Reading the Pending For Review value of Human Resource
 		NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
 		int Not_Applicable = Integer.parseInt(NotApplicable);	
 		WebElement r = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));	
@@ -15111,7 +15115,7 @@ Thread.sleep(2000);
 	//	js.executeScript("window.scrollBy(0,800)");
 		Thread.sleep(3000);
 		
-		String NotCompleted = CFOcountPOM.clickHROverduem().getText();			//Reading the Overdue value of Human Resource
+		String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo().getText();			//Reading the Overdue value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Overdue = Integer.parseInt(NotCompleted);	
 		
@@ -15124,22 +15128,22 @@ Thread.sleep(2000);
 		int Closed_Delayed = Integer.parseInt(ClosedDelayed);	
 		Thread.sleep(500);
 		Thread.sleep(3000);
-		String ClosedTimely = CFOcountPOM.clickHumanClosedTimely().getText();		//Reading the Closed Timely value of Human Resource
+		String ClosedTimely = CFOcountPOM.clickHumanClosedTimelym().getText();		//Reading the Closed Timely value of Human Resource
 		ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Closed_Timely = Integer.parseInt(ClosedTimely);			
-		String PendingReview = CFOcountPOM.clickHRPendingReviewm1().getText();	//Reading the Pending For Review value of Human Resource
+		String PendingReview = CFOcountPOM.clickAccountPendingReview().getText();	//Reading the Pending For Review value of Human Resource
 		PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 		int Pending_Review = Integer.parseInt(PendingReview);
 		
-		String InProgress = CFOcountPOM.clickAdminInprogress().getText();	//Reading the Pending For Review value of Human Resource
+		String InProgress = CFOcountPOM.clickFinanceInProgressInternal().getText();	//Reading the Pending For Review value of Human Resource
 		InProgress = InProgress.replaceAll(" ","");								//Removing all white spaces from string. 
 		int In_Progress = Integer.parseInt(InProgress);	
 		
-		String Rejected = CFOcountPOM.clickAdminInRejected().getText();	//Reading the Pending For Review value of Human Resource
+		String Rejected = CFOcountPOM.clickFinanceRejectedInternal().getText();	//Reading the Pending For Review value of Human Resource
 		Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
 		int R_ejected = Integer.parseInt(Rejected);	
 		
-		String NotApplicable = CFOcountPOM.clickAdminNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
+		String NotApplicable = CFOcountPOM.clickComplianceIsecNotApplicableDemo().getText();	//Reading the Pending For Review value of Human Resource
 		NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
 		int Not_Applicable = Integer.parseInt(NotApplicable);	
 		WebElement roc1 = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));	

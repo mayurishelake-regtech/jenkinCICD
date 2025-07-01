@@ -68,7 +68,7 @@ public class DeptStatutoryExcludingChecklist extends BasePage{
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\Department.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\Department.html",true);
 		test = extent.startTest("Loging In - Department Head (StatutoryExcludingChecklist)");
 		test.log(LogStatus.PASS, "Logging into system");
 		

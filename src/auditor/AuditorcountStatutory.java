@@ -68,10 +68,10 @@ public class AuditorcountStatutory extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 	//	String workingDir = System.getProperty("web.chrome.","C:/March2022/PerformerPom//chrome.exe");
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Auditor.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\Auditor.html",true);
 		test = extent.startTest("Loging In - Auditor (Statutory)");
 		test.log(LogStatus.PASS, "https://login.teamleaseregtech.com/");
-		test.log(LogStatus.PASS, "auditor@regtrack.com");
+		test.log(LogStatus.PASS, "auditor1@regtrack.com");
 		test.log(LogStatus.PASS, "admin@123");
 
 	/*	XSSFSheet sheet = ReadExcel();
@@ -137,7 +137,7 @@ public class AuditorcountStatutory extends BasePage {
 		}
 	}
 	
-// 	@Test(priority = 2)
+ 	//@Test(priority = 2)
 	void NotCompleted_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -226,7 +226,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 3)
+	//@Test(priority = 3)
 	void ClosedDelayed_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -312,7 +312,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 4)
+	//@Test(priority = 4)
 	void ClosedTimely_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -398,7 +398,7 @@ public class AuditorcountStatutory extends BasePage {
 		
 	}
 	
-//	@Test(priority = 5)
+	//@Test(priority = 5)
 	void NotApplicable_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -493,7 +493,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 6)
+	//@Test(priority = 6)
 	void CompletionGraphIsSMETAColumn() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart - Performance Summary - Completion Status- 'Is SMETA Column added' Verification");
@@ -504,7 +504,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 
 		
-//	@Test(priority = 7)
+	//@Test(priority = 7)
 	void Overdue_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -597,7 +597,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 8)
+	//@Test(priority = 8)
 	void dueToday_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -691,7 +691,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 9)
+	//@Test(priority = 9)
 	void pendingForReview_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -785,7 +785,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 10)
+	//@Test(priority = 10)
 	void inProgress_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -878,7 +878,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 11)
+	//@Test(priority = 11)
 	void rejected_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -971,7 +971,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 12)
+	//@Test(priority = 12)
 	void NotCompletion_IsSmeta() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart - Performance Summary - Not Completion Status- 'Is SMETA Column added' Verification");					
@@ -982,7 +982,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 
 	
-	   @Test(priority = 13)
+	  // @Test(priority = 13)
 		void BargraphIndustrySpeCriticalStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
@@ -1084,7 +1084,7 @@ public class AuditorcountStatutory extends BasePage {
 		}
 		
 		
-//		@Test(priority = 14)
+		//@Test(priority = 14)
 		void BargraphIndustrySpeHighStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'High' risk");
@@ -1102,7 +1102,7 @@ public class AuditorcountStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,800)");						//Scrolling down window by 1000 px.
 			Thread.sleep(4000);
-			String PendingReview = CFOcountPOM.clickIndustrySpeHighM().getText();	//Reading the Pending For Review value of Human Resource
+			String PendingReview = CFOcountPOM.clickIndustrySpeHigh().getText();	//Reading the Pending For Review value of Human Resource
 		//	PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 			
 			Thread.sleep(4000);
@@ -1190,7 +1190,7 @@ public class AuditorcountStatutory extends BasePage {
 		}
 
 		
-//	    @Test(priority = 15)
+	  //  @Test(priority = 15)
 
 		void BargraphIndustrySpeMediumStatutory() throws InterruptedException, IOException
 		{
@@ -1209,7 +1209,7 @@ public class AuditorcountStatutory extends BasePage {
 			js.executeScript("window.scrollBy(0,800)");						//Scrolling down window by 1000 px.
 			
 			Thread.sleep(4000);
-			int IndustrySpeMedium = Integer.parseInt(CFOcountPOM.clickIndustrySpeMediumM().getText());	//Reading the Medium value of Labour compliance
+			int IndustrySpeMedium = Integer.parseInt(CFOcountPOM.clickIndustrySpeMedium().getText());	//Reading the Medium value of Labour compliance
 			CFOcountPOM.clickIndustrySpeMediumM().click();					//Clicking on High bar of Labour  
 			
 			Thread.sleep(3000);
@@ -1290,7 +1290,7 @@ public class AuditorcountStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//	   @Test(priority = 16)
+	 //  @Test(priority = 16)
 
 		void BargraphIndustrySpeLowStatutory() throws InterruptedException, IOException
 		{
@@ -1310,7 +1310,7 @@ public class AuditorcountStatutory extends BasePage {
 			
 			
 			Thread.sleep(4000);
-			int IndustrySpeLow = Integer.parseInt(CFOcountPOM.clickIndustrySpeLowM().getText());	//Reading the Medium value of Labour compliance
+			int IndustrySpeLow = Integer.parseInt(CFOcountPOM.clickIndustrySpeLow().getText());	//Reading the Medium value of Labour compliance
 			CFOcountPOM.clickIndustrySpeLowM().click();					//Clicking on low bar of Indistry Specific  
 			
 			Thread.sleep(500);
@@ -1396,7 +1396,7 @@ public class AuditorcountStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 17)
+		//@Test(priority = 17)
 		void OverallFunIsSmeta() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - Completion Status- Overall Function - 'Is SMETA Column added' Verification");					
@@ -1407,7 +1407,7 @@ public class AuditorcountStatutory extends BasePage {
 		}
 
 	
-//	@Test(priority = 18)
+	//@Test(priority = 18)
 	void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 	{
 		Thread.sleep(2000);
@@ -1476,7 +1476,7 @@ public class AuditorcountStatutory extends BasePage {
 		{
 			CFOcountPOM.clickRiskCriticalNotApplicable().click();			//Clicking on Not Completed compliances bar of High risk.  
 			Thread.sleep(2000);
-			CFOcountPOM.RiskGraphCountNA( test, "Critical - Not Applicable", RiskCritical_NotApplicable, "Statutory");
+			CFOcountPOM.RiskGraphCountNAC( test, "Critical - Not Applicable", RiskCritical_NotApplicable, "Statutory");
 		}
 		else
 		{
@@ -1501,7 +1501,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 19)
+	//@Test(priority = 19)
 	void RiskSummaryHighStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1598,7 +1598,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-	//	@Test(priority = 20)
+		//@Test(priority = 20)
 
 	void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 	{
@@ -1700,7 +1700,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 21)
+	//@Test(priority = 21)
 
 	void RiskSummaryLowStatutory() throws InterruptedException, IOException
 	{		
@@ -1804,7 +1804,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 	
 	
-//	@Test(priority = 22)
+	//@Test(priority = 22)
 	void RiskSummaryFilterNA() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Status,License Type,Mitigation plan are working on the graph of Risk Summary - Not applicable Status or not?");
@@ -1814,7 +1814,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-//	@Test(priority = 23)
+	//@Test(priority = 23)
 		void RiskSummIsSmeta() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - Risk Summary graph - 'Is SMETA Column added' Verification");					
@@ -1824,152 +1824,178 @@ public class AuditorcountStatutory extends BasePage {
 			extent.flush();
 		}
 
-//	@Test(priority = 24)
+		//@Test(priority = 24)
 
-	void DepartmentSummaryFinanceStatutory() throws InterruptedException, IOException
-	{
-		Thread.sleep(3000);		
-		JavascriptExecutor js = (JavascriptExecutor) getDriver();
-		js.executeScript("window.scrollBy(0,1700)");					//Scrolling down window by 1500 px.
-		Thread.sleep(3000);	
-		test = extent.startTest("Department Summary - 'Admin' Count Verification");
-		
-	 
-		String NotCompleted = CFOcountPOM.clickAdminOverdueA().getText();			//Reading the Overdue value of Human Resource
-		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
-		int Overdue = Integer.parseInt(NotCompleted);						
-		if(Overdue > 0)
+		void DepartmentSummaryFinanceStatutory() throws InterruptedException, IOException
 		{
-			CFOcountPOM.clickAdminOverdueA().click();
-			Thread.sleep(500);
-			AuditorcountPOM.RiskGraphCount1( test, "Overdue", Overdue, "Statutory");
-		}
-		else
-		{
-			test.log(LogStatus.PASS, "Overdue Compliance Count = "+ Overdue + ".");
-		}
-		
-         WebElement roc = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-2 > rect"));
-		
-		  roc.click();
-		Thread.sleep(4000);
-		
-		Thread.sleep(500);
-		String ClosedDelayed = CFOcountPOM.clickAdminClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
-		//ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
-		int Closed_Delayed = Integer.parseInt(ClosedDelayed);	
-	//	int Closed_Delayed = Integer.parseInt(CFOcountPOM.clickHumanClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
-
-		if(Closed_Delayed > 0)
-		{
-			CFOcountPOM.clickAdminClosedDelayed().click();
-			Thread.sleep(2000);
-			AuditorcountPOM.RiskGraphCount2( test, "Closed Delayed", Closed_Delayed, "Statutory");
-		}
-		else
-		{
-			test.log(LogStatus.PASS, "Closed Delayed Compliance Count = "+ Closed_Delayed + ".");
-		}
-		
-		Thread.sleep(500);
-		String ClosedTimely = CFOcountPOM.clickAccountClosedTimelyA().getText();		//Reading the Closed Timely value of Human Resource
-		ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
-		int Closed_Timely = Integer.parseInt(ClosedTimely);						
-		if(Closed_Timely > 0)
-		{
-			CFOcountPOM.clickAccountClosedTimelyA().click();
-			Thread.sleep(500);
-			AuditorcountPOM.RiskGraphCount2( test, "Closed Timely", Closed_Timely, "Statutory");
-		}
-		else
-		{
-			test.log(LogStatus.PASS, "Closed Timely Compliance Count = "+ Closed_Timely + ".");
-		}
-		
-		Thread.sleep(2000);
-		String PendingReview = CFOcountPOM.clickAdminPendingReview().getText();	//Reading the Pending For Review value of Human Resource
-		PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
-		int Pending_Review = Integer.parseInt(PendingReview);						
-		if(Pending_Review > 0)
-		{
-			CFOcountPOM.clickAdminPendingReview().click();
-			Thread.sleep(2000);
-			AuditorcountPOM.RiskGraphCount2( test, "Pending For Review", Pending_Review, "Statutory");
-		}
-		else
-		{
-			test.log(LogStatus.PASS, "Pending For Review Compliance Count = "+ Pending_Review + ".");
-		}
-		
+			Thread.sleep(3000);		
+			JavascriptExecutor js = (JavascriptExecutor) getDriver();
+			js.executeScript("window.scrollBy(0,1700)");					//Scrolling down window by 1500 px.
+			Thread.sleep(3000);	
+			test = extent.startTest("Department Summary - 'Forest' Count Verification");
 			
-			Thread.sleep(500);
-			String InProgress = CFOcountPOM.clickAdminInprogress().getText();	//Reading the Pending For Review value of Human Resource
-			InProgress = InProgress.replaceAll(" ","");								//Removing all white spaces from string. 
-			int In_Progress = Integer.parseInt(InProgress);						
-			if(In_Progress > 0)
+			Thread.sleep(3000);
+			String Admin = CFOcountPOM.AdminCount().getText();			//Reading the Overdue value of Human Resource
+			Admin = Admin.replaceAll(" ","");									//Removing all white spaces from string. 
+			int IndustrySpeCritical = Integer.parseInt(Admin);	
+			
+			Thread.sleep(4000);
+			String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo().getText();			//Reading the Overdue value of Human Resource
+			NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
+			int Overdue = Integer.parseInt(NotCompleted);						
+			if(Overdue > 0)
 			{
-				CFOcountPOM.clickAdminInprogress().click();
-				AuditorcountPOM.RiskGraphCount2( test, "InProgress", In_Progress, "Statutory");
+				CFOcountPOM.clickComplianceIsecOverdueDemo().click();
+				Thread.sleep(500);
+				AuditorcountPOM.RiskGraphCount1( test, "Overdue", Overdue, "Statutory");
 			}
 			else
 			{
-				test.log(LogStatus.PASS, "InProgress Compliance Count = "+ In_Progress + ".");
+				test.log(LogStatus.PASS, "Overdue Compliance Count = "+ Overdue + ".");
 			}
 			
+	         WebElement roc = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-2 > rect"));
+			
+			  roc.click();
+			Thread.sleep(4000);
+			
 			Thread.sleep(500);
-			String Rejected = CFOcountPOM.clickAdminInRejected().getText();	//Reading the Pending For Review value of Human Resource
-			Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
-			int R_ejected = Integer.parseInt(Rejected);						
-			if(In_Progress > 0)
+			String ClosedDelayed = CFOcountPOM.clickHumanClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
+			//ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
+			int Closed_Delayed = Integer.parseInt(ClosedDelayed);	
+		//	int Closed_Delayed = Integer.parseInt(CFOcountPOM.clickHumanClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
+
+			if(Closed_Delayed > 0)
 			{
-				CFOcountPOM.clickAdminInRejected().click();
-				AuditorcountPOM.RiskGraphCount2( test, "Rejected", R_ejected, "Statutory");
+				CFOcountPOM.clickHumanClosedDelayed().click();
+				Thread.sleep(2000);
+				AuditorcountPOM.RiskGraphCount2( test, "Closed Delayed", Closed_Delayed, "Statutory");
 			}
 			else
 			{
-				test.log(LogStatus.PASS, "Rejected Compliance Count = "+ R_ejected + ".");
+				test.log(LogStatus.PASS, "Closed Delayed Compliance Count = "+ Closed_Delayed + ".");
 			}
+			 WebElement roc1 =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-0 > text"));
+				
+			  roc1.click();
+			
 			Thread.sleep(500);
-			String NotApplicable = CFOcountPOM.clickAdminNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
-			NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
-			int Not_Applicable = Integer.parseInt(NotApplicable);						
-			if(Not_Applicable > 0)
+			String ClosedTimely = CFOcountPOM.clickHumanClosedTimelym().getText();		//Reading the Closed Timely value of Human Resource
+			ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
+			int Closed_Timely = Integer.parseInt(ClosedTimely);						
+			if(Closed_Timely > 0)
 			{
-				CFOcountPOM.clickAdminNotApplicable().click();
-				AuditorcountPOM.RiskGraphCount2( test, "Not Applicable", Not_Applicable, "Statutory");
+				CFOcountPOM.clickHumanClosedTimelym().click();
+				Thread.sleep(500);
+				AuditorcountPOM.RiskGraphCount2( test, "Closed Timely", Closed_Timely, "Statutory");
 			}
 			else
 			{
-				test.log(LogStatus.PASS, "Not Applicable Compliance Count = "+ Not_Applicable + ".");
+				test.log(LogStatus.PASS, "Closed Timely Compliance Count = "+ Closed_Timely + ".");
 			}
-			Thread.sleep(500);
-			WebElement CD = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-0 > rect"));
-			CD.click();
 			WebElement CT = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-1 > rect"));
 			CT.click();
-			WebElement PR = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));
-			PR.click();
-			String DueToday = CFOcountPOM.clickAdminDueToday().getText();	//Reading the Pending For Review value of Human Resource
-			DueToday = DueToday.replaceAll(" ","");								//Removing all white spaces from string. 
-			int Due_Today = Integer.parseInt(DueToday);						
-			if(Due_Today > 0)
+			
+			Thread.sleep(3000);
+			Thread.sleep(2000);
+			String PendingReview = CFOcountPOM.clickAccountPendingReview().getText();	//Reading the Pending For Review value of Human Resource
+			PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
+			int Pending_Review = Integer.parseInt(PendingReview);						
+			if(Pending_Review > 0)
 			{
-				CFOcountPOM.clickAdminDueToday().click();
-				AuditorcountPOM.RiskGraphCount2( test, "DueToday", Due_Today, "Statutory");
+				CFOcountPOM.clickAccountPendingReview().click();
+				Thread.sleep(2000);
+				AuditorcountPOM.RiskGraphCount2( test, "Pending For Review", Pending_Review, "Statutory");
 			}
 			else
 			{
-				test.log(LogStatus.PASS, "DueToday Compliance Count = "+ Due_Today + ".");
+				test.log(LogStatus.PASS, "Pending For Review Compliance Count = "+ Pending_Review + ".");
 			}
-		
-		Thread.sleep(500);
-		performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
-		Thread.sleep(2000);
-		extent.endTest(test);
-		extent.flush();
-	}
+			
+			WebElement PR = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));
+			PR.click();
+				Thread.sleep(500);
+				String InProgress = CFOcountPOM.clickFinanceInProgressInternal().getText();	//Reading the Pending For Review value of Human Resource
+				InProgress = InProgress.replaceAll(" ","");								//Removing all white spaces from string. 
+				int In_Progress = Integer.parseInt(InProgress);						
+				if(In_Progress > 0)
+				{
+					CFOcountPOM.clickFinanceInProgressInternal().click();
+					AuditorcountPOM.RiskGraphCount2( test, "InProgress", In_Progress, "Statutory");
+				}
+				else
+				{
+					test.log(LogStatus.PASS, "InProgress Compliance Count = "+ In_Progress + ".");
+				}
+				WebElement IP = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-4 > rect"));
+				IP.click();
+				
+				Thread.sleep(500);
+				String Rejected = CFOcountPOM.clickFinanceRejectedInternal().getText();	//Reading the Pending For Review value of Human Resource
+				Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
+				int R_ejected = Integer.parseInt(Rejected);						
+				if(R_ejected > 0)
+				{
+					CFOcountPOM.clickFinanceRejectedInternal().click();
+					AuditorcountPOM.RiskGraphCount2( test, "Rejected", R_ejected, "Statutory");
+				}
+				else
+				{
+					test.log(LogStatus.PASS, "Rejected Compliance Count = "+ R_ejected + ".");
+				}
+				Thread.sleep(500);
+				String NotApplicable = CFOcountPOM.clickComplianceIsecNotApplicableDemo().getText();	//Reading the Pending For Review value of Human Resource
+				NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
+				int Not_Applicable = Integer.parseInt(NotApplicable);						
+				if(Not_Applicable > 0)
+				{
+					CFOcountPOM.clickComplianceIsecNotApplicableDemo().click();
+					AuditorcountPOM.RiskGraphCount2( test, "Not Applicable", Not_Applicable, "Statutory");
+				}
+				else
+				{
+					test.log(LogStatus.PASS, "Not Applicable Compliance Count = "+ Not_Applicable + ".");
+				}
+				Thread.sleep(500);
+				Thread.sleep(500);
+				WebElement NA = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-6 > rect"));
+				NA.click();
+				Thread.sleep(3000);
+				String DueToday = CFOcountPOM.clickAdminDueToday().getText();	//Reading the Pending For Review value of Human Resource
+				DueToday = DueToday.replaceAll(" ","");								//Removing all white spaces from string. 
+				int Due_Today = Integer.parseInt(DueToday);						
+				if(Due_Today > 0)
+				{
+					CFOcountPOM.clickAdminDueToday().click();
+					AuditorcountPOM.RiskGraphCount2( test, "DueToday", Due_Today, "Statutory");
+				}
+				else
+				{
+					test.log(LogStatus.PASS, "DueToday Compliance Count = "+ Due_Today + ".");
+				}
+
+				Thread.sleep(8000);
+				int total = Overdue + Due_Today + Not_Applicable + R_ejected+Pending_Review+Closed_Timely+Closed_Delayed+In_Progress;				//Calculating the values to match with High value of Labour.
+				Thread.sleep(5000);	
+				if(IndustrySpeCritical == total)
+				{
+					test.log(LogStatus.PASS, "Department Summary  Count matches to sum of all types of Compliance.");
+					test.log(LogStatus.PASS, "Total  Department Summary : "+IndustrySpeCritical+" | Sum of all risk count : "+total);
+				}
+				else
+				{
+					test.log(LogStatus.FAIL, "Department summary   Count doesn't matches to sum of all types of statuses.");
+					test.log(LogStatus.FAIL, "Total Department summary' Compliances : "+IndustrySpeCritical+" | Sum of all risk count : "+total);
+				}
+				
+			Thread.sleep(500);
+			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+			Thread.sleep(2000);
+			extent.endTest(test);
+			extent.flush();
+		}
 	
-//	@Test(priority = 35)
+	//@Test(priority = 25)
 	void DepartSummIsSmeta() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - Department Summary graph - 'Is SMETA Column added' Verification");					
@@ -1979,7 +2005,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 
-//	@Test(priority = 26)
+	//@Test(priority = 26)
 
 	void NotCompleted_PieChartPe() throws InterruptedException, IOException
 	{
@@ -2100,7 +2126,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 27)
+	//@Test(priority = 27)
 
 	void ClosedDelayed_PieChartPe() throws InterruptedException, IOException
 	{
@@ -2222,7 +2248,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 28)
+	//@Test(priority = 28)
 
 	void ClosedTimely_PieChartPe() throws InterruptedException, IOException
 	{
@@ -2346,7 +2372,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 29)
+	//@Test(priority = 29)
 
 	void NotApplicable_PieChartPeriod() throws InterruptedException, IOException
 	{
@@ -2468,7 +2494,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 		
 	}	
-//	@Test(priority = 30)
+	//@Test(priority = 30)
 
 	void UpcomingPieChartPeriod() throws InterruptedException
 	{
@@ -2625,7 +2651,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 31)
+	//@Test(priority = 31)
 	void DueforperiodIsSMETAColumn() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Not Completed - Is SMETA Column Count Verification");
@@ -2669,7 +2695,7 @@ public class AuditorcountStatutory extends BasePage {
 		
 	}
 	
-	@Test(priority = 32)
+//	@Test(priority = 32)
 	void periodIsSMETAColumnCloseddelayed() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Closed Delayed - Is SMETA Column Count Verification");
@@ -2711,7 +2737,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
     
-	@Test(priority = 33)
+	//@Test(priority = 33)
 	void periodIsSMETAColumnTimely() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Closed Timely - Is SMETA Column Count Verification");
@@ -2839,7 +2865,7 @@ public class AuditorcountStatutory extends BasePage {
 	
 
 	
-//	@Test(priority = 36)
+	@Test(priority = 36)
 
 	void Overdue_PieChartperiod() throws InterruptedException, IOException
 	{
@@ -2965,6 +2991,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
+	
 	@Test(priority =37)
 	void periodIsSMETAColumnOverdue() throws InterruptedException, IOException
 	{
@@ -3008,7 +3035,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 		
 
-//	@Test(priority = 38)
+	@Test(priority = 38)
 
 	void dueToday_PieChartPeriod() throws InterruptedException, IOException
 	{
@@ -3176,7 +3203,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-//	@Test(priority = 40)
+	@Test(priority = 40)
 
 	void pendingForReview_PieChartPeriod() throws InterruptedException, IOException
 	{
@@ -3348,7 +3375,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 		
 
-//	@Test(priority = 42)
+	@Test(priority = 42)
 
 	void inProgress_PieChartPeriod() throws InterruptedException, IOException
 	{
@@ -3968,7 +3995,7 @@ public class AuditorcountStatutory extends BasePage {
 			Thread.sleep(3000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
 			Thread.sleep(2000);
-			 By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[22]/a");
+			 By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[24]/a");
 			
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -4064,7 +4091,7 @@ public class AuditorcountStatutory extends BasePage {
 					extent.flush();
 		}
 		
-		@Test(priority = 65)
+		//@Test(priority = 65)
 	void ComplianceDocumentsFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To Check Compliance Document page All filters working or not");
@@ -4154,7 +4181,7 @@ public class AuditorcountStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//////		@Test(priority = 34) // pass
+//		@Test(priority = 34) // pass
 		void MyReminderStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("My Reminder - Statutory Count Verification");
@@ -4233,7 +4260,7 @@ public class AuditorcountStatutory extends BasePage {
 				Thread.sleep(1000);
 				OverduePOM.TypeMsg().sendKeys("Automation testing");
 				Thread.sleep(1000);
-				OverduePOM.choosefile().sendKeys("C:\\Users\\shitalb\\Downloads\\Report .xlsx");
+				OverduePOM.choosefile().sendKeys("C:\\Users\\mayurig\\Downloads\\Report.xlsx");
 				Thread.sleep(1000);
 				//OverduePOM.send().click();
 				By locator = By.xpath("//*[@id='btnsendmailNew']");
@@ -4686,7 +4713,7 @@ public class AuditorcountStatutory extends BasePage {
 		*/
 		
 
-			
+	/*		
 			@Test(priority = 74)
 			void ComplianceDocumentsDAM() throws InterruptedException, IOException
 			{
@@ -4729,7 +4756,7 @@ public class AuditorcountStatutory extends BasePage {
 				
 				extent.endTest(test);
 				extent.flush();
-			}
+			}*/
 	       
 			@Test(priority = 82)
 			void PerformReviewEmailCol() throws InterruptedException, IOException
@@ -4755,8 +4782,8 @@ public class AuditorcountStatutory extends BasePage {
 			}
 
 
-	       /*
-	     @Test(priority = 82)
+	       
+	    @Test(priority = 82)
 			void PerformanceSummarySF() throws InterruptedException, IOException
 			{
 				test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Performance Summary Graph?");
@@ -4818,7 +4845,7 @@ public class AuditorcountStatutory extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-		*/
+		
 						
 
 			

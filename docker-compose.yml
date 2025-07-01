@@ -1,0 +1,19 @@
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  hlm-backend:
+    image: healenium/hlm-backend
+    ports:
+      - "7878:7878"
+    depends_on:
+      - mongo
+
+  hlm-selector-healer:
+    image: healenium/hlm-selector-healer
+    ports:
+      - "5005:5005"
+    depends_on:
+      - mongo

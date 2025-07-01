@@ -503,7 +503,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ClickReviewerTaskPFRStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerPendingReviewStatBoth']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerPendingReviewStat']"));
 		return statutoryAction;
 	}
 	
@@ -533,7 +533,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ReviewerTaskDBNSStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubStatBoth']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubStat']"));
 		return statutoryAction;
 	}
 	
@@ -545,7 +545,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ReviewerTaskDBNSInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubIntBoth']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubInt']"));
 		return statutoryAction;
 	}
 	

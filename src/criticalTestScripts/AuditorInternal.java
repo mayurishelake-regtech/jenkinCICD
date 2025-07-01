@@ -30,7 +30,7 @@ import auditor.AuditorcountPOM;
 import cfo.CFOcountPOM;
 import login.BasePage;
 import performer.OverduePOM;
-
+//mgmtregtrack@tlregtech.com
 public class AuditorInternal extends BasePage {
 	
 //	public static Web  = null;		//Web instance created
@@ -566,7 +566,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//@Test(priority = 7)
+@Test(priority = 7)
 	void dueToday_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -655,7 +655,7 @@ public class AuditorInternal extends BasePage {
 	}
 	
 	
-//@Test(priority = 8)
+@Test(priority = 8)
 	void PFR_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status - 'Pending For Review' Count Verification");
@@ -696,7 +696,7 @@ public class AuditorInternal extends BasePage {
 			{Thread.sleep(1000);
 			
 			//	AuditorcountPOM.GraphCountIn2( test, "Critical", critical, "Internal");
-			AuditorcountPOM.GraphCount4( test, "Critical", critical, "Internal");
+			AuditorcountPOM.GraphCountIn( test, "Critical", critical, "Internal");
 
 			}
 			else
@@ -706,9 +706,9 @@ public class AuditorInternal extends BasePage {
 			
 			if(high > 0)
 			{
-			//	AuditorcountPOM.GraphCountIn2( test, "High", high, "Internal");
+				//AuditorcountPOM.GraphCountIn2( test, "High", high, "Internal");
 
-				AuditorcountPOM.GraphCount4( test, "High", high, "Internal");
+				AuditorcountPOM.GraphCountIn( test, "High", high, "Internal");
 			}
 			else
 			{
@@ -718,7 +718,7 @@ public class AuditorInternal extends BasePage {
 			if(medium > 0)
 			{
 			//	AuditorcountPOM.GraphCountIn2( test, "Medium", medium, "Internal");
-				AuditorcountPOM.GraphCount4( test, "Medium", medium, "Internal");
+				AuditorcountPOM.GraphCountIn( test, "Medium", medium, "Internal");
 
 			}
 			else
@@ -729,7 +729,7 @@ public class AuditorInternal extends BasePage {
 			if(low > 0)
 			{
 				//AuditorcountPOM.GraphCountIn2( test, "Low", low, "Internal");
-				AuditorcountPOM.GraphCount4( test, "Low", low, "Internal");
+				AuditorcountPOM.GraphCountIn( test, "Low", low, "Internal");
 
 			}
 			else
@@ -755,7 +755,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//@Test(priority = 9)
+@Test(priority = 9)
 	void inProgress_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status - 'In Progress' Count Verification");
@@ -797,7 +797,7 @@ public class AuditorInternal extends BasePage {
 			{Thread.sleep(1000);
 			
 				//AuditorcountPOM.GraphCountIn2( test, "Critical", critical, "Internal");
-			AuditorcountPOM.GraphCount4( test, "Critical", critical, "Internal");
+			AuditorcountPOM.GraphCountIn( test, "Critical", critical, "Internal");
 
 			}
 			else
@@ -808,7 +808,7 @@ public class AuditorInternal extends BasePage {
 			if(high > 0)
 			{
 			//	AuditorcountPOM.GraphCountIn2( test, "High", high, "Internal");
-				AuditorcountPOM.GraphCount4( test, "High", high, "Internal");
+				AuditorcountPOM.GraphCountIn( test, "High", high, "Internal");
 
 			}
 			else
@@ -820,7 +820,7 @@ public class AuditorInternal extends BasePage {
 			{
 				
 			//	AuditorcountPOM.GraphCountIn2( test, "Medium", medium, "Internal");
-				AuditorcountPOM.GraphCount4( test, "Medium", medium, "Internal");
+				AuditorcountPOM.GraphCountIn( test, "Medium", medium, "Internal");
 
 			}
 			else
@@ -832,7 +832,7 @@ public class AuditorInternal extends BasePage {
 			{
 				//AuditorcountPOM.GraphCount4( test, "Medium", medium, "Internal");
 
-				AuditorcountPOM.GraphCount4( test, "Low", low, "Internal");
+				AuditorcountPOM.GraphCountIn( test, "Low", low, "Internal");
 			}
 			else
 			{
@@ -858,7 +858,7 @@ public class AuditorInternal extends BasePage {
 	}
 	
 	
-//@Test(priority = 10)
+@Test(priority = 10)
 	void Rejected_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status - 'Rejected' Count Verification");
@@ -897,7 +897,7 @@ public class AuditorInternal extends BasePage {
 			{
 				
 				//AuditorcountPOM.GraphCountIn2( test, "Critical", critical, "Internal");
-				AuditorcountPOM.GraphCount4( test, "Critical", critical, "Internal");
+				AuditorcountPOM.GraphCountIn( test, "Critical", critical, "Internal");
 
 			}
 			else
@@ -910,7 +910,7 @@ public class AuditorInternal extends BasePage {
 			{
 				Thread.sleep(3000);
 				
-				AuditorcountPOM.GraphCount4( test, "High", high, "Internal");
+				AuditorcountPOM.GraphCountIn( test, "High", high, "Internal");
 
 			//AuditorcountPOM.GraphCountIn2( test, "High", high, "Internal");
 			}
@@ -921,7 +921,7 @@ public class AuditorInternal extends BasePage {
 			
 			if(medium > 0)
 			{
-				AuditorcountPOM.GraphCount4( test, "Medium", medium, "Internal");
+				AuditorcountPOM.GraphCountIn( test, "Medium", medium, "Internal");
 
 			//	AuditorcountPOM.GraphCountIn2( test, "Medium", medium, "Internal");
 			}
@@ -933,7 +933,7 @@ public class AuditorInternal extends BasePage {
 			if(low > 0)
 			{
 			//	AuditorcountPOM.GraphCountIn2( test, "Low", low, "Internal");
-				AuditorcountPOM.GraphCount4( test, "Low", low, "Internal");
+				AuditorcountPOM.GraphCountIn( test, "Low", low, "Internal");
 
 			}
 			else
@@ -960,7 +960,7 @@ public class AuditorInternal extends BasePage {
 	}
 	
 		
-//@Test(priority = 11)
+@Test(priority = 11)
 	void BargraphBSECriticalStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Critical' risk");
@@ -1056,7 +1056,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//@Test(priority = 12)
+@Test(priority = 12)
 	void BargraphBSEHighStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'High' risk");
@@ -1153,7 +1153,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//@Test(priority = 13)
+@Test(priority = 13)
 	void BargraphBSEMediumStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Medium' risk");
@@ -1248,7 +1248,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//@Test(priority =14)
+@Test(priority =14)
 	void BargraphBSELowStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'LOW' risk");
@@ -1341,7 +1341,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 
-//@Test(priority = 15)
+@Test(priority = 15)
 	void RiskSummaryCriticalInternal() throws InterruptedException, IOException
 	{
 		//.navigate().refresh();
@@ -1462,7 +1462,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//@Test(priority = 16)
+@Test(priority = 16)
 	void RiskSummaryHighInternal() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1588,7 +1588,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//@Test(priority = 17)
+@Test(priority = 17)
 	void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1713,7 +1713,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//@Test(priority = 18)
+@Test(priority = 18)
 	void RiskSummaryLowStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1841,7 +1841,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//@Test(priority = 19)
+@Test(priority = 19)
 	void DepartmentSummaryFinanceStatutory() throws InterruptedException
 	{
 		Thread.sleep(3000);		
@@ -1858,12 +1858,12 @@ public class AuditorInternal extends BasePage {
 		Thread.sleep(4000);
 	  	Thread.sleep(4000);
 	 
-		String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo().getText();			//Reading the Overdue value of Human Resource
+		String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo1().getText();			//Reading the Overdue value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Overdue = Integer.parseInt(NotCompleted);						
 		if(Overdue > 0)
 		{
-			CFOcountPOM.clickComplianceIsecOverdueDemo().click();
+			CFOcountPOM.clickComplianceIsecOverdueDemo1().click();
 			Thread.sleep(500);
 			AuditorcountPOM.RiskGraphCountIn( test, "Overdue", Overdue, "Statutory");
 		}
@@ -1897,12 +1897,12 @@ public class AuditorInternal extends BasePage {
 			
 		  roc1.click();
 		Thread.sleep(500);
-		String ClosedTimely = CFOcountPOM.clickHumanClosedTimelym().getText();		//Reading the Closed Timely value of Human Resource
+		String ClosedTimely = CFOcountPOM.clickAccountClosedTimelyA().getText();		//Reading the Closed Timely value of Human Resource
 		ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Closed_Timely = Integer.parseInt(ClosedTimely);						
 		if(Closed_Timely > 0)
 		{
-			CFOcountPOM.clickHumanClosedTimelym().click();
+			CFOcountPOM.clickAccountClosedTimelyA().click();
 			Thread.sleep(500);
 			AuditorcountPOM.RiskGraphCountIn1( test, "Closed Timely", Closed_Timely, "Statutory");
 		}
@@ -1916,12 +1916,12 @@ public class AuditorInternal extends BasePage {
 		
 		Thread.sleep(3000);
 		Thread.sleep(2000);
-		String PendingReview = CFOcountPOM.clickAccountPendingReview().getText();	//Reading the Pending For Review value of Human Resource
+		String PendingReview = CFOcountPOM.clickAccountPendingReview1().getText();	//Reading the Pending For Review value of Human Resource
 		PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 		int Pending_Review = Integer.parseInt(PendingReview);						
 		if(Pending_Review > 0)
 		{
-			CFOcountPOM.clickAccountPendingReview().click();
+			CFOcountPOM.clickAccountPendingReview1().click();
 			Thread.sleep(2000);
 			AuditorcountPOM.RiskGraphCountIn1( test, "Pending For Review", Pending_Review, "Statutory");
 		}
@@ -1934,12 +1934,12 @@ public class AuditorInternal extends BasePage {
 		PR.click();
 			
 			Thread.sleep(2000);
-			String Inprogress = CFOcountPOM.clickFinanceInProgressInternal().getText();	//Reading the Pending For Review value of Human Resource
+			String Inprogress = CFOcountPOM.clickFinanceInProgressInternal1().getText();	//Reading the Pending For Review value of Human Resource
 			Inprogress = Inprogress.replaceAll(" ","");								//Removing all white spaces from string. 
 			int In_Progress = Integer.parseInt(Inprogress);						
 			if(In_Progress > 0)
 			{
-				CFOcountPOM.clickFinanceInProgressInternal().click();
+				CFOcountPOM.clickFinanceInProgressInternal1().click();
 				Thread.sleep(2000);
 				AuditorcountPOM.RiskGraphCountIn1( test, "In Progress", In_Progress, "Statutory");
 			}
@@ -1951,12 +1951,12 @@ public class AuditorInternal extends BasePage {
 			WebElement IP = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-4 > text > tspan"));
 			IP.click();
 			Thread.sleep(2000);
-			String Rejected = CFOcountPOM.clickFinanceRejectedInternal().getText();	//Reading the Pending For Review value of Human Resource
+			String Rejected = CFOcountPOM.clickFinanceRejectedInternal1().getText();	//Reading the Pending For Review value of Human Resource
 			Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
 			int Rejected_in = Integer.parseInt(Rejected);						
 			if(Rejected_in > 0)
 			{
-				CFOcountPOM.clickFinanceRejectedInternal().click();
+				CFOcountPOM.clickFinanceRejectedInternal1().click();
 				Thread.sleep(2000);
 				AuditorcountPOM.RiskGraphCountIn1( test, "Rejected", Rejected_in, "Statutory");
 			}
@@ -2017,7 +2017,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//@Test(priority = 20)
+@Test(priority = 20)
 	void ClosedTimely_PieChartperiod() throws InterruptedException
 	{
 		test = extent.startTest("period - Pie Chart -Completion Status - 'Closed Timely' Count Verification");

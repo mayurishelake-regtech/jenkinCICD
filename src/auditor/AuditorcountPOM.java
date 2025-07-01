@@ -5150,12 +5150,12 @@ try {
 				
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 				Thread.sleep(8000);
-				CFOcountPOM.ComplianceID().sendKeys("66196");
+				CFOcountPOM.ComplianceID().sendKeys("9572");
 				
 				Thread.sleep(8000);
-				
-				
-				By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+				CFOcountPOM.Apply1().click();
+				Thread.sleep(8000);
+				By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 			
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -5179,14 +5179,14 @@ try {
 			
 			
 				Thread.sleep(3000);
-				File dir = new File("C:\\Users\\snehalp\\Downloads");
+				File dir = new File("C:\\Users\\mayurig\\Downloads");
 				File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 				Thread.sleep(500);
 				OverduePOM.Download().click(); // Exporting (Downloading) file
 
 				Thread.sleep(3000);
-				File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+				File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 				File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 				Thread.sleep(3000);
 				if (dirContents.length < allFilesNew.length) 
@@ -5229,12 +5229,13 @@ try {
 				
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 				Thread.sleep(8000);
-				CFOcountPOM.ComplianceID().sendKeys("66196");
+				CFOcountPOM.ComplianceID().sendKeys("9572");
 				
 				Thread.sleep(8000);
+				CFOcountPOM.Apply1().click();
+				Thread.sleep(8000);
 				
-				
-				By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+				By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 			
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -5258,14 +5259,14 @@ try {
 			
 			
 				Thread.sleep(3000);
-				File dir = new File("C:\\Users\\snehalp\\Downloads");
+				File dir = new File("C:\\Users\\mayurig\\Downloads");
 				File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 				Thread.sleep(500);
 				OverduePOM.Download().click(); // Exporting (Downloading) file
 
 				Thread.sleep(3000);
-				File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+				File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 				File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 				Thread.sleep(3000);
 				if (dirContents.length < allFilesNew.length) 
@@ -5302,7 +5303,7 @@ try {
 				Thread.sleep(5000);
 				js.executeScript("window.scrollBy(0,1500)");	
 				Thread.sleep(3000);
-				CFOcountPOM.clickAdminOverdueA().click();								//CLicking on 'Not Completed' count
+				CFOcountPOM.clickComplianceIsecOverdueDemo().click();								//CLicking on 'Not Completed' count
 				
 						
 				Thread.sleep(3000);
@@ -5310,12 +5311,13 @@ try {
 				
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 				Thread.sleep(8000);
-				CFOcountPOM.ComplianceID().sendKeys("66196");
+				CFOcountPOM.ComplianceID().sendKeys("9572");
 				
 				Thread.sleep(8000);
+				CFOcountPOM.Apply1().click();
+				Thread.sleep(8000);
 				
-				
-				By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+				By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 			
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -5339,14 +5341,14 @@ try {
 			
 			
 				Thread.sleep(3000);
-				File dir = new File("C:\\Users\\snehalp\\Downloads");
+				File dir = new File("C:\\Users\\mayurig\\Downloads");
 				File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 				Thread.sleep(500);
 				OverduePOM.Download().click(); // Exporting (Downloading) file
 
 				Thread.sleep(3000);
-				File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+				File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 				File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 				Thread.sleep(3000);
 				if (dirContents.length < allFilesNew.length) 
@@ -5391,12 +5393,14 @@ try {
 				Thread.sleep(3000);
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
 				Thread.sleep(8000);
-				CFOcountPOM.ComplianceID().sendKeys("66196");
+				CFOcountPOM.ComplianceID().sendKeys("9572");
 				
 				Thread.sleep(8000);
+				Thread.sleep(8000);
+				CFOcountPOM.Apply1().click();
+				Thread.sleep(8000);
 				
-				
-				By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
+				By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[23]/a[1]");
 			
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -5420,14 +5424,14 @@ try {
 			
 			
 				Thread.sleep(3000);
-				File dir = new File("C:\\Users\\snehalp\\Downloads");
+				File dir = new File("C:\\Users\\mayurig\\Downloads");
 				File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 				Thread.sleep(500);
 				OverduePOM.Download().click(); // Exporting (Downloading) file
 
 				Thread.sleep(3000);
-				File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+				File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 				File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 				Thread.sleep(3000);
 				if (dirContents.length < allFilesNew.length) 
@@ -5465,8 +5469,10 @@ try {
 //			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
 			
 			
-			CFOcountPOM.ComplianceID().sendKeys("66196");
+			CFOcountPOM.ComplianceID().sendKeys("9572");
 			Thread.sleep(4000);
+			CFOcountPOM.Apply1().click();
+			Thread.sleep(8000);
 			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td/a");
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -5489,14 +5495,14 @@ try {
 
 
 			Thread.sleep(3000);
-			File dir = new File("C:\\Users\\snehalp\\Downloads");
+			File dir = new File("C:\\Users\\mayurig\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(500);
 			OverduePOM.Download().click(); // Exporting (Downloading) file
 
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) 
@@ -5534,12 +5540,12 @@ try {
 				Thread.sleep(3000);
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
 				Thread.sleep(3000);
-				CFOcountPOM.ComplianceID1().sendKeys("66196");
+				CFOcountPOM.ComplianceID1().sendKeys("9572");
 				
 				Thread.sleep(2000);
 				CFOcountPOM.Apply().click();
 				Thread.sleep(2000);
-				By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[22]/a[2]");
+				By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[24]/a[2]");
 				
 				WebElement ViewButton =getDriver() .findElement(locator);	
 				Thread.sleep(3000);
@@ -5559,14 +5565,14 @@ try {
 
 
 				Thread.sleep(3000);
-				File dir = new File("C:\\Users\\snehalp\\Downloads");
+				File dir = new File("C:\\Users\\mayurig\\Downloads");
 				File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 				Thread.sleep(500);
 				OverduePOM.Download().click(); // Exporting (Downloading) file
 
 				Thread.sleep(3000);
-				File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+				File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 				File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 				Thread.sleep(3000);
 				if (dirContents.length < allFilesNew.length) 
@@ -5714,7 +5720,11 @@ try {
     	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
     	
     	int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
-    			
+    	Thread.sleep(8000);
+    	
+    	
+    	
+    	Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -5769,7 +5779,7 @@ try {
 	    	Thread.sleep(2000);
 	       	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.Apply().click();
 	    	Thread.sleep(8000);
@@ -6008,7 +6018,7 @@ try {
 	    	Thread.sleep(2000);
 	       	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.Apply().click();
 	    	Thread.sleep(8000);
@@ -6117,7 +6127,7 @@ try {
 	    	Thread.sleep(2000);
 	       	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.Apply().click();
 	    	Thread.sleep(8000);
@@ -6296,7 +6306,11 @@ public static void riskSummaryClosedDelayed(ExtentTest test,String risk)throws I
     	int riskSummaryLowclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskLowClosedDelayed().getText());
     	
     	int total = riskSummaryCriticalclosedDelayed+riskSummaryHighclosedDelayed+riskSummaryMediumclosedDelayed+riskSummaryLowclosedDelayed;
-    			
+    	Thread.sleep(8000);
+    	
+    	
+    	
+    	Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -6341,7 +6355,7 @@ public static void riskSummaryClosedDelayed(ExtentTest test,String risk)throws I
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.Apply().click();
 	    	Thread.sleep(8000);
@@ -6563,7 +6577,7 @@ int total = riskSummaryCriticalclosedDelayed+riskSummaryHighclosedDelayed+riskSu
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -6664,7 +6678,7 @@ int total = riskSummaryCriticalclosedDelayed+riskSummaryHighclosedDelayed+riskSu
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -6836,7 +6850,11 @@ public static void riskSummaryClosedTimely(ExtentTest test,String risk)throws In
 		int RiskLow_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskLowClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
     	
     	int total = RiskCritical_ClosedTimely+RiskHigh_ClosedTimely+RiskMedium_ClosedTimely+RiskLow_ClosedTimely;
-    			
+    	Thread.sleep(8000);
+    	
+    	
+    	
+    	Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -6881,7 +6899,7 @@ public static void riskSummaryClosedTimely(ExtentTest test,String risk)throws In
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.Apply().click();
 	    	Thread.sleep(8000);
@@ -7107,7 +7125,7 @@ int total = RiskCritical_ClosedTimely+RiskHigh_ClosedTimely+RiskMedium_ClosedTim
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -7209,7 +7227,7 @@ int total = RiskCritical_ClosedTimely+RiskHigh_ClosedTimely;//+RiskMedium_Closed
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -7391,7 +7409,11 @@ public static void riskSummaryNotApplicable(ExtentTest test,String risk)throws I
 	
 			
     	int total = RiskCritical_NotApplicable+RiskHigh_NotApplicable+RiskMedium_NotApplicable+RiskLow_NotApplicable;
-    			
+    	Thread.sleep(8000);
+    	
+    	
+    	
+    	Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -7436,7 +7458,7 @@ public static void riskSummaryNotApplicable(ExtentTest test,String risk)throws I
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("01-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("09-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.Apply().click();
 	    	Thread.sleep(8000);
@@ -7680,7 +7702,7 @@ int total = RiskCritical_NotApplicable+RiskHigh_NotApplicable+RiskMedium_NotAppl
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -7792,7 +7814,7 @@ int total = RiskCritical_NotApplicable+RiskHigh_NotApplicable+RiskMedium_NotAppl
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.Apply().click();
 	Thread.sleep(8000);
@@ -7963,7 +7985,11 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Overdue = Integer.parseInt(NotCompleted);
     	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
-    			
+		Thread.sleep(8000);
+		
+		
+		
+		Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -8018,7 +8044,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.DepartmentFilter().click();
 	    	Thread.sleep(2000);
@@ -8251,7 +8277,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.DepartmentFilter().click();
 	Thread.sleep(2000);
@@ -8305,7 +8331,7 @@ public static void DepartmentSummaryOverdueIn(ExtentTest test,String risk)throws
 JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 js.executeScript("window.scroll(0,2000)");
 Thread.sleep(3000);
-String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo1().getText();			//Reading the Overdue value of Human Resource
+String NotCompleted = CFOcountPOM.clickHumanOverduem().getText();			//Reading the Overdue value of Human Resource
 NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 int Overdue = Integer.parseInt(NotCompleted);
 //int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
@@ -8358,7 +8384,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 	Thread.sleep(2000);
    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.DepartmentFilter().click();
 	Thread.sleep(2000);
@@ -8411,7 +8437,7 @@ public static void DepartmentSummaryOverdueInAu(ExtentTest test,String risk)thro
 JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 js.executeScript("window.scroll(0,1700)");
 Thread.sleep(3000);
-String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo().getText();			//Reading the Overdue value of Human Resource
+String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo1().getText();			//Reading the Overdue value of Human Resource
 NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 int Overdue = Integer.parseInt(NotCompleted);
 //int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
@@ -8531,11 +8557,15 @@ int Overdue = Integer.parseInt(NotCompleted);
 		
 		  roc.click();
 		  Thread.sleep(3000);
-		String ClosedDelayed = CFOcountPOM.clickAdminClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
+		String ClosedDelayed = CFOcountPOM.clickHumanClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
 		ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
 		int Closed_Delayed = Integer.parseInt(ClosedDelayed);
     	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
-    			
+		Thread.sleep(8000);
+		
+		
+		
+		Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -8579,7 +8609,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.DepartmentFilter().click();
 	    	Thread.sleep(2000);
@@ -8797,7 +8827,7 @@ int Overdue = Integer.parseInt(NotCompleted);
     	Thread.sleep(2000);
        	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
     	Thread.sleep(2000);
-    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
     	Thread.sleep(2000);
     	CFOcountPOM.DepartmentFilter().click();
     	Thread.sleep(2000);
@@ -8855,7 +8885,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 	
 	  roc.click();
 	  Thread.sleep(3000);
-	String ClosedDelayed = CFOcountPOM.clickAdminClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
+	String ClosedDelayed = CFOcountPOM.clickHRClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
 	ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
 	int Closed_Delayed = Integer.parseInt(ClosedDelayed);
 	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
@@ -8897,7 +8927,7 @@ int Overdue = Integer.parseInt(NotCompleted);
     	Thread.sleep(2000);
        	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
     	Thread.sleep(2000);
-    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
     	Thread.sleep(2000);
     	CFOcountPOM.DepartmentFilter().click();
     	Thread.sleep(2000);
@@ -9062,11 +9092,15 @@ int Overdue = Integer.parseInt(NotCompleted);
 		
 		  roc.click();
 			Thread.sleep(3000);
-		String ClosedTimely = CFOcountPOM.clickComplianceIsecClosedTimelyDemo().getText();		//Reading the Closed Timely value of Human Resource
+		String ClosedTimely = CFOcountPOM.clickHumanClosedTimelym().getText();		//Reading the Closed Timely value of Human Resource
 		ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Closed_Timely = Integer.parseInt(ClosedTimely);	
     	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
-    			
+		Thread.sleep(8000);
+		
+		
+		
+		Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -9110,7 +9144,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.DepartmentFilter().click();
 	    	Thread.sleep(2000);
@@ -9167,7 +9201,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 	
 	  roc.click();
 		Thread.sleep(3000);
-	String ClosedTimely = CFOcountPOM.clickComplianceIsecClosedTimelyDemo().getText();		//Reading the Closed Timely value of Human Resource
+	String ClosedTimely = CFOcountPOM.clickHumanClosedTimelym().getText();		//Reading the Closed Timely value of Human Resource
 	ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
 	int Closed_Timely = Integer.parseInt(ClosedTimely);	
 	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
@@ -9328,7 +9362,7 @@ int Overdue = Integer.parseInt(NotCompleted);
     	Thread.sleep(2000);
     	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
     	Thread.sleep(2000);
-    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
     	Thread.sleep(2000);
     	CFOcountPOM.DepartmentFilter().click();
     	Thread.sleep(2000);
@@ -9386,7 +9420,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 	
 	  roc.click();
 		Thread.sleep(3000);
-	String ClosedTimely = CFOcountPOM.clickComplianceIsecClosedTimelyDemo().getText();		//Reading the Closed Timely value of Human Resource
+	String ClosedTimely = CFOcountPOM.clickAccountClosedTimelyA().getText();		//Reading the Closed Timely value of Human Resource
 	ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
 	int Closed_Timely = Integer.parseInt(ClosedTimely);	
 	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
@@ -9428,7 +9462,7 @@ int Overdue = Integer.parseInt(NotCompleted);
     	Thread.sleep(2000);
     	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
     	Thread.sleep(2000);
-    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
     	Thread.sleep(2000);
     	CFOcountPOM.DepartmentFilter().click();
     	Thread.sleep(2000);
@@ -9599,7 +9633,11 @@ int Overdue = Integer.parseInt(NotCompleted);
 		PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 		int Pending_Review = Integer.parseInt(PendingReview);	
     	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
-    			
+		Thread.sleep(8000);
+		
+		
+		
+		Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -9643,7 +9681,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.DepartmentFilter().click();
 	    	Thread.sleep(2000);
@@ -9867,7 +9905,7 @@ int Overdue = Integer.parseInt(NotCompleted);
     	Thread.sleep(2000);
     	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
     	Thread.sleep(2000);
-    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
     	Thread.sleep(2000);
     	CFOcountPOM.DepartmentFilter().click();
     	Thread.sleep(2000);
@@ -9928,7 +9966,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 		
 	  roc1.click();
 	  Thread.sleep(4000);
-	String PendingReview = CFOcountPOM.clickFinancePendingReviewDept().getText();	//Reading the Pending For Review value of Human Resource
+	String PendingReview = CFOcountPOM.clickAccountPendingReview1().getText();	//Reading the Pending For Review value of Human Resource
 	PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 	int Pending_Review = Integer.parseInt(PendingReview);	
 	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
@@ -9970,7 +10008,7 @@ int Overdue = Integer.parseInt(NotCompleted);
     	Thread.sleep(2000);
     	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
     	Thread.sleep(2000);
-    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
     	Thread.sleep(2000);
     	CFOcountPOM.DepartmentFilter().click();
     	Thread.sleep(2000);
@@ -10147,7 +10185,11 @@ int Overdue = Integer.parseInt(NotCompleted);
 		InProgress = InProgress.replaceAll(" ","");								//Removing all white spaces from string. 
 		int In_Progress = Integer.parseInt(InProgress);		
     	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
-    			
+		Thread.sleep(8000);
+		
+		
+		
+		Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -10191,7 +10233,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.DepartmentFilter().click();
 	    	Thread.sleep(2000);
@@ -10408,7 +10450,7 @@ int Overdue = Integer.parseInt(NotCompleted);
     	Thread.sleep(2000);
     	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
     	Thread.sleep(2000);
-    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
     	Thread.sleep(2000);
     	CFOcountPOM.DepartmentFilter().click();
     	Thread.sleep(2000);
@@ -10515,7 +10557,7 @@ int Overdue = Integer.parseInt(NotCompleted);
     	Thread.sleep(2000);
     	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
     	Thread.sleep(2000);
-    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
     	Thread.sleep(2000);
     	CFOcountPOM.DepartmentFilter().click();
     	Thread.sleep(2000);
@@ -10579,7 +10621,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 		
 	  roc2.click();
 	  Thread.sleep(3000);
-	String InProgress = CFOcountPOM.clickFinanceInProgressInternal().getText();	//Reading the Pending For Review value of Human Resource
+	String InProgress = CFOcountPOM.clickFinanceInProgressInternal1().getText();	//Reading the Pending For Review value of Human Resource
 	InProgress = InProgress.replaceAll(" ","");								//Removing all white spaces from string. 
 	int In_Progress = Integer.parseInt(InProgress);		
 	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
@@ -10688,11 +10730,15 @@ int Overdue = Integer.parseInt(NotCompleted);
 			
 		  roc1.click();
 		  Thread.sleep(3000);
-		String Rejected = CFOcountPOM.clickComplianceIsecInRejectedDemo().getText();	//Reading the Pending For Review value of Human Resource
+		String Rejected = CFOcountPOM.clickFinanceRejectedInternal().getText();	//Reading the Pending For Review value of Human Resource
 		Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
 		int R_ejected = Integer.parseInt(Rejected);			
     	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
-    			
+		Thread.sleep(8000);
+		
+		
+		
+		Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -10736,7 +10782,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.DepartmentFilter().click();
 	    	Thread.sleep(2000);
@@ -10959,7 +11005,7 @@ int Overdue = Integer.parseInt(NotCompleted);
     	Thread.sleep(2000);
     	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
     	Thread.sleep(2000);
-    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
     	Thread.sleep(2000);
     	CFOcountPOM.DepartmentFilter().click();
     	Thread.sleep(2000);
@@ -11019,7 +11065,7 @@ int Overdue = Integer.parseInt(NotCompleted);
 		
 	  roc1.click();
 	  Thread.sleep(3000);
-	String Rejected = CFOcountPOM.clickComplianceIsecInRejectedDemo().getText();	//Reading the Pending For Review value of Human Resource
+	String Rejected = CFOcountPOM.clickFinanceRejectedInternal1().getText();	//Reading the Pending For Review value of Human Resource
 	Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
 	int R_ejected = Integer.parseInt(Rejected);			
 	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
@@ -11061,7 +11107,7 @@ int Overdue = Integer.parseInt(NotCompleted);
     	Thread.sleep(2000);
     	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
     	Thread.sleep(2000);
-    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
     	Thread.sleep(2000);
     	CFOcountPOM.DepartmentFilter().click();
     	Thread.sleep(2000);
@@ -11234,7 +11280,11 @@ public static void DepaNotApplic(ExtentTest test,String risk)throws InterruptedE
 		NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
 		int Not_Applicable = Integer.parseInt(NotApplicable);			
     	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
-    			
+		Thread.sleep(8000);
+		
+		
+		
+		Thread.sleep(5000);
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -11278,7 +11328,7 @@ public static void DepaNotApplic(ExtentTest test,String risk)throws InterruptedE
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	    	Thread.sleep(2000);
-	    	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	    	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.DepartmentFilter().click();
 	    	Thread.sleep(2000);
@@ -11501,7 +11551,7 @@ int Not_Applicable = Integer.parseInt(NotApplicable);
 	Thread.sleep(2000);
 	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.DepartmentFilter().click();
 	Thread.sleep(2000);
@@ -11562,7 +11612,11 @@ WebElement roc =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > 
 	
   roc1.click();
   Thread.sleep(3000);
-String NotApplicable = CFOcountPOM.clickHRNotApplicable1().getText();	//Reading the Pending For Review value of Human Resource
+  WebElement roc2 =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > text"));
+	
+  roc2.click();
+  Thread.sleep(3000);
+String NotApplicable = CFOcountPOM.clickFinanceNotAppliInternal().getText();	//Reading the Pending For Review value of Human Resource
 NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
 int Not_Applicable = Integer.parseInt(NotApplicable);			
 //int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
@@ -11604,7 +11658,7 @@ int Not_Applicable = Integer.parseInt(NotApplicable);
 	Thread.sleep(2000);
 	CFOcountPOM.StartDate2().sendKeys("01-Apr-2024");
 	Thread.sleep(2000);
-	CFOcountPOM.EndDate2().sendKeys("02-Jun-2025");
+	CFOcountPOM.EndDate2().sendKeys("30-Jun-2025");
 	Thread.sleep(2000);
 	CFOcountPOM.DepartmentFilter().click();
 	Thread.sleep(2000);
@@ -11664,7 +11718,7 @@ WebElement roc =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > 
 	
   roc1.click();
   Thread.sleep(3000);
-String NotApplicable = CFOcountPOM.clickComplianceIsecNotApplicableDemo().getText();	//Reading the Pending For Review value of Human Resource
+String NotApplicable = CFOcountPOM.clickHRNotApplicable1().getText();	//Reading the Pending For Review value of Human Resource
 NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
 int Not_Applicable = Integer.parseInt(NotApplicable);			
 //int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
@@ -12893,7 +12947,7 @@ public static void DetailedreportVsCommercialHighcount(ExtentTest test,String te
 	Thread.sleep(3000);
 	Thread.sleep(3000);
 	
-	String IndustrySpeCritical = CFOcountPOM.clickIndustrySpeHighM().getText();		//Reading the Closed Timely value of Human Resource
+	String IndustrySpeCritical = CFOcountPOM.clickIndustrySpeHigh().getText();		//Reading the Closed Timely value of Human Resource
 	IndustrySpeCritical = IndustrySpeCritical.replaceAll(" ","");									//Removing all white spaces from string. 
 	int NotCompletedIn = Integer.parseInt(IndustrySpeCritical);
 	Thread.sleep(500);
@@ -13025,7 +13079,7 @@ public static void DetailedreportVsCommercialMediumcount(ExtentTest test,String 
 	Thread.sleep(3000);
 	Thread.sleep(3000);
 	
-	String IndustrySpeCritical = CFOcountPOM.clickIndustrySpeMediumM().getText();		//Reading the Closed Timely value of Human Resource
+	String IndustrySpeCritical = CFOcountPOM.clickIndustrySpeMedium().getText();		//Reading the Closed Timely value of Human Resource
 	IndustrySpeCritical = IndustrySpeCritical.replaceAll(" ","");									//Removing all white spaces from string. 
 	int NotCompletedIn = Integer.parseInt(IndustrySpeCritical);
 	Thread.sleep(500);
@@ -13156,7 +13210,7 @@ public static void DetailedreportVsCommercialLowcount(ExtentTest test,String tex
 	Thread.sleep(3000);
 	Thread.sleep(3000);
 	
-	String IndustrySpeCritical = CFOcountPOM.clickIndustrySpeLowM().getText();		//Reading the Closed Timely value of Human Resource
+	String IndustrySpeCritical = CFOcountPOM.clickIndustrySpeLow().getText();		//Reading the Closed Timely value of Human Resource
 	IndustrySpeCritical = IndustrySpeCritical.replaceAll(" ","");									//Removing all white spaces from string. 
 	int NotCompletedIn = Integer.parseInt(IndustrySpeCritical);
 	Thread.sleep(500);

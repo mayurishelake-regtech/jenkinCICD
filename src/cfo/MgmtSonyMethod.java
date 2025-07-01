@@ -170,7 +170,7 @@ public class MgmtSonyMethod extends BasePage{
 	
 	public static WebElement ClickTriA()		//Method for reading Compliances value on Dashboard
 	{
-		sony = getDriver().findElement(By.xpath("(//*[@class='k-icon k-i-more-vertical'])[6]"));
+		sony = getDriver().findElement(By.xpath("(//*[@class='k-icon k-i-more-vertical'])[14]"));
 		return sony;
 	}
 	

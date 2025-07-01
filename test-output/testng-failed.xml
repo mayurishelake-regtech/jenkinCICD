@@ -3,27 +3,26 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="criticalTestScripts.Reviewer">
+      <class name="criticalTestScripts.StatutoryMGMT">
         <methods>
-          <include name="DueButNotSubmitted"/>
+          <include name="DetailedreportVsCommercialCriticalcount"/>
+          <include name="DetailedreportVsCommercialMediumcount"/>
+          <include name="NCcompletionVsNCOverdueP"/>
           <include name="setBrowser"/>
-          <include name="MyEscalation"/>
-          <include name="browserClosing"/>
-          <include name="PendingForReviewTaskInRejected"/>
-          <include name="ReviewCountStatutoryApprove"/>
-          <include name="PendingForReviewIn"/>
-          <include name="ReviewCountStatutoryReject"/>
-          <include name="DueButNotSubmittedIn"/>
-          <include name="ComplianceDocumentsInter"/>
-          <include name="SMETAReportFilterMgmt"/>
-          <include name="PendingForReview"/>
+          <include name="DepartmentSummaryRejected"/>
+          <include name="DetailedreportVsCommercialLowcount"/>
+          <include name="DepartmentSummaPR"/>
+          <include name="DepartmentSummaryHumanResourceStatutory"/>
+          <include name="DepartmentSummaryNotApplicable"/>
+          <include name="DetailedReport"/>
+          <include name="DetailedreportVsCommercialHighcount"/>
+          <include name="DepaINPROGRESSR"/>
+          <include name="complianceCalendar"/>
           <include name="Login"/>
-          <include name="SMETAReport"/>
-          <include name="ComplianceDocumentsSat"/>
-          <include name="AssignmentReport"/>
-          <include name="PendingForReviewTaskRejected"/>
+          <include name="browserClosing"/>
+          <include name="Closing"/>
         </methods>
-      </class> <!-- criticalTestScripts.Reviewer -->
+      </class> <!-- criticalTestScripts.StatutoryMGMT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

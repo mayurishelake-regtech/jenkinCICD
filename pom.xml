@@ -7,10 +7,12 @@
   
   <dependencies>
   	<dependency>
-	    <groupId>org.seleniumhq.selenium</groupId>
-	    <artifactId>selenium-java</artifactId>
-	    <version>3.141.0</version>
-	</dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.1.0</version>
+</dependency>
+
+
 	<dependency>
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
@@ -48,8 +50,6 @@
 	    <artifactId>poi-ooxml</artifactId>
 	    <version>4.0.0</version>
 	</dependency>
-	
-	
 	<dependency>
     <groupId>com.github.lambdatest</groupId>
     <artifactId>lambdatest-tunnel-binary</artifactId>

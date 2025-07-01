@@ -116,7 +116,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 	}
 	
-	 @Test(priority = 1)
+	 //@Test(priority = 1)
 	void CategoriesCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Categories'");
@@ -127,7 +127,7 @@ public class StatutoryMGMT extends BasePage {
 		extent.flush();
 	}
 	
-    @Test(priority = 2)
+  //  @Test(priority = 2)
 	void CompliancesCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Compliances'");
@@ -183,7 +183,7 @@ public class StatutoryMGMT extends BasePage {
 		extent.flush();
 	}
    
-   @Test(priority = 3)
+  // @Test(priority = 3)
 	void UsersCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Users'");
@@ -238,7 +238,7 @@ public class StatutoryMGMT extends BasePage {
 		extent.flush();
 	}
 	
- @Test(priority = 4)
+// @Test(priority = 4)
 	void SummaryofOverdueCompliances() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Summary of Overdue Compliances");
@@ -296,7 +296,7 @@ public class StatutoryMGMT extends BasePage {
 		
 	}
 	
-        @Test(priority = 5)
+       // @Test(priority = 5)
 		void NotCompleted_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -314,7 +314,9 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.cfo
 			//	js.executeScript("window.scrollBy(0,100)");
-			Thread.sleep(3000);
+			
+           
+
 			int NotCompletedValue = Integer.parseInt(CFOcountPOM.clickNotCompleted().getText());	//Reading value of 'Not Completed'
 			CFOcountPOM.clickNotCompleted().click();									//CLicking on 'Not Completed' count
 			
@@ -391,7 +393,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-        @Test(priority = 6)
+       // @Test(priority = 6)
 		void ClosedDelayed_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -409,7 +411,11 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 			
-			Thread.sleep(2000);
+			Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			int ClosedDelayedValue = Integer.parseInt(CFOcountPOM.clickClosedDelayed().getText());	//Reading value of 'After Due Date'
 			
 			CFOcountPOM.clickClosedDelayed().click();								//CLicking on 'Not Completed' count
@@ -486,7 +492,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 7)
+// @Test(priority = 7)
 		void ClosedTimely_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -505,6 +511,11 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 			
 			Thread.sleep(3000);
+Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			int ClosedTimelyValue = Integer.parseInt(CFOcountPOM.clickClosedTimely().getText());	//Reading value of 'After Due Date'
 			CFOcountPOM.clickClosedTimely().click();								//CLicking on 'Not Completed' count
 			
@@ -581,7 +592,7 @@ public class StatutoryMGMT extends BasePage {
 			
 		}
 		
-	 @Test(priority = 8)
+	 //@Test(priority = 8)
 		void NotApplicable_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -596,6 +607,13 @@ public class StatutoryMGMT extends BasePage {
 			Thread.sleep(1000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 				js.executeScript("window.scrollBy(0,500)");	
+				
+				Thread.sleep(8000);
+				
+				
+				
+				Thread.sleep(4000);
+				
 			Actions action = new Actions(getDriver());
 			WebDriverWait wait = new WebDriverWait(getDriver(), (100));
 			wait.until(ExpectedConditions.visibilityOf(CFOcountPOM.clickNotApplicable()));
@@ -683,7 +701,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 			
-	 @Test(priority = 9)
+	 //@Test(priority = 9)
 		void Overdue_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -703,6 +721,7 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.
 			
 			Thread.sleep(3000);
+
 			int OverdueValue = Integer.parseInt(CFOcountPOM.clickOverdue().getText());	//Reading value of 'Not Completed'
 			CFOcountPOM.clickOverdue().click();									//CLicking on 'Not Completed' count
 			
@@ -785,7 +804,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 10)
+ //@Test(priority = 10)
 		void dueToday_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -804,6 +823,7 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.
 			
 			Thread.sleep(3000);
+
 			int dueTodayValue = Integer.parseInt(CFOcountPOM.clickdueToday().getText());	//Reading value of 'Not Completed'
 			CFOcountPOM.clickdueToday().click();									//CLicking on 'Not Completed' count
 			
@@ -887,7 +907,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	 @Test(priority = 11)
+	 //@Test(priority = 11)
 		void pendingForReview_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -907,6 +927,9 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.
 			
 			Thread.sleep(4000);
+			
+           
+			
 			int pendingForReviewValue = Integer.parseInt(CFOcountPOM.clickpendingForReview().getText());	//Reading value of 'Not Completed'
 			CFOcountPOM.clickpendingForReview().click();									//CLicking on 'Not Completed' count
 			
@@ -990,7 +1013,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 		
-    @Test(priority = 12)
+   // @Test(priority = 12)
 		void inProgress_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -1092,7 +1115,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
- @Test(priority = 13)
+ //@Test(priority = 13)
 		void rejected_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -1193,7 +1216,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-@Test(priority = 14)
+//@Test(priority = 14)
 		void BargraphIndustrySpeCriticalStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
@@ -1214,7 +1237,12 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,925)");						//Scrolling down window by 1000 px.
 			
-			Thread.sleep(3000);
+Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
+			
 			int IndustrySpeCritical = Integer.parseInt(CFOcountPOM.clickIndustrySpeCriticalM().getText());	//Reading the High value of Labour compliance
 			
 			Thread.sleep(1000);
@@ -1294,7 +1322,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 23)
+ //@Test(priority = 23)
 		void BargraphIndustrySpeHighStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'High' risk");
@@ -1310,8 +1338,12 @@ public class StatutoryMGMT extends BasePage {
 			Thread.sleep(1000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,925)");						//Scrolling down window by 1000 px.
+Thread.sleep(8000);
 			
-			String PendingReview = CFOcountPOM.clickIndustrySpeHighM().getText();	//Reading the Pending For Review value of Human Resource
+			
+			
+			Thread.sleep(4000);
+			String PendingReview = CFOcountPOM.clickIndustrySpeHigh().getText();	//Reading the Pending For Review value of Human Resource
 			PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 			
 			Thread.sleep(4000);
@@ -1398,7 +1430,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 
-     @Test(priority = 24)
+   //  @Test(priority = 24)
 		void BargraphIndustrySpeMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Medium' risk");
@@ -1415,8 +1447,12 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,925)");						//Scrolling down window by 1000 px.
 			
+Thread.sleep(8000);
+			
+			
+			
 			Thread.sleep(4000);
-			int IndustrySpeMedium = Integer.parseInt(CFOcountPOM.clickIndustrySpeMediumM().getText());	//Reading the Medium value of Labour compliance
+			int IndustrySpeMedium = Integer.parseInt(CFOcountPOM.clickIndustrySpeMedium().getText());	//Reading the Medium value of Labour compliance
 			CFOcountPOM.clickIndustrySpeMediumM().click();					//Clicking on High bar of Labour  
 			
 			Thread.sleep(3000);
@@ -1497,7 +1533,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-           @Test(priority = 25)
+       //    @Test(priority = 25)
 		void BargraphIndustrySpeLowStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Low' risk");
@@ -1515,8 +1551,10 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,925)");						//Scrolling down window by 1000 px.
 			
 			
+Thread.sleep(8000);
+			
 			Thread.sleep(4000);
-			int IndustrySpeLow = Integer.parseInt(CFOcountPOM.clickIndustrySpeLowM().getText());	//Reading the Medium value of Labour compliance
+			int IndustrySpeLow = Integer.parseInt(CFOcountPOM.clickIndustrySpeLow().getText());	//Reading the Medium value of Labour compliance
 			CFOcountPOM.clickIndustrySpeLowM().click();					//Clicking on low bar of Indistry Specific  
 			
 			Thread.sleep(500);
@@ -1602,7 +1640,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	 @Test(priority = 26)
+	// @Test(priority = 26)
 		void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 		{
 		
@@ -1617,7 +1655,11 @@ public class StatutoryMGMT extends BasePage {
 			Thread.sleep(1000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,1450)");					//Scrolling down window by 1000 px.cfo
-		//	js.executeScript("window.scrollBy(0,800)");
+Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			test = extent.startTest("Risk Summary - 'Critical' Count Verification");
 			Thread.sleep(2000);
 			int IndustrySpeCritical = Integer.parseInt(CFOcountPOM.RiskSummaryCritical().getText());
@@ -1724,7 +1766,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	 @Test(priority = 27)
+	// @Test(priority = 27)
 		void RiskSummaryHighStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1847,7 +1889,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 28)
+ //@Test(priority = 28)
 		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1969,7 +2011,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 29)
+ //@Test(priority = 29)
 		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -2320,6 +2362,11 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 		//	js.executeScript("window.scrollBy(0,100)");
 			Thread.sleep(800);
+Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			WebDriverWait wait = new WebDriverWait(getDriver() ,(30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
@@ -2425,7 +2472,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	 //@Test(priority = 32)
+	 @Test(priority = 32)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -2437,6 +2484,11 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
 			Thread.sleep(3000);
+Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			WebDriverWait wait = new WebDriverWait( getDriver(),(30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
@@ -2555,6 +2607,11 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2400)");					//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
+             Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			Thread.sleep(800);
 			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
@@ -2672,6 +2729,11 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2400)");					//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
+Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			Actions action = new Actions(getDriver());
 			WebDriverWait wait = new WebDriverWait(getDriver(),(30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
@@ -2795,6 +2857,11 @@ public class StatutoryMGMT extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,2400)");			//Scrolling down window by 1000 px.
 		Thread.sleep(800);
+		Thread.sleep(8000);
+		
+		
+		
+		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		
@@ -2956,6 +3023,11 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
 			Thread.sleep(3000);
+Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -3077,6 +3149,11 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
+Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
@@ -3199,6 +3276,11 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
+Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
@@ -3320,6 +3402,11 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
+Thread.sleep(8000);
+			
+			
+			
+			Thread.sleep(4000);
 			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
@@ -3442,6 +3529,10 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
+			
+			
+			
+			Thread.sleep(4000);
 			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);

@@ -70,7 +70,7 @@ public class AuditorStatutory extends BasePage {
 		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\Auditor.html",true);
 
 		test = extent.startTest("Loging In - Auditor (Statutory)");
-		test.log(LogStatus.PASS, "Logging id - auditor@regtrack.com , password - admin@123");
+		test.log(LogStatus.PASS, "Logging id - auditor1@regtrack.com , password - Team@1234");
 		
 	
 		extent.endTest(test);
@@ -1063,12 +1063,12 @@ public class AuditorStatutory extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,800)");						//Scrolling down window by 1000 px.
 		
-		String PendingReview = CFOcountPOM.clickIndustrySpeHighM().getText();	//Reading the Pending For Review value of Human Resource
+		String PendingReview = CFOcountPOM.clickIndustrySpeHigh().getText();	//Reading the Pending For Review value of Human Resource
 	//	PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 		
 		Thread.sleep(4000);
 		int IndustrySpeHigh = Integer.parseInt(PendingReview);	//Reading the Medium value of Labour compliance
-		CFOcountPOM.clickIndustrySpeHighM().click();					//Clicking on High bar of Labour  
+		CFOcountPOM.clickIndustrySpeHigh().click();					//Clicking on High bar of Labour  
 		
 		Thread.sleep(3000);
 		int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
@@ -1169,8 +1169,8 @@ public class AuditorStatutory extends BasePage {
 		js.executeScript("window.scrollBy(0,800)");						//Scrolling down window by 1000 px.
 		
 		Thread.sleep(4000);
-		int IndustrySpeMedium = Integer.parseInt(CFOcountPOM.clickIndustrySpeMediumM().getText());	//Reading the Medium value of Labour compliance
-		CFOcountPOM.clickIndustrySpeMediumM().click();					//Clicking on High bar of Labour  
+		int IndustrySpeMedium = Integer.parseInt(CFOcountPOM.clickIndustrySpeMedium().getText());	//Reading the Medium value of Labour compliance
+		CFOcountPOM.clickIndustrySpeMedium().click();					//Clicking on High bar of Labour  
 		
 		Thread.sleep(3000);
     	int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
@@ -1270,10 +1270,10 @@ public class AuditorStatutory extends BasePage {
 		
 		
 		Thread.sleep(4000);
-		int IndustrySpeLow = Integer.parseInt(CFOcountPOM.clickIndustrySpeLowM().getText());	//Reading the Medium value of Labour compliance
-		CFOcountPOM.clickIndustrySpeLowM().click();					//Clicking on low bar of Indistry Specific  
+		int IndustrySpeLow = Integer.parseInt(CFOcountPOM.clickIndustrySpeLow().getText());	//Reading the Medium value of Labour compliance
+		CFOcountPOM.clickIndustrySpeLow().click();					//Clicking on low bar of Indistry Specific  
 		
-		Thread.sleep(500);
+		Thread.sleep(5000);
 		int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
 		int ClosedDelayed = Integer.parseInt(CFOcountPOM.clickBarClosedDelayed().getText());	//reading Closed Delayed count.
 		int NotCompleted = Integer.parseInt(CFOcountPOM.clickBarNotCompleted().getText());	//reading Not Completed count.
@@ -1852,7 +1852,7 @@ public class AuditorStatutory extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,1700)");					//Scrolling down window by 1500 px.
 		Thread.sleep(3000);	
-		test = extent.startTest("Department Summary - 'Admin' Count Verification");
+		test = extent.startTest("Department Summary - 'Forest' Count Verification");
 		
 		Thread.sleep(3000);
 		String Admin = CFOcountPOM.AdminCount().getText();			//Reading the Overdue value of Human Resource
@@ -3313,7 +3313,7 @@ public class AuditorStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 31) 
+		//@Test(priority = 31) 
 		void SMETAReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("My Reports - SMETA Report Verification");

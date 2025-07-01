@@ -51,22 +51,22 @@ public class ReviewerCount extends BasePage
 	public static List<WebElement> elementsList = null;
 	public static List<WebElement> elementsList1 = null;
 	
-	static String filePath ="E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
+	static String filePath ="D:\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
 	public static String link = "mgmt1";
-	public static XSSFSheet ReadExcel() throws IOException
+/*	public static XSSFSheet ReadExcel() throws IOException
 	{
 		
 		fis = new FileInputStream("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx");
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheetAt(1);					//Retrieving second sheet of Workbook
 		return sheet;
-	}
+	}*/
 	
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
 		//String workingDir = System.getProperty("user.dir");
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\ReviewerResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\ReviewerResults.html",true);
 		test = extent.startTest("Logging In - Reviewer");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -345,7 +345,9 @@ public class ReviewerCount extends BasePage
 			
 		}
 		
-		XSSFSheet sheet = ReadExcel();
+		FileInputStream fis = new FileInputStream(filePath);
+        Workbook workbook = WorkbookFactory.create(fis);
+        Sheet sheet = workbook.getSheetAt(1);
 		WebElement ele1 = null;
 		WebElement ele2 = null;
 		WebElement ele3 = null;
@@ -571,7 +573,7 @@ public class ReviewerCount extends BasePage
 		extent.flush();
 	}
      
- /*@Test(priority = 16) //pass 
+ @Test(priority = 16) //pass 
     void EventsCount() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Event Count Match");
@@ -606,7 +608,7 @@ public class ReviewerCount extends BasePage
 		extent.flush();
 	}
     
-    
+/*    
 	@Test(priority = 0) // pass
 	void MyReminderStatutory() throws InterruptedException, IOException
 	{
@@ -630,7 +632,7 @@ public class ReviewerCount extends BasePage
 		extent.flush();
 	}*/
 	
-	
+/*	
 	@Test(priority = 21) //pass
 	void InterimReview() throws InterruptedException, IOException
 	{
@@ -1431,7 +1433,7 @@ extent.flush();
         	}*/
         	
         	
-        	 @Test(priority = 15) //pass
+        	 @Test(priority = 19) //pass
      	    void DueButNotSubmitted() throws InterruptedException, IOException
      		{
      			test = extent.startTest("Reviewer Task Summary - Statutory Due But Not Submitted Count Match");
@@ -1443,7 +1445,7 @@ extent.flush();
      			extent.flush();
      		}
      	 
-     	 @Test(priority = 16) //pass
+     	 @Test(priority = 20) //pass
      	    void DueButNotSubmittedIn() throws InterruptedException, IOException
      		{
      			test = extent.startTest("Reviewer Task Summary - Internal Due But Not Submitted Count Match");
@@ -1455,7 +1457,7 @@ extent.flush();
      			extent.flush();
      		}
      	 
-     	 @Test(priority = 17) //pass
+     	 @Test(priority = 21) //pass need to run
  	    void PendingForReview() throws InterruptedException, IOException
  		{
  			test = extent.startTest("Reviewer Task Summary - Statutory Pending For Review Count Match");
@@ -1467,7 +1469,7 @@ extent.flush();
  			extent.flush();
  		}
  	 
- 	 @Test(priority = 18) //pass
+ 	 @Test(priority = 22) //pass
  	    void PendingForReviewIn() throws InterruptedException, IOException
  		{
  			test = extent.startTest("Reviewer Task Summary - Internal Pending For Review Count Match");
@@ -1479,7 +1481,7 @@ extent.flush();
  			extent.flush();
  		}
  	 
- 	 @Test(priority = 19) //pass
+ 	 @Test(priority = 23) //pass
 	    void Rejectedtask() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Reviewer Task Summary - Statutory Rejected Count Match");
@@ -1491,7 +1493,7 @@ extent.flush();
 			extent.flush();
 		}
 	 
-	 @Test(priority = 20) //pass
+	 @Test(priority = 24) //pass
 	    void RejectedtaskIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Reviewer Task Summary - Internal Rejected Count Match");
@@ -1503,7 +1505,7 @@ extent.flush();
 			extent.flush();
 		}
 	 
-	 @Test(priority =21) 
+	 @Test(priority =25) 
 		void Compliancecalendar() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check \" Calendar Report \" Downloaded Or not");
@@ -1515,7 +1517,7 @@ extent.flush();
 		}
         	
         	
-	 @Test(priority = 22) 
+	 @Test(priority = 26) 
 		void DetailedReport1() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report -Statutory Count Verification");
@@ -1527,7 +1529,7 @@ extent.flush();
 			extent.flush();
 		}
 		
-		@Test(priority = 23) 
+		@Test(priority = 27) 
 		void DetailedReportIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report -Internal Count Verification");
@@ -1539,7 +1541,7 @@ extent.flush();
 		}
 
 	
-	@Test(priority = 24) 
+	@Test(priority = 28) 
 	void DetailedReportFilterRe() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To check  Detailed report filters working or not Verification");
@@ -1551,7 +1553,7 @@ extent.flush();
 		extent.flush();
 	}
         	
-        	@Test(priority = 25) //pass
+        	@Test(priority = 29) //pass
         	void AssignmentReport() throws InterruptedException, IOException
         	{
         		test = extent.startTest("Assignment Report count verification");
@@ -1563,7 +1565,7 @@ extent.flush();
         		extent.flush();
         	}
 	
-	@Test(priority = 26)
+	@Test(priority = 30)
 	void AssignmentReportFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To Check 'Assignment Report ' Filter Working Or not");
@@ -1575,7 +1577,7 @@ extent.flush();
 		extent.flush();
 	}
 	
-	@Test(priority = 27) //non Critical
+	@Test(priority = 31) //non Critical
 	void ComplianceIDFilter1() throws InterruptedException, IOException
 	{
 		test = extent.startTest("'Assignment Report' :- Statutory & Statutory CheckList = Compliance ID Filter Working Or not");
@@ -1641,7 +1643,7 @@ extent.flush();
 		extent.flush();
 	}	
 	
-//	@Test(priority = 34)		
+	//@Test(priority = 34)		
 		void WorkspaceSRFm() throws InterruptedException
 		{
 			test = extent.startTest("My Workspace - 'Update Tasks' - To check whether the dropdown of secondary reviewer for the task is seen or not on the popup of show assignment details.");
@@ -1895,7 +1897,7 @@ extent.flush();
         		}
         		
         		
-        	//	@Test(priority = 51) // pass non critical
+        		@Test(priority = 51) // pass non critical
         		void MessageCenter() throws InterruptedException, IOException
         		{
         			test = extent.startTest(" Message Center - Verification");
@@ -1913,7 +1915,7 @@ extent.flush();
         			extent.flush();
         		}
         		
-        		//@Test(priority = 52) // pass
+        		@Test(priority = 52) // pass
         		void MyNotifications() throws InterruptedException, IOException
         		{
         			test = extent.startTest("My Notifications - Verification");
@@ -1959,7 +1961,7 @@ extent.flush();
      				Thread.sleep(1000);
      				OverduePOM.TypeMsg().sendKeys("Automation testing");
      				Thread.sleep(1000);
-     				OverduePOM.choosefile().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+     				OverduePOM.choosefile().sendKeys("D:\\Regtrack-Project\\TestData\\Contract.xlsx");
      				Thread.sleep(1000);
      				//OverduePOM.send().click();
      				By locator = By.xpath("//*[@id='btnsendmailNew']");
@@ -1992,7 +1994,7 @@ extent.flush();
      				}	
      		 
 	
-	//@Test(priority = 55)
+	@Test(priority = 55)
 	void ComplianceDocumentsFilterRE() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To Check Compliance Document page All filters working or not");
@@ -2015,7 +2017,7 @@ extent.flush();
 				extent.flush();
 			}
     
-  //  @Test(priority = 63)
+  /*//  @Test(priority = 63)
 	void EventsFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To Check \" Event Overdue \" Page All filter working or not.");
@@ -2152,9 +2154,9 @@ extent.flush();
 		
 		extent.endTest(test);
 		extent.flush();
-	}
+	}*/
 	
-/*	@Test(priority = 28)
+/*	@Test(priority = 74)
 		void Reopening() throws InterruptedException, IOException
 		{
 			test = extent.startTest("My Reopening - To check whether the new tab named \"My Reopening\" is seperately reflects or not on the dashboard in the main menu while the tab will be visible only for who have made the configuration.");
@@ -2279,7 +2281,7 @@ extent.flush();
     			@Test(priority = 81)
     			void CompletedStatutorySF() throws InterruptedException, IOException
     			{
-    				test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Deatiled Report?");
+    				test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Completed Statutory?");
     				
     				ReMethodsPOM.CompletedStatutorySF(test);
     				

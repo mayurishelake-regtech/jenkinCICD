@@ -75,8 +75,8 @@ import org.openqa.selenium.WebElement;
 			extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\MgmtBita.html",true);
 			test = extent.startTest("Loging In - MGMT (Statutory)");
 			test.log(LogStatus.PASS, "https://login.teamleaseregtech.com/");
-			test.log(LogStatus.PASS, "snehal10.patil@tlregtech.in");
-			test.log(LogStatus.PASS, "admin#111");
+			test.log(LogStatus.PASS, "deepalidev1973@gmail.com");
+			test.log(LogStatus.PASS, "Team@123");
 
 		/*	
 			XSSFSheet sheet = ReadExcel();
@@ -409,14 +409,14 @@ import org.openqa.selenium.WebElement;
 			Thread.sleep(4000);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFGradingGraphDisplay"));	//Wait until frame get visible and switch to it.
 
-			File dir = new File("C:\\Users\\snehalp\\Downloads");
+			File dir = new File("C:\\Users\\mayurig\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(1000);
 			CFOcountPOM.clickExportImage().click();
 
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -425,17 +425,17 @@ import org.openqa.selenium.WebElement;
 				test.log(LogStatus.FAIL,  "  File does not downloaded.");
 			}
 			Thread.sleep(500);
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			CFOcountPOM.clickLocationInterest().click();
 			Thread.sleep(2000);
 		//	CFOcountPOM.clickExpand2().click();
 		//	Thread.sleep(1000);
 		//	CFOcountPOM.clickBita().click();
 			//Thread.sleep(2000);
-			if(CFOcountPOM.clickClear().isEnabled()) {
-			CFOcountPOM.clickClear().click();
+			if(CFOcountPOM.clickClear1().isEnabled()) {
+			CFOcountPOM.clickClear1().click();
 			test.log(LogStatus.PASS, " Interest - Clear Button Working  Successfully");
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			}
 			getDriver().switchTo().defaultContent();
 			Thread.sleep(3000);
@@ -937,7 +937,7 @@ import org.openqa.selenium.WebElement;
 				extent.flush();
 			}
 				
-			@Test(priority = 16)
+		//	@Test(priority = 16)
 			void CompletionGraphIsSMETAColumn() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart - Performance Summary - Completion Status- 'Is SMETA Column added' Verification");
@@ -1577,12 +1577,12 @@ import org.openqa.selenium.WebElement;
 				JavascriptExecutor js = (JavascriptExecutor) getDriver();
 				js.executeScript("window.scrollBy(0,925)");						//Scrolling down window by 1000 px.
 				
-				String PendingReview = CFOcountPOM.clickIndustrySpeHighM().getText();	//Reading the Pending For Review value of Human Resource
+				String PendingReview = CFOcountPOM.clickIndustrySpeHigh().getText();	//Reading the Pending For Review value of Human Resource
 				PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 				
 				Thread.sleep(4000);
 				int IndustrySpeHigh = Integer.parseInt(PendingReview);	//Reading the Medium value of Labour compliance
-				CFOcountPOM.clickIndustrySpeHighM().click();					//Clicking on High bar of Labour  
+				CFOcountPOM.clickIndustrySpeHigh().click();					//Clicking on High bar of Labour  
 				
 				Thread.sleep(3000);
 				int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
@@ -1682,8 +1682,8 @@ import org.openqa.selenium.WebElement;
 				js.executeScript("window.scrollBy(0,925)");						//Scrolling down window by 1000 px.
 				
 				Thread.sleep(4000);
-				int IndustrySpeMedium = Integer.parseInt(CFOcountPOM.clickIndustrySpeMediumM().getText());	//Reading the Medium value of Labour compliance
-				CFOcountPOM.clickIndustrySpeMediumM().click();					//Clicking on High bar of Labour  
+				int IndustrySpeMedium = Integer.parseInt(CFOcountPOM.clickIndustrySpeMedium().getText());	//Reading the Medium value of Labour compliance
+				CFOcountPOM.clickIndustrySpeMedium().click();					//Clicking on High bar of Labour  
 				
 				Thread.sleep(3000);
 		    	int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
@@ -1782,8 +1782,8 @@ import org.openqa.selenium.WebElement;
 				
 				
 				Thread.sleep(4000);
-				int IndustrySpeLow = Integer.parseInt(CFOcountPOM.clickIndustrySpeLowM().getText());	//Reading the Medium value of Labour compliance
-				CFOcountPOM.clickIndustrySpeLowM().click();					//Clicking on low bar of Indistry Specific  
+				int IndustrySpeLow = Integer.parseInt(CFOcountPOM.clickIndustrySpeLow().getText());	//Reading the Medium value of Labour compliance
+				CFOcountPOM.clickIndustrySpeLow().click();					//Clicking on low bar of Indistry Specific  
 				
 				Thread.sleep(500);
 				int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
@@ -1964,7 +1964,7 @@ import org.openqa.selenium.WebElement;
 				extent.endTest(test);
 				extent.flush();
 			}
-			//	@Test(priority = 28)
+				@Test(priority = 28)
 			void RiskSummaryHighStatutory() throws InterruptedException, IOException
 			{		
 				test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -2142,6 +2142,7 @@ import org.openqa.selenium.WebElement;
 				extent.endTest(test);
 				extent.flush();
 			}
+			
 			@Test(priority =30)
 			void RiskSummaryLowStatutory() throws InterruptedException, IOException
 			{		
@@ -2237,7 +2238,7 @@ import org.openqa.selenium.WebElement;
 				extent.flush();
 			}
 			
-			//   @Test(priority = 31)
+			   @Test(priority = 31)
 	void RiskSummIsSmeta() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - Risk Summary graph - 'Is SMETA Column added' Verification");					
@@ -2247,165 +2248,201 @@ import org.openqa.selenium.WebElement;
 		extent.flush();
 	}
 
-	//	@Test(priority = 32)
-			void DepartmentSummaryHumanResourceStatutory() throws InterruptedException, IOException
+    @Test(priority = 32)
+		void DepartmentSummaryHumanResourceStatutory() throws InterruptedException, IOException
+		{
+			Thread.sleep(3000);		
+			
+			CFOcountPOM.YearTodate().click();
+			Thread.sleep(1000);
+			CFOcountPOM.ALL().click();
+			Thread.sleep(1000);
+			CFOcountPOM.clickApply().click();
+			Thread.sleep(1000);
+			CFOcountPOM.clickApply().click();
+			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(1000);
+			JavascriptExecutor js = (JavascriptExecutor) getDriver();
+			js.executeScript("window.scrollBy(0,2000)");					//Scrolling down window by 1500 px.
+			Thread.sleep(2000);
+			Thread.sleep(3000);
+			
+			
+			
+			
+			test = extent.startTest("Department Summary - 'Forest' Count Verification");
+			
+			
+			Thread.sleep(3000);
+			String NotCompleted = CFOcountPOM.clickComplianceIsecOverdueDemo().getText();			//Reading the Overdue value of Human Resource
+			NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
+			int Overdue = Integer.parseInt(NotCompleted);						
+			if(Overdue > 0)
 			{
-				Thread.sleep(3000);		
-				
-				CFOcountPOM.YearTodate().click();
-				Thread.sleep(1000);
-				CFOcountPOM.ALL().click();
-				Thread.sleep(1000);
-				CFOcountPOM.clickApply().click();
-				Thread.sleep(1000);
-				CFOcountPOM.clickApply().click();
-				Thread.sleep(5000);
-				CFOcountPOM.RefreshNow().click();
-				Thread.sleep(1000);
-				JavascriptExecutor js = (JavascriptExecutor) getDriver();
-				js.executeScript("window.scrollBy(0,2000)");					//Scrolling down window by 1500 px.
-				
-				test = extent.startTest("Department Summary - 'Admin' Count Verification");
-				
-				
-				Thread.sleep(3000);
-				String NotCompleted = CFOcountPOM.clickHROverduem().getText();			//Reading the Overdue value of Human Resource
-				NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
-				int Overdue = Integer.parseInt(NotCompleted);						
-				if(Overdue > 0)
-				{
-					CFOcountPOM.clickHROverduem().click();
-					CFOcountPOM.RiskGraphCount1( test, "Overdue", Overdue, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "Overdue Complaince Count = "+ Overdue + ".");
-				}
-				
-				 WebElement roc =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-2 > text"));
-					
-				  roc.click();
-				
-			
-				Thread.sleep(6000);
-				String ClosedDelayed = CFOcountPOM.clickHumanClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
-				ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
-				int Closed_Delayed = Integer.parseInt(ClosedDelayed);	
-			//	int Closed_Delayed = Integer.parseInt(CFOcountPOM.clickHumanClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
-				
-				if(Closed_Delayed > 0)
-				{
-					Thread.sleep(500);	
-					CFOcountPOM.clickHumanClosedDelayed().click();
-					Thread.sleep(2000);
-					CFOcountPOM.RiskGraphCount( test, "Closed Delayed", Closed_Delayed, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "Closed Delayed Complaince Count = "+ Closed_Delayed + ".");
-				}
-				
-				  WebElement roc1 =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-0 > text"));
-					
-				  roc1.click();
-				  
-				Thread.sleep(3000);
-				String ClosedTimely = CFOcountPOM.clickHumanClosedTimely().getText();		//Reading the Closed Timely value of Human Resource
-				ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
-				int Closed_Timely = Integer.parseInt(ClosedTimely);						
-				if(Closed_Timely > 0)
-				{
-					CFOcountPOM.clickHumanClosedTimely().click();
-					CFOcountPOM.RiskGraphCount( test, "Closed Timely", Closed_Timely, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "Closed Timely Complaince Count = "+ Closed_Timely + ".");
-				}
-				
-				
-				Thread.sleep(3000);
-				String PendingReview = CFOcountPOM.clickHRPendingReviewm1().getText();	//Reading the Pending For Review value of Human Resource
-				PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
-				int Pending_Review = Integer.parseInt(PendingReview);						
-				if(Pending_Review > 0)
-				{
-					CFOcountPOM.clickHRPendingReviewm1().click();
-					CFOcountPOM.RiskGraphCount( test, "Pending For Review", Pending_Review, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "Pending For Review Complaince Count = "+ Pending_Review + ".");
-				}
-				
-				Thread.sleep(3000);
-				String InProgress = CFOcountPOM.clickInProgress().getText();	//Reading the Pending For Review value of Human Resource
-				//NotApplicable = NotApplicable.replaceAll(" ","");	
-				Thread.sleep(3000);//Removing all white spaces from string. 
-				int In_Progress = Integer.parseInt(InProgress);						
-				if(In_Progress > 0)
-				{
-					Thread.sleep(3000);
-					CFOcountPOM.clickInProgress().click();
-					ApprovalcountPOM.RiskGraphCount( test, "In Progress", In_Progress, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "In Progress Complaince Count = "+ In_Progress + ".");
-				}
-			
-			Thread.sleep(500);
-
-				
-				
-				Thread.sleep(3000);
-					String Rejected = CFOcountPOM.clickAccountRejected().getText();	//Reading the Pending For Review value of Human Resource
-					//NotApplicable = NotApplicable.replaceAll(" ","");	
-					Thread.sleep(3000);//Removing all white spaces from string. 
-					int Rejecte_d = Integer.parseInt(Rejected);						
-					if(Rejecte_d > 0)
-					{
-						Thread.sleep(3000);
-						CFOcountPOM.clickAccountRejected().click();
-						ApprovalcountPOM.RiskGraphCount( test, "Rejected", Rejecte_d, "Statutory");
-					}
-					else
-					{
-						test.log(LogStatus.PASS, "Rejected Complaince Count = "+ Rejecte_d + ".");
-					}
-				
-				Thread.sleep(500);
-				//-----------------------------------------------------
-				
-					try
-				{
-					Thread.sleep(500);
-					String NotApplicable = CFOcountPOM.clickHumanNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
-					NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
-					int Not_Applicable = Integer.parseInt(NotApplicable);						
-					if(Not_Applicable > 0)
-					{
-						CFOcountPOM.clickHumanNotApplicable().click();
-						CFOcountPOM.RiskGraphCount( test, "Not Applicable", Not_Applicable, "Statutory");
-					}
-					else
-					{
-						test.log(LogStatus.PASS, "Not Applicable Complaince Count = "+ Not_Applicable + ".");
-					}
-				}
-				catch(Exception e)
-				{
-					
-				}
-					
-				Thread.sleep(500);
-				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
-				Thread.sleep(2000);
-				extent.endTest(test);
-				extent.flush();
+				CFOcountPOM.clickComplianceIsecOverdueDemo().click();
+				CFOcountPOM.RiskGraphCount1( test, "Overdue", Overdue, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "Overdue Complaince Count = "+ Overdue + ".");
 			}
 			
-			//	@Test(priority = 33)
+			 WebElement roc =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-2 > text"));
+				
+			  roc.click();
+			
+		
+			Thread.sleep(6000);
+			String ClosedDelayed = CFOcountPOM.clickHumanClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
+			ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
+			int Closed_Delayed = Integer.parseInt(ClosedDelayed);	
+		//	int Closed_Delayed = Integer.parseInt(CFOcountPOM.clickHumanClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
+			
+			if(Closed_Delayed > 0)
+			{
+				Thread.sleep(500);	
+				CFOcountPOM.clickHumanClosedDelayed().click();
+				Thread.sleep(2000);
+				CFOcountPOM.RiskGraphCount( test, "Closed Delayed", Closed_Delayed, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "Closed Delayed Complaince Count = "+ Closed_Delayed + ".");
+			}
+			
+			  WebElement roc1 =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-0 > text"));
+				
+			  roc1.click();
+			
+			Thread.sleep(3000);
+			String ClosedTimely = CFOcountPOM.clickHumanClosedTimelym().getText();		//Reading the Closed Timely value of Human Resource
+			ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
+			int Closed_Timely = Integer.parseInt(ClosedTimely);						
+			if(Closed_Timely > 0)
+			{
+				CFOcountPOM.clickHumanClosedTimelym().click();
+				CFOcountPOM.RiskGraphCount( test, "Closed Timely", Closed_Timely, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "Closed Timely Complaince Count = "+ Closed_Timely + ".");
+			}
+			
+		
+			WebElement CT = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-1 > rect"));
+			CT.click();
+			Thread.sleep(3000);
+			String PendingReview = CFOcountPOM.clickAccountPendingReview().getText();	//Reading the Pending For Review value of Human Resource
+			PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
+			int Pending_Review = Integer.parseInt(PendingReview);						
+			if(Pending_Review > 0)
+			{
+				CFOcountPOM.clickAccountPendingReview().click();
+				CFOcountPOM.RiskGraphCount( test, "Pending For Review", Pending_Review, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "Pending For Review Complaince Count = "+ Pending_Review + ".");
+			}
+			
+			WebElement PR = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));
+			PR.click();
+			
+			Thread.sleep(3000);
+			
+			String FinaInprogress = CFOcountPOM.clickFinanceInProgressInternal().getText();			//Reading the Overdue value of Human Resource
+			FinaInprogress = FinaInprogress.replaceAll(" ","");									//Removing all white spaces from string. 
+			int Fina_InProgress = Integer.parseInt(FinaInprogress);						
+			if(Fina_InProgress > 0)
+			{
+				CFOcountPOM.clickFinanceInProgressInternal().click();
+				CFOcountPOM.RiskGraphCount( test, "Admin -In Progress", Fina_InProgress, "Internal");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Admin - In Progress ' Complaince Count = "+ Fina_InProgress + ".");
+			}
+			
+			WebElement IP = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-4 > rect"));
+			IP.click();
+			
+					Thread.sleep(3000);
+			String FinaRejected = CFOcountPOM.clickFinanceRejectedInternal().getText();			//Reading the Overdue value of Human Resource
+			FinaRejected = FinaRejected.replaceAll(" ","");									//Removing all white spaces from string. 
+			int Fina_Rejected= Integer.parseInt(FinaRejected);						
+			if(Fina_Rejected > 0)
+			{
+				CFOcountPOM.clickFinanceRejectedInternal().click();
+				CFOcountPOM.RiskGraphCount( test, "Admin -Rejected", Fina_Rejected, "Internal");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Admin - Rejected' Complaince Count = "+ Fina_Rejected + ".");
+			}
+		
+
+
+			/*	Thread.sleep(500);
+				String NotApplicable = CFOcountPOM.clickHumanNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
+				NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
+				int Not_Applicable = Integer.parseInt(NotApplicable);						
+				if(Not_Applicable > 0)
+			{
+					CFOcountPOM.clickHumanNotApplicable().click();
+//					CFOcountPOM.RiskGraphCount( test, "Not Applicable", Not_Applicable, "Statutory");
+//				}
+//				else
+//				{
+//					test.log(LogStatus.PASS, "Not Applicable Complaince Count = "+ Not_Applicable + ".");
+//				}
+//			}
+//			catch(Exception e)
+//			{
+//				
+//			}*/
+				
+				Thread.sleep(500);
+				String NotApplicable = CFOcountPOM.clickComplianceIsecNotApplicableDemo().getText();	//Reading the Pending For Review value of Human Resource
+				NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
+				int Not_Applicable = Integer.parseInt(NotApplicable);						
+				if(Not_Applicable > 0)
+				{
+					CFOcountPOM.clickComplianceIsecNotApplicableDemo().click();
+					AuditorcountPOM.RiskGraphCount2( test, "Not Applicable", Not_Applicable, "Statutory");
+				}
+				else
+				{
+					test.log(LogStatus.PASS, "Not Applicable Compliance Count = "+ Not_Applicable + ".");
+				}
+				Thread.sleep(500);
+				WebElement NA = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-6 > rect"));
+				NA.click();
+				Thread.sleep(5000);
+				String DueToday = CFOcountPOM.clickAdminDueToday().getText();	//Reading the Pending For Review value of Human Resource
+				DueToday = DueToday.replaceAll(" ","");								//Removing all white spaces from string. 
+				int Due_Today = Integer.parseInt(DueToday);						
+				if(Due_Today > 0)
+				{
+					CFOcountPOM.clickAdminDueToday().click();
+					AuditorcountPOM.RiskGraphCount2( test, "DueToday", Due_Today, "Statutory");
+				}
+				else
+				{
+					test.log(LogStatus.PASS, "DueToday Compliance Count = "+ Due_Today + ".");
+				}
+				
+				
+				
+					
+			Thread.sleep(500);
+			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+			Thread.sleep(2000);
+			extent.endTest(test);
+			extent.flush();
+		}
+			
+				@Test(priority = 33)
 		void DepartSummIsSmeta() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - Department Summary graph - 'Is SMETA Column added' Verification");					
@@ -2416,7 +2453,7 @@ import org.openqa.selenium.WebElement;
 		}
 
 			
-		//	@Test(priority = 31)
+			@Test(priority = 34)
 		void NotCompleted_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -2534,7 +2571,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		//	@Test(priority = 32)
+			@Test(priority = 35)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -2651,7 +2688,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		//	@Test(priority = 33)
+			@Test(priority = 36)
 		void ClosedTimely_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -2769,7 +2806,7 @@ import org.openqa.selenium.WebElement;
 			
 		}
 		
-	@Test(priority = 34)
+	@Test(priority = 37)
 		void NotApplicable_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -2890,7 +2927,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 	
-	@Test(priority = 35)
+	@Test(priority = 38)
 
 	void UpcomingPieChartPeriod() throws InterruptedException
 	{
@@ -3048,7 +3085,7 @@ import org.openqa.selenium.WebElement;
 	}
 	
 		
-	@Test(priority = 36)
+	@Test(priority = 39)
 	void DueforperiodIsSMETAColumn() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Not Completed - Is SMETA Column Count Verification");
@@ -3092,7 +3129,7 @@ import org.openqa.selenium.WebElement;
 		
 	}
 	
-	@Test(priority = 37)
+	@Test(priority = 40)
 	void periodIsSMETAColumnCloseddelayed() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Closed Delayed - Is SMETA Column Count Verification");
@@ -3134,7 +3171,7 @@ import org.openqa.selenium.WebElement;
 		extent.flush();
 	}
     
-	//	@Test(priority = 38)
+		@Test(priority = 41)
 	void periodIsSMETAColumnTimely() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Closed Timely - Is SMETA Column Count Verification");
@@ -3176,7 +3213,7 @@ import org.openqa.selenium.WebElement;
 		extent.flush();
 	}
 	
-	@Test(priority =39)
+	@Test(priority =42)
 	void periodIsSMETAColumnNotApplicable() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Not Applicable - Is SMETA Column Count Verification");
@@ -3218,7 +3255,7 @@ import org.openqa.selenium.WebElement;
 		extent.flush();
 	}
 	
-	@Test(priority =40)
+	@Test(priority =43)
 	void periodIsSMETAColumnUpcoming() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Upcoming - Is SMETA Column Count Verification");
@@ -3261,7 +3298,7 @@ import org.openqa.selenium.WebElement;
 	}
 	
 	
-  // @Test(priority = 41)
+   @Test(priority = 44)
    		void Overdue_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -3383,7 +3420,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
    
-   //	@Test(priority =42)
+   	@Test(priority =45)
 	void periodIsSMETAColumnOverdue() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Overdue - Is SMETA Column Count Verification");
@@ -3425,7 +3462,7 @@ import org.openqa.selenium.WebElement;
 		extent.flush();
 	}
 		
-	//	@Test(priority = 43)
+	//	@Test(priority = 46)
 		void dueToday_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -3546,7 +3583,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		//	@Test(priority =44)
+			@Test(priority =47)
 	void periodIsSMETAColumnDuetoday() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - DueToday - Is SMETA Column Count Verification");
@@ -3588,7 +3625,7 @@ import org.openqa.selenium.WebElement;
 		extent.flush();
 	}
 	
-		@Test(priority = 45)
+		@Test(priority = 48)
 		void pendingForReview_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -3709,7 +3746,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 	
-			@Test(priority = 46)
+			@Test(priority = 49)
 	void periodIsSMETAColumnPendingForReview() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Pending For Review - Is SMETA Column Count Verification");
@@ -3751,7 +3788,7 @@ import org.openqa.selenium.WebElement;
 		extent.flush();
 	}
 		
-	//	@Test(priority = 47)
+		@Test(priority = 50)
 		void inProgress_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'in Progress' Count Verification");
@@ -3872,7 +3909,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 	
-		//	@Test(priority = 48)
+			@Test(priority = 51)
 	void periodIsSMETAColumnInprogress() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - In Progress - Is SMETA Column Count Verification");
@@ -3916,7 +3953,7 @@ import org.openqa.selenium.WebElement;
 		
 
 		
-	  @Test(priority = 49)
+	  @Test(priority = 52)
 		void rejected_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -4034,7 +4071,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 	  
-			@Test(priority = 50)
+			@Test(priority = 53)
 		void periodIsSMETAColumnRejected() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Rejected - Is SMETA Column Count Verification");
@@ -4077,7 +4114,7 @@ import org.openqa.selenium.WebElement;
 		}
 			
 	  
-	/*	@Test(priority = 51)
+		@Test(priority = 54)
 		void UpcomingFilterMgmt() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the all filters functionally working or not while clicking on Period-Pie Chart - Not Completed Status- ' Upcoming ' -  Critical Risk or not?.");
@@ -4088,7 +4125,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-	  
+	 /* 
 		
 		@Test(priority = 52)
 		void PenaltySummaryStatutory() throws InterruptedException
@@ -4274,17 +4311,22 @@ import org.openqa.selenium.WebElement;
 			Thread.sleep(3000);
 			extent.endTest(test);
 			extent.flush();
-		}
+		}*/
 		
-		@Test(priority = 53)
+		@Test(priority = 55)
 		void GradingReportStatutory() throws InterruptedException, IOException
 		{
 					Thread.sleep(3000);		
 				test = extent.startTest("'Grading Report'  Export and OverView");
 				//test.log(LogStatus.INFO, "Test Initiated");
-			
+				CFOcountPOM.YearTodate().click();
+				Thread.sleep(1000);
+				CFOcountPOM.ALL().click();
+				Thread.sleep(1000);
+				CFOcountPOM.clickApply().click();
+				Thread.sleep(5000);
 				JavascriptExecutor js = (JavascriptExecutor) getDriver(); ;
-				js.executeScript("window.scrollBy(0,3500)");					//Scrolling down window by 2600 px.
+				js.executeScript("window.scrollBy(0,3000)");					//Scrolling down window by 2600 px.
 				Thread.sleep(2000);	
 				CFOcountPOM.clickRedGrading().click();
 				Thread.sleep(8000);	
@@ -4322,8 +4364,8 @@ import org.openqa.selenium.WebElement;
 				extent.endTest(test);
 				extent.flush();
 		}
-		*/
-	//	@Test(priority = 54)
+		
+		@Test(priority = 56)
 		void complianceCalendar() throws InterruptedException
 		{
 			test = extent.startTest("compliance Calendar Verifications");
@@ -4333,7 +4375,7 @@ import org.openqa.selenium.WebElement;
 			Thread.sleep(2000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver(); ;
 			//js.executeScript("window.scrollBy(0,1800)");					//Scrolling down window by 2600 px.
-			js.executeScript("window.scrollBy(0,4000)");	
+			js.executeScript("window.scrollBy(0,3500)");	
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='collapsePerformerCalender']")));
 			Thread.sleep(5000);
@@ -4343,7 +4385,7 @@ import org.openqa.selenium.WebElement;
 			 Thread.sleep(2000);
 				test.log(LogStatus.PASS, "Excel file Export Successfully");
 				Thread.sleep(3000);
-				By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[7]/a");
+				By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[14]/a");
 
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(2000);
@@ -4396,7 +4438,7 @@ import org.openqa.selenium.WebElement;
 				extent.flush();
 		}
 		
-	/*	@Test(priority = 55)
+		@Test(priority = 57)
 		void DailyUpdates() throws InterruptedException, IOException
 		{
 			Thread.sleep(3000);		
@@ -4436,7 +4478,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-  @Test(priority = 56)
+  @Test(priority = 58)
 		void NewsLetter() throws InterruptedException, IOException
 		{
 			Thread.sleep(500);		
@@ -4465,175 +4507,175 @@ import org.openqa.selenium.WebElement;
 		}
 		
 	 
-		/*@Test(priority = 45)
+		@Test(priority = 59)
 		void StandardReportOverall() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report -Overall Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportOverall(test, , "cfo");
+			CFOcountPOM.StandardReportOverall(test, "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 46)
+		@Test(priority = 60)
 		void StandardReportLocation() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report -Location Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportLocation(test, , "cfo");
+			CFOcountPOM.StandardReportLocation(test,  "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 47)
+		@Test(priority = 61)
 		void StandardReportUser() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report -User Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportUser(test, , "cfo");
+			CFOcountPOM.StandardReportUser(test, "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 48)
+		@Test(priority = 62)
 		void StandardReportCategory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report -Category  Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportCategory(test, , "cfo");
+			CFOcountPOM.StandardReportCategory(test,  "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 49)
+		@Test(priority = 63)
 		void StandardReportRisk() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report - Risk  Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportRisk(test, , "cfo");
+			CFOcountPOM.StandardReportRisk(test,  "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 50)
+		@Test(priority = 64)
 		void StandardReportDetailed() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report - Detailed  Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportDetailed(test, , "cfo");
+			CFOcountPOM.StandardReportDetailed(test, "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 51)
+		@Test(priority = 65)
 		void StandardReportCriticalRisk() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report - Critical Risk  Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportCriticalRisk(test, , "cfo");
+			CFOcountPOM.StandardReportCriticalRisk(test,  "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 52)
+		@Test(priority = 66)
 		void StandardReportOverallIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal -Overall Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportOverallIn(test, , "cfo");
+			CFOcountPOM.StandardReportOverallIn(test,  "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-	     @Test(priority = 53)
+	     @Test(priority = 67)
 		void StandardReportLocationIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal -Location Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportLocationIN(test, , "cfo");
+			CFOcountPOM.StandardReportLocationIN(test,  "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 54)
+		@Test(priority = 68)
 		void StandardReportUserIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal -User Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportUserIN(test, , "cfo");
+			CFOcountPOM.StandardReportUserIN(test, "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 55)
+		@Test(priority = 69)
 		void StandardReportCategoryIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal -Category  Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportCategoryIN(test, , "cfo");
+			CFOcountPOM.StandardReportCategoryIN(test, "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 56)
+		@Test(priority = 70)
 		void StandardReportRiskIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal-Risk  Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportRiskIN(test, , "cfo");
+			CFOcountPOM.StandardReportRiskIN(test,  "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 57)
+		@Test(priority = 71)
 		void StandardReportDetailedIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal-Detailed  Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportDetailedIN(test, , "cfo");
+			CFOcountPOM.StandardReportDetailedIN(test,  "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 58)
+		@Test(priority = 72)
 		void StandardReportCriticalRiskIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal -Critical Risk  Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
 			
-			CFOcountPOM.StandardReportCriticalRiskIN(test, , "cfo");
+			CFOcountPOM.StandardReportCriticalRiskIN(test,  "cfo");
 			
 			extent.endTest(test);
 			extent.flush();
-		}*/
+		}
 		
-	/*	@Test(priority = 59)
+		@Test(priority = 73)
 		void DetailedReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report Count Verification");
@@ -4645,7 +4687,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		@Test(priority = 60) 
+		@Test(priority = 74) 
 		void DetailedReportIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report -Internal Count Verification");
@@ -4657,7 +4699,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 
-		@Test(priority =61) 
+		@Test(priority =75) 
 		void DetailedReportFilterMgmt() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check  Detailed report filters working or not Verification");
@@ -4669,7 +4711,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		@Test(priority = 62)
+		@Test(priority = 76)
 		void AssignmentReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Assignment Report verification");
@@ -4681,7 +4723,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-	//	@Test(priority = 63)
+	//@Test(priority = 63)
 		void AssignmentReportFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check 'Assignment Report ' Filter Working Or not");
@@ -4693,7 +4735,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}	
 		
-		@Test(priority = 46)
+		@Test(priority = 77)
 		void ComplianceIDFilterMgmt() throws InterruptedException, IOException
 		{
 			test = extent.startTest("'Assignment Report' :- Statutory & Statutory CheckList = Compliance ID Filter Working Or not");
@@ -4704,7 +4746,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}	
 		
-		@Test(priority = 47)
+		@Test(priority = 78)
 		void ComplianceIDFilterEBMgmt() throws InterruptedException, IOException
 		{
 			test = extent.startTest("'Assignment Report' :- EventBased Checklist & EventBased = Compliance ID Filter Working Or not");
@@ -4715,7 +4757,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}	
 		
-		@Test(priority = 48)
+		@Test(priority = 79)
 		void ComplianceIDFilterINMgmt() throws InterruptedException, IOException
 		{
 			test = extent.startTest("'Assignment Report' :- Internal & Internal CheckList = Compliance ID Filter Working Or not");
@@ -4726,7 +4768,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}	
 		
-		@Test(priority = 49)
+		@Test(priority = 80)
 		void ComplianceIDFilter1Invalid() throws InterruptedException, IOException
 		{
 			test = extent.startTest("'Assignment Report' :- Statutory & Statutory CheckList = To check whether the data is seen on the grid after entering invalid data in compliance ID search box Filter.");
@@ -4737,7 +4779,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}	
 		
-		@Test(priority = 50)
+		@Test(priority = 81)
 		void ComplianceIDFilterEBInvalid() throws InterruptedException, IOException
 		{
 			test = extent.startTest("'Assignment Report' :- EventBased Checklist & EventBased = To check whether the data is seen on the grid after entering invalid data in compliance ID search box Filter.");
@@ -4748,7 +4790,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}	
 		
-		@Test(priority = 51)
+		@Test(priority = 82)
 		void ComplianceIDFilterINInvalid() throws InterruptedException, IOException
 		{
 			test = extent.startTest("'Assignment Report' :- Internal & Internal CheckList = To check whether the data is seen on the grid after entering invalid data in compliance ID search box Filter.");
@@ -4759,7 +4801,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}	
 		
-		@Test(priority = 52)
+		@Test(priority = 83)
 		void UsageReport() throws InterruptedException
 		{
 			test = extent.startTest("Usage Report verification");
@@ -4781,14 +4823,14 @@ import org.openqa.selenium.WebElement;
 			Thread.sleep(4000);
 			performer.OverduePOM.selectDate().click();		//Method to click on date at second row and fourth column
 			Thread.sleep(3000);
-			File dir = new File("C:\\Users\\snehalp\\Downloads");
+			File dir = new File("C:\\Users\\mayurig\\Downloads");
 			File[] dirContents = dir.listFiles();					//Counting number of files in directory before download
 			
 			Thread.sleep(500);
 			CFOcountPOM.clickExport().click();				//CLicking on 'Export to Excel' button
 			
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 			File[] dirContents1 = dir1.listFiles();					//Counting number of files in directory after download
 			
 			if(dirContents.length < dirContents1.length)
@@ -4807,7 +4849,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-	/*	@Test(priority = 71)
+	/*	@Test(priority = 71) not persent
 		void AuditReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Audit Report verification");
@@ -4843,7 +4885,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}*/
 
-		/*@Test(priority = 55)
+		@Test(priority = 84)
 		void ComplianceDocuments() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Compliance Documents  verification");
@@ -4855,7 +4897,7 @@ import org.openqa.selenium.WebElement;
 					extent.flush();
 		}
 		
-	//	@Test(priority = 54)
+	//	@Test(priority = 85)
 		void ComplianceDocumentsFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Compliance Document page All filters working or not");
@@ -4867,7 +4909,7 @@ import org.openqa.selenium.WebElement;
 					extent.flush();
 		}
 		
-	@Test(priority =55)
+	@Test(priority =86)
 		void ComplianceDocumentsIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Compliance Documents-Internal  verification");
@@ -4879,7 +4921,7 @@ import org.openqa.selenium.WebElement;
 					extent.flush();
 		}
 		
-		@Test(priority = 56) //	pass	
+		@Test(priority = 87) //	pass	
 		void CriticalDocuments() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Critical Document Verification");
@@ -4892,7 +4934,7 @@ import org.openqa.selenium.WebElement;
 		}
 		
 		
-		@Test(priority = 57)
+		@Test(priority = 88)
 		void ActDocuments() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Act Documents  verification");
@@ -4936,8 +4978,8 @@ import org.openqa.selenium.WebElement;
 			extent.endTest(test);
 			extent.flush();
 		}*/
-	/*	
-		@Test(priority = 81) 
+		
+		@Test(priority = 89) 
 		void MyNotifications() throws InterruptedException, IOException
 		{
 			test = extent.startTest("My Notifications - Verification");
@@ -4966,7 +5008,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		@Test(priority = 82) // pass
+		@Test(priority = 90) // pass
 		void MessageCenter() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" Message Center - Verification");
@@ -4989,7 +5031,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-	    @Test(priority = 83)
+	    @Test(priority = 91)
 			void InternalMsg() throws InterruptedException, IOException
 			{
 				Thread.sleep(500);		
@@ -5025,7 +5067,7 @@ import org.openqa.selenium.WebElement;
 				extent.flush();
 			}
 			
-			 @Test(priority = 84)
+			 @Test(priority = 92)
 				void SupportTicket() throws InterruptedException, IOException
 				{
 					Thread.sleep(1000);		
@@ -5051,7 +5093,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		@Test(priority =86)
+		//@Test(priority =86)
 		void PerformanceSummaryReopen() throws InterruptedException, IOException
 		{
 			test = extent.startTest("In Performer Summary graph - Re-open - Closed Timely , Closed Delayed and Not applicable compliance  verification");
@@ -5062,7 +5104,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		@Test(priority = 87)
+		//@Test(priority = 87)
 		void RiskGraphReOpen() throws InterruptedException, IOException
 		{
 			test = extent.startTest("In Risk Summary graph - Re-open - Closed Timely , Closed Delayed and Not applicable compliance  verification");
@@ -5073,7 +5115,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		@Test(priority = 88) //pass 
+		@Test(priority = 93) //pass 
 	    void WhatsNew() throws InterruptedException, IOException
 				{
 					test = extent.startTest("'what's New ' Verification");
@@ -5097,8 +5139,8 @@ import org.openqa.selenium.WebElement;
 					extent.flush();
 				}
 			
-		*/
-		@Test(priority = 90)
+		
+		//@Test(priority = 90)
 		void CompletionStatusFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the filters of Performance Summary Graph for Completion Status  working or not?");
@@ -5207,9 +5249,9 @@ import org.openqa.selenium.WebElement;
 			extent.endTest(test);
 			extent.flush();
 		}
+		*/
 		
-		
-	//	@Test(priority = 100)
+		@Test(priority = 100)
 		void DeviationApproverColSOO() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Summary of Overdue Compliances - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\" in summary of overdue of Approver dashboard ?");
@@ -5220,7 +5262,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-	//	@Test(priority = 101)
+		@Test(priority = 101)
 		void DeviationClosureStatuscolSOO() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Summary of Overdue Compliances - To check whether the name of additional column \"deviation closure status\" appears or not in grid");
@@ -5231,7 +5273,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-	//	@Test(priority = 102)
+		@Test(priority = 102)
 		void SOOStatus() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Summary of Overdue Compliances - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown  in summary of overdue of management ");
@@ -5242,7 +5284,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-	/*	@Test(priority = 103)
+		@Test(priority = 103)
 		void DeviationApproverColPS() throws InterruptedException, IOException
 		{
 			test = extent.startTest("performance summary graph - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\" in the performance summary graph of management  ");
@@ -5264,7 +5306,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		@Test(priority = 105)
+		//@Test(priority = 105)
 		void DeviationApproverColDS() throws InterruptedException, IOException
 		{
 			test = extent.startTest("department summary graph - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\" in the department summary graph of management   ");
@@ -5286,7 +5328,7 @@ import org.openqa.selenium.WebElement;
 			extent.flush();
 		}
 		
-		@Test(priority = 107)
+		//@Test(priority = 107)
 		void DeviationApproverColGR() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" grading report - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\" in the grading report of management dashboard ? ");
@@ -5339,7 +5381,7 @@ import org.openqa.selenium.WebElement;
 			
 			extent.endTest(test);
 			extent.flush();
-		}*/
+		}
 		
 		
 		/*@Test(priority = 112)

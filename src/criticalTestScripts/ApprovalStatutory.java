@@ -1280,12 +1280,12 @@ public class ApprovalStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,925)");						//Scrolling down window by 1000 px.
 			
-			String PendingReview = CFOcountPOM.clickIndustrySpeHighM().getText();	//Reading the Pending For Review value of Human Resource
+			String PendingReview = CFOcountPOM.clickIndustrySpeHigh().getText();	//Reading the Pending For Review value of Human Resource
 			PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 			
 			Thread.sleep(4000);
 			int IndustrySpeHigh = Integer.parseInt(PendingReview);	//Reading the Medium value of Labour compliance
-			CFOcountPOM.clickIndustrySpeHighM().click();					//Clicking on High bar of Labour  
+			CFOcountPOM.clickIndustrySpeHigh().click();					//Clicking on High bar of Labour  
 			
 			Thread.sleep(3000);
 			int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
@@ -1384,8 +1384,8 @@ public class ApprovalStatutory extends BasePage {
 			js.executeScript("window.scrollBy(0,925)");						//Scrolling down window by 1000 px.
 			
 			Thread.sleep(4000);
-			int IndustrySpeMedium = Integer.parseInt(CFOcountPOM.clickIndustrySpeMediumM().getText());	//Reading the Medium value of Labour compliance
-			CFOcountPOM.clickIndustrySpeMediumM().click();					//Clicking on High bar of Labour  
+			int IndustrySpeMedium = Integer.parseInt(CFOcountPOM.clickIndustrySpeMedium().getText());	//Reading the Medium value of Labour compliance
+			CFOcountPOM.clickIndustrySpeMedium().click();					//Clicking on High bar of Labour  
 			
 			Thread.sleep(3000);
 	    	int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
@@ -1484,8 +1484,8 @@ public class ApprovalStatutory extends BasePage {
 			
 			
 			Thread.sleep(4000);
-			int IndustrySpeLow = Integer.parseInt(CFOcountPOM.clickIndustrySpeLowM().getText());	//Reading the Medium value of Labour compliance
-			CFOcountPOM.clickIndustrySpeLowM().click();					//Clicking on low bar of Indistry Specific  
+			int IndustrySpeLow = Integer.parseInt(CFOcountPOM.clickIndustrySpeLow().getText());	//Reading the Medium value of Labour compliance
+			CFOcountPOM.clickIndustrySpeLow().click();					//Clicking on low bar of Indistry Specific  
 			
 			Thread.sleep(500);
 			int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
